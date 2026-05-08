@@ -2,6 +2,7 @@ export const siteInfo = {
   name: "Talbrennerei Neufra",
   claim: "Regionale Spezialitäten aus eigener Herstellung.",
   phone: "+49 7574 935301",
+  whatsapp: "+497574935301",
   email: "info@talbrennerei-neufra.de",
   address: "Talstr. 25, 72419 Neufra",
   openingHours: "Do. + Fr. von 15:00 Uhr bis 18:00 Uhr",
