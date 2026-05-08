@@ -1,13 +1,21 @@
 import Image from "next/image";
+import { ButtonLink } from "@/components/ButtonLink";
+
+type HeroAction = {
+  label: string;
+  href: string;
+  variant?: "primary" | "secondary";
+};
 
 type HeroSectionProps = {
   eyebrow: string;
   title: string;
   text: string;
   image: string;
+  actions?: HeroAction[];
 };
 
-export function HeroSection({ eyebrow, title, text, image }: HeroSectionProps) {
+export function HeroSection({ eyebrow, title, text, image, actions }: HeroSectionProps) {
   return (
     <section className="mx-auto grid min-h-[82vh] max-w-7xl items-center gap-14 px-6 py-20 md:grid-cols-[1.05fr_0.95fr]">
       <div>
@@ -20,6 +28,15 @@ export function HeroSection({ eyebrow, title, text, image }: HeroSectionProps) {
         </h1>
 
         <p className="mt-8 max-w-xl text-lg leading-8 text-[#555149]">{text}</p>
+        {actions && (
+          <div className="mt-8 flex gap-4">
+            {actions.map((action, index) => (
+              <ButtonLink key={index} href={action.href} variant={action.variant}>
+                {action.label}
+              </ButtonLink>
+            ))}
+          </div>
+        )}
       </div>
 
       <div className="relative min-h-[540px] overflow-hidden bg-[#D8D2C6]">

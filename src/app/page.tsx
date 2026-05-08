@@ -12,6 +12,14 @@ export default function Home() {
         title={homeIntro.title}
         text={homeIntro.text}
         image="/images/hero.jpg"
+        actions={[
+          { label: "Produkte entdecken", href: "/produkte" },
+          {
+            label: "Kontakt aufnehmen",
+            href: "/kontakt",
+            variant: "secondary",
+          },
+        ]}
       />
 
       <EditorialIntro title="Von Streuobstwiesen, Hofladen und echter Handarbeit.">
