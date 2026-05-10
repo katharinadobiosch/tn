@@ -1,42 +1,72 @@
+import Image from "next/image";
+import { siteImages } from "@/data/images";
+
 export default function UeberUnsPage() {
   return (
     <main className="bg-[#F7F4EE] text-[#24231F]">
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-          Über uns
-        </p>
-
-        <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
-          Aus Streuobstwiesen, Wald und handwerklicher Verarbeitung.
-        </h1>
-      </section>
-
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr]">
-        <h2 className="font-serif text-4xl leading-tight md:text-5xl">
-          Die Geschichte der Talbrennerei beginnt mit einer Streuobstwiese.
-        </h2>
-
-        <div className="space-y-6 text-lg leading-8 text-[#555149]">
-          <p>
-            Im Jahr 2008 kaufte Firmengründer Detlef Zamzow zusammen mit seiner
-            Ehefrau Annemarie seine erste Streuobstwiese in Dettingen/Erms.
-            Schnell war sein Interesse geweckt und nach und nach kamen weitere
-            Grundstücke dazu.
+      <section className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+        <div>
+          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+            Über uns
           </p>
 
-          <p>
-            Heute bewirtschaftet das Unternehmen rund 15 Hektar eigene
-            Obstwiesen und Wälder. Durch den reichlichen Ertrag an Obst musste
-            schnell eine Lösung zur Weiterverarbeitung gefunden werden.
-          </p>
+          <h1 className="font-serif text-5xl leading-tight md:text-7xl">
+            Eine Brennerei mit Geschichte.
+          </h1>
 
-          <p>
-            Mit der Gründung einer Brennerei mit Direktvermarktung am Ende der
-            Talstraße in Neufra/Hohenzollern entstand die Talbrennerei.
+          <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
+            Was mit Streuobstwiesen begann, wird heute mit Erfahrung, Handarbeit
+            und Respekt vor der Natur weitergeführt.
           </p>
         </div>
-      </section>
 
+        <div className="relative min-h-[480px] overflow-hidden bg-[#D8D2C6]">
+          <Image
+            src={siteImages.about.outside}
+            alt="Außenansicht der Talbrennerei Neufra"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </section>
+      s
+      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr]">
+        <div className="relative min-h-[420px] overflow-hidden bg-[#D8D2C6]">
+          <Image
+            src={siteImages.about.shop}
+            alt="Innenraum des Hofladens"
+            fill
+            className="object-cover"
+          />
+        </div>
+
+        <div className="space-y-6 text-lg leading-8 text-[#555149]">
+          <h2 className="font-serif text-4xl leading-tight text-[#24231F] md:text-5xl">
+            Die Geschichte der Talbrennerei beginnt mit einer Streuobstwiese.
+          </h2>
+
+          <div className="space-y-6 text-lg leading-8 text-[#555149]">
+            <p>
+              Im Jahr 2008 kaufte Firmengründer Detlef Zamzow zusammen mit
+              seiner Ehefrau Annemarie seine erste Streuobstwiese in
+              Dettingen/Erms. Schnell war sein Interesse geweckt und nach und
+              nach kamen weitere Grundstücke dazu.
+            </p>
+
+            <p>
+              Heute bewirtschaftet das Unternehmen rund 15 Hektar eigene
+              Obstwiesen und Wälder. Durch den reichlichen Ertrag an Obst musste
+              schnell eine Lösung zur Weiterverarbeitung gefunden werden.
+            </p>
+
+            <p>
+              Mit der Gründung einer Brennerei mit Direktvermarktung am Ende der
+              Talstraße in Neufra/Hohenzollern entstand die Talbrennerei.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
         <article className="border-t border-[#24231F]/15 pt-10">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
@@ -63,7 +93,6 @@ export default function UeberUnsPage() {
           </p>
         </article>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="border-t border-[#24231F]/15 pt-10">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
