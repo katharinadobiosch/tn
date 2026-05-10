@@ -1,7 +1,18 @@
 import Image from "next/image";
-import { updates } from "@/data/updates";
+import { supabase } from "@/lib/supabase";
+import type { Update } from "@/types/update";
 
-export default function AktuellesPage() {
+export default async function AktuellesPage() {
+  const { data: updates, error } = await supabase
+    .from("updates")
+    .select("*")
+    .eq("published", true)
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error(error);
+  }
+
   return (
     <main className="bg-[#F7F4EE] text-[#24231F]">
       <section className="mx-auto max-w-7xl px-6 py-24">
@@ -20,30 +31,42 @@ export default function AktuellesPage() {
       </section>
 
       <section className="mx-auto max-w-7xl px-6 pb-24">
+        {!updates?.length && (
+          <p className="border-t border-[#24231F]/15 pt-10 text-[#555149]">
+            Aktuell gibt es noch keine Neuigkeiten.
+          </p>
+        )}
+
         <div className="grid gap-10">
-          {updates.map((update) => (
+          {updates?.map((update: Update) => (
             <article
               key={update.id}
               className="grid gap-8 border-t border-[#24231F]/15 pt-10 md:grid-cols-[0.55fr_1fr]"
             >
               <div className="relative min-h-[260px] overflow-hidden bg-[#D8D2C6]">
-                <Image
-                  src={update.image}
-                  alt={update.title}
-                  fill
-                  className="object-cover grayscale-[8%]"
-                />
+                {update.image_url ? (
+                  <Image
+                    src={update.image_url}
+                    alt={update.title}
+                    fill
+                    className="object-cover grayscale-[8%]"
+                  />
+                ) : (
+                  <div className="flex h-full min-h-[260px] items-center justify-center text-sm uppercase tracking-[0.2em] text-[#777064]">
+                    Kein Bild
+                  </div>
+                )}
               </div>
 
               <div>
                 <time className="text-xs uppercase tracking-[0.22em] text-[#526247]">
-                  {new Date(update.date).toLocaleDateString("de-DE")}
+                  {new Date(update.created_at).toLocaleDateString("de-DE")}
                 </time>
 
                 <h2 className="mt-4 font-serif text-4xl">{update.title}</h2>
 
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[#555149]">
-                  {update.text}
+                  {update.content}
                 </p>
               </div>
             </article>
