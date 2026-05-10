@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { siteImages } from "@/data/images";
 import { siteInfo } from "@/data/site";
 
 export default function HofladenPage() {
@@ -19,8 +21,14 @@ export default function HofladenPage() {
             Wildspezialitäten und Geschenkkörbe.
           </p>
         </div>
-
-        <div className="min-h-[480px] bg-[#D8D2C6]" />
+        <div className="relative min-h-[480px] overflow-hidden bg-[#D8D2C6]">
+          <Image
+            src={siteImages.about.shop}
+            alt="Hofladen der Talbrennerei Neufra"
+            fill
+            className="object-cover"
+          />
+        </div>{" "}
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-3">

@@ -1,3 +1,5 @@
+import Image from "next/image";
+import { siteImages } from "@/data/images";
 import {
   additionalProducts,
   fruitSpreads,
@@ -25,6 +27,18 @@ export default function ProduktePage() {
           dieser Basis entstehen feinste Destillate und sortenreine
           Spezialitäten.
         </p>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6">
+        <div className="relative min-h-[520px] overflow-hidden bg-[#D8D2C6]">
+          <Image
+            src={siteImages.products.hero}
+            alt="Produkte der Talbrennerei Neufra"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr]">

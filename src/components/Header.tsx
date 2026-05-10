@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { siteImages } from "@/data/images";
 import { navigation } from "@/data/navigation";
 
 export function Header() {
@@ -8,7 +9,7 @@ export function Header() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link href="/">
           <Image
-            src="/images/logo.png"
+            src={siteImages.logo}
             alt="Talbrennerei Neufra Logo"
             width={160}
             height={80}

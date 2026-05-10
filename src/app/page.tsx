@@ -3,6 +3,7 @@ import { EditorialIntro } from "@/components/EditorialIntro";
 import { ProductTeaserGrid } from "@/components/ProductTeaserGrid";
 import { UpdatesPreview } from "@/components/UpdatesPreview";
 import { homeIntro, productCategories, updatesPreview } from "@/data/site";
+import { siteImages } from "@/data/images";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
         eyebrow={homeIntro.eyebrow}
         title={homeIntro.title}
         text={homeIntro.text}
-        image="/images/hero.jpg"
+        image={siteImages.hero}
         actions={[
           { label: "Produkte entdecken", href: "/produkte" },
           {
