@@ -1,10 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
-import { supabase } from "@/lib/supabase";
 import type { Update } from "@/types/update";
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 
 export default async function AdminPage() {
-  const { data: updates, error } = await supabase
+  const authSupabase = await createClient();
+
+  const {
+    data: { user },
+  } = await authSupabase.auth.getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+
+  const { data: updates, error } = await authSupabase
     .from("updates")
     .select("*")
     .order("created_at", { ascending: false });
@@ -42,10 +53,9 @@ export default async function AdminPage() {
           {updates?.map((update: Update) => (
             <article
               key={update.id}
-              className="flex items-start justify-between gap-8 py-8"
+              className="grid items-start gap-6 py-8 md:grid-cols-[180px_1fr_auto]"
             >
-              {" "}
-              <div className="relative h-32 overflow-hidden bg-[#D8D2C6]">
+              <div className="relative h-32 w-full overflow-hidden bg-[#D8D2C6]">
                 {update.image_url ? (
                   <Image
                     src={update.image_url}

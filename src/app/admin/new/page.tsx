@@ -1,7 +1,19 @@
+import { redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import { createUpdate } from "@/app/actions/updateActions";
 
-export default function NewUpdatePage() {
+export default async function NewUpdatePage() {
+  const supabase = await createClient();
+
+  const {
+    data: { user },
+  } = await supabase.auth.getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+  
   return (
     <main className="bg-[#F7F4EE] px-6 py-24 text-[#24231F]">
       <section className="mx-auto max-w-3xl">

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import { supabase } from "@/lib/supabase";
+import { notFound, redirect } from "next/navigation";
+import { createClient } from "@/lib/supabase/server";
 import type { Update } from "@/types/update";
 import { deleteUpdate, updateUpdate } from "@/app/actions/updateActions";
 
@@ -13,7 +13,17 @@ type EditUpdatePageProps = {
 export default async function EditUpdatePage({ params }: EditUpdatePageProps) {
   const { id } = await params;
 
-  const { data: update, error } = await supabase
+  const authSupabase = await createClient();
+
+  const {
+    data: { user },
+  } = await authSupabase.auth.getUser();
+
+  if (!user) {
+    redirect("/login");
+  }
+
+  const { data: update, error } = await authSupabase
     .from("updates")
     .select("*")
     .eq("id", id)
