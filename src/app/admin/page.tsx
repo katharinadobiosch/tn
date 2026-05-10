@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Update } from "@/types/update";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { logout } from "@/app/actions/authActions";
 
 export default async function AdminPage() {
   const authSupabase = await createClient();
@@ -35,12 +36,23 @@ export default async function AdminPage() {
             <h1 className="font-serif text-5xl">Neuigkeiten verwalten</h1>
           </div>
 
-          <Link
-            href="/admin/new"
-            className="bg-[#1F2F20] px-6 py-3 text-sm text-white"
-          >
-            Neuer Beitrag
-          </Link>
+          <div className="flex gap-3">
+            <Link
+              href="/admin/new"
+              className="bg-[#1F2F20] px-6 py-3 text-sm text-white"
+            >
+              Neuer Beitrag
+            </Link>
+
+            <form action={logout}>
+              <button
+                type="submit"
+                className="border border-[#1F2F20]/30 px-6 py-3 text-sm"
+              >
+                Ausloggen
+              </button>
+            </form>
+          </div>
         </div>
 
         {!updates?.length && (
