@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { supabase } from "@/lib/supabase";
 import type { Update } from "@/types/update";
@@ -43,6 +44,21 @@ export default async function AdminPage() {
               key={update.id}
               className="flex items-start justify-between gap-8 py-8"
             >
+              {" "}
+              <div className="relative h-32 overflow-hidden bg-[#D8D2C6]">
+                {update.image_url ? (
+                  <Image
+                    src={update.image_url}
+                    alt={update.title}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="flex h-full items-center justify-center text-xs uppercase tracking-[0.2em] text-[#777064]">
+                    Kein Bild
+                  </div>
+                )}
+              </div>
               <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-[#526247]">
                   {update.published ? "Veröffentlicht" : "Entwurf"}
@@ -54,7 +70,6 @@ export default async function AdminPage() {
                   {update.content}
                 </p>
               </div>
-
               <div className="flex shrink-0 gap-4 text-sm">
                 <Link
                   href={`/admin/${update.id}`}
