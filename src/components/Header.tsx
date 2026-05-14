@@ -19,13 +19,17 @@ export function Header() {
 
         <nav className="hidden items-center gap-10 text-sm md:flex">
           {navigation.map((item) => (
-            <Link key={item.href} href={item.href}>
+            <Link
+              key={item.href}
+              href={item.href}
+              className="transition-colors duration-200 hover:text-[#526247] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
               {item.label}
             </Link>
           ))}
         </nav>
 
-        <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm md:inline-block">
+        <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm transition-colors duration-200 hover:border-[#1F2F20] hover:bg-[#1F2F20] hover:text-white md:inline-block">
           Hofladen geöffnet
         </span>
       </div>

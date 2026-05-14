@@ -39,7 +39,7 @@ export default async function AdminPage() {
           <div className="flex gap-3">
             <Link
               href="/admin/new"
-              className="bg-[#1F2F20] px-6 py-3 text-sm text-white"
+              className="bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#2F432F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20] active:bg-[#162417]"
             >
               Neuer Beitrag
             </Link>
@@ -47,7 +47,7 @@ export default async function AdminPage() {
             <form action={logout}>
               <button
                 type="submit"
-                className="border border-[#1F2F20]/30 px-6 py-3 text-sm"
+                className="border border-[#1F2F20]/40 px-6 py-3 text-sm transition-colors duration-200 hover:border-[#1F2F20] hover:bg-[#1F2F20] hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
               >
                 Ausloggen
               </button>
@@ -95,7 +95,7 @@ export default async function AdminPage() {
               <div className="flex shrink-0 gap-4 text-sm">
                 <Link
                   href={`/admin/${update.id}`}
-                  className="underline underline-offset-4"
+                  className="border-b border-[#24231F] pb-1 transition-colors duration-200 hover:border-[#526247] hover:text-[#526247] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
                 >
                   Bearbeiten
                 </Link>

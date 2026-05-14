@@ -39,7 +39,7 @@ export default function LoginPage() {
 
           <button
             type="submit"
-            className="bg-[#1F2F20] px-6 py-3 text-sm text-white"
+            className="bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#2F432F] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20] active:bg-[#162417]"
           >
             Einloggen
           </button>

@@ -13,9 +13,14 @@ export async function createClient() {
           return cookieStore.getAll();
         },
         setAll(cookiesToSet) {
-          cookiesToSet.forEach(({ name, value, options }) => {
-            cookieStore.set(name, value, options);
-          });
+          try {
+            cookiesToSet.forEach(({ name, value, options }) => {
+              cookieStore.set(name, value, options);
+            });
+          } catch {
+            // Wird ignoriert, wenn setAll in einer Server Component läuft.
+            // Auth-Refresh wird später über Middleware/Server Actions sauber behandelt.
+          }
         },
       },
     },
