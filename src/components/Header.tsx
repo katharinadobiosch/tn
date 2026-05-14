@@ -29,7 +29,7 @@ export function Header() {
           ))}
         </nav>
 
-        <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm transition-colors duration-200 hover:border-[#1F2F20] hover:bg-[#1F2F20] hover:text-white md:inline-block">
+        <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm md:inline-block">
           Hofladen geöffnet
         </span>
       </div>
