@@ -6,8 +6,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
           <strong>Öffnungszeiten</strong>
-          <p>{siteInfo.openingHours.weekdays}</p>
-          <p>{siteInfo.openingHours.saturday}</p>
+          <p>{siteInfo.openingHours}</p>
         </div>
 
         <div>
