@@ -46,7 +46,7 @@ export default function ProduktePage() {
   return (
     <main className="bg-[#F7F4EE] text-[#24231F]">
       <section className="mx-auto max-w-7xl px-6 pb-24 pt-12">
-        <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+        <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#B87935]">
           Produkte
         </p>
         <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">

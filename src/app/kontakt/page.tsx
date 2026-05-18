@@ -4,7 +4,7 @@ export default function KontaktPage() {
   return (
     <main className="bg-[#F7F4EE] text-[#24231F]">
       <section className="mx-auto max-w-7xl px-6 py-24">
-        <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+        <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#B87935]">
           Kontakt
         </p>
 
