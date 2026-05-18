@@ -19,7 +19,7 @@ export function HeroSection({ eyebrow, title, text, image, actions }: HeroSectio
   return (
     <section className="mx-auto grid min-h-[82vh] max-w-7xl items-center gap-14 px-6 py-20 md:grid-cols-[1.05fr_0.95fr]">
       <div>
-        <p className="mb-6 text-xs uppercase tracking-[0.28em] text-[#526247]">
+        <p className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#526247] before:h-px before:w-8 before:bg-[#B87935]">
           {eyebrow}
         </p>
 
@@ -39,7 +39,7 @@ export function HeroSection({ eyebrow, title, text, image, actions }: HeroSectio
         )}
       </div>
 
-      <div className="relative min-h-[540px] overflow-hidden bg-[#D8D2C6]">
+      <div className="relative min-h-[540px] overflow-hidden border border-[#B87935]/25 bg-[#D8D2C6] shadow-[18px_18px_0_rgba(234,214,189,0.35)]">
         <Image
           src={image}
           alt={title}

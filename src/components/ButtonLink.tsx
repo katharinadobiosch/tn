@@ -17,7 +17,7 @@ export function ButtonLink({
   const variants = {
     primary: "bg-[#1F2F20] text-white hover:bg-[#B87935] active:bg-[#8F5C29]",
     secondary:
-      "border border-[#1F2F20]/40 text-[#1F2F20] hover:border-[#B87935]/70 hover:bg-[#EAD6BD]/35 active:border-[#8F5C29] active:bg-[#EAD6BD]/55",
+      "border border-[#B87935]/50 text-[#1F2F20] hover:border-[#B87935] hover:bg-[#EAD6BD]/45 active:border-[#8F5C29] active:bg-[#EAD6BD]/65",
     dark: "border border-[#B8C0A6] text-[#B8C0A6] hover:bg-[#B8C0A6] hover:text-[#24231F] active:bg-white active:text-[#24231F]",
   };
 

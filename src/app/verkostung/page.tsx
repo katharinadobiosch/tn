@@ -6,7 +6,7 @@ export default function VerkostungPage() {
     <main className="bg-[#F7F4EE] text-[#24231F]">
       <section className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-[0.9fr_1.1fr] md:items-center">
         <div>
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+          <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Verkostung
           </p>
 
