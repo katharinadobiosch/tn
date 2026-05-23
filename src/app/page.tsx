@@ -4,6 +4,7 @@ import { ProductTeaserGrid } from "@/components/ProductTeaserGrid";
 import { UpdatesPreview } from "@/components/UpdatesPreview";
 import { homeIntro, productCategories, updatesPreview } from "@/data/site";
 import { siteImages } from "@/data/images";
+import { PartnerSection } from "@/components/PartnerSection";
 
 export default function Home() {
   return (
@@ -37,6 +38,8 @@ export default function Home() {
       </EditorialIntro>
 
       <ProductTeaserGrid categories={productCategories} />
+
+      <PartnerSection />
 
       <UpdatesPreview updates={updatesPreview} />
     </main>
