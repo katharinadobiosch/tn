@@ -30,7 +30,7 @@ export default function KontaktPage() {
           <h2 className="font-serif text-4xl">Anrufen</h2>
           <a
             href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
-            className="mt-6 block text-lg underline underline-offset-4"
+            className="mt-6 inline-block border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
           >
             {siteInfo.phone}
           </a>
@@ -53,7 +53,7 @@ export default function KontaktPage() {
           <h2 className="font-serif text-4xl">Schreiben</h2>
           <a
             href={`mailto:${siteInfo.email}`}
-            className="mt-6 block text-lg underline underline-offset-4"
+            className="mt-6 inline-block border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
           >
             {siteInfo.email}
           </a>
@@ -79,7 +79,7 @@ export default function KontaktPage() {
               href="https://www.instagram.com/talbrennerei_neufra/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-lg underline underline-offset-4 transition-colors duration-200 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="block w-fit border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               Instagram
             </a>
@@ -88,7 +88,7 @@ export default function KontaktPage() {
               href="https://www.facebook.com/p/Talbrennerei-Neufra-100070884354091/?locale=de_DE"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-lg underline underline-offset-4 transition-colors duration-200 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="block w-fit border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               Facebook
             </a>
@@ -96,47 +96,31 @@ export default function KontaktPage() {
         </article>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-10 bg-[#24231F] p-8 text-[#F7F4EE] md:grid-cols-[0.8fr_1.2fr] md:p-12">
-          <div>
-            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#B8C0A6]">
-              Anfrage
-            </p>
-            <h2 className="font-serif text-4xl">Nachricht senden</h2>
-            <p className="mt-6 leading-7 text-white/70">
-              Das Formular ist aktuell als Layout vorbereitet. Die technische
-              Anbindung ergänzen wir später.
-            </p>
-          </div>
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="border-t border-[#24231F]/15 pt-12">
+          <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
+            Anfrage
+          </p>
 
-          <form className="space-y-4">
-            <input
-              type="text"
-              placeholder="Name"
-              className="w-full border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
-            />
-            <input
-              type="email"
-              placeholder="E-Mail"
-              className="w-full border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
-            />
-            <input
-              type="text"
-              placeholder="Betreff"
-              className="w-full border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
-            />
-            <textarea
-              placeholder="Ihre Nachricht"
-              rows={6}
-              className="w-full border border-white/20 bg-transparent px-4 py-3 text-white placeholder:text-white/50"
-            />
-            <button
-              type="button"
-              className="border border-[#B8C0A6] px-6 py-3 text-sm text-[#B8C0A6]"
+          <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-5xl">
+            Sie haben Fragen zu Produkten, Verkostungen oder Verfügbarkeit?
+          </h2>
+
+          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
+            <a
+              href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
+              className="inline-flex items-center justify-center bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#B87935] active:bg-[#8F5C29] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
-              Nachricht abschicken
-            </button>
-          </form>
+              Jetzt anrufen
+            </a>
+
+            <a
+              href={`mailto:${siteInfo.email}`}
+              className="inline-flex items-center justify-center border border-[#B87935]/50 px-6 py-3 text-sm text-[#1F2F20] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/45 active:border-[#8F5C29] active:bg-[#EAD6BD]/65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
+              E-Mail schreiben
+            </a>
+          </div>
         </div>
       </section>
     </main>
