@@ -3,7 +3,7 @@ import Link from "next/link";
 type ButtonLinkProps = {
   href: string;
   children: React.ReactNode;
-  variant?: "primary" | "secondary" | "dark";
+  variant?: "primary" | "secondary" | "dark" | "light";
 };
 
 export function ButtonLink({
@@ -19,6 +19,8 @@ export function ButtonLink({
     secondary:
       "border border-[#B87935]/50 text-[#1F2F20] hover:border-[#B87935] hover:bg-[#EAD6BD]/45 active:border-[#8F5C29] active:bg-[#EAD6BD]/65",
     dark: "border border-[#B8C0A6] text-[#B8C0A6] hover:bg-[#B8C0A6] hover:text-[#24231F] active:bg-white active:text-[#24231F]",
+    light:
+      "bg-[#F7F4EE] text-[#1F2F20] hover:bg-[#EAD6BD] active:bg-[#D8D2C6]",
   };
 
   return (

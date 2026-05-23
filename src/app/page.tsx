@@ -14,6 +14,7 @@ export default function Home() {
         title={homeIntro.title}
         text={homeIntro.text}
         image={siteImages.hero}
+        variant="dark"
         actions={[
           { label: "Produkte entdecken", href: "/produkte" },
           {
