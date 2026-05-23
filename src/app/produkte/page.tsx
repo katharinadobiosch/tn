@@ -45,7 +45,7 @@ const productCards = [
 
 export default function ProduktePage() {
   return (
-    <main className="bg-[#F7F4EE] text-[#24231F]">
+    <main className="bg-[#FAF9F6] text-[#24231F]">
       <section className="mx-auto max-w-7xl px-6 pb-24 pt-12">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Produkte

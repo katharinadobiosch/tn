@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f4ee;
+  --background: #faf9f6;
   --foreground: #24231f;
   --accent-green: #1f2f20;
   --accent-muted-green: #526247;
@@ -30,7 +30,7 @@ body {
 }
 
 :root {
-  --background: #f7f4ee;
+  --background: #faf9f6;
   --foreground: #24231f;
 }
 

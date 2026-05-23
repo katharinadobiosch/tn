@@ -2,7 +2,7 @@ import { siteInfo } from "@/data/site";
 
 export function Footer() {
   return (
-    <footer className="border-t border-neutral-200 bg-[#F7F4EE] px-6 py-10 text-sm">
+    <footer className="border-t border-[#1F2F20]/20 bg-white px-6 py-8 text-sm">
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
           <strong>Öffnungszeiten</strong>
@@ -17,7 +17,12 @@ export function Footer() {
         <div>
           <strong>Kontakt</strong>
           <p>{siteInfo.phone}</p>
-          <p>{siteInfo.email}</p>
+          <a
+            href={`mailto:${siteInfo.email}`}
+            className="mt-1 block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+          >
+            {siteInfo.email}
+          </a>
         </div>
 
         <div>
@@ -29,7 +34,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Talbrennerei Neufra auf Instagram öffnen"
-              className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               <svg
                 aria-hidden="true"
@@ -58,7 +63,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Talbrennerei Neufra auf Facebook öffnen"
-              className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               <svg
                 aria-hidden="true"

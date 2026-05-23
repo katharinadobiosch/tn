@@ -15,7 +15,7 @@ export default async function NewUpdatePage() {
   }
 
   return (
-    <main className="bg-[#F7F4EE] px-6 py-24 text-[#24231F]">
+    <main className="bg-[#FAF9F6] px-6 py-24 text-[#24231F]">
       <section className="mx-auto max-w-3xl">
         <Link href="/admin" className="text-sm underline underline-offset-4">
           Zurück zur Übersicht

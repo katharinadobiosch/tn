@@ -52,11 +52,11 @@ export function PartnerSection() {
         </p>
       </div>
 
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-x-10 gap-y-8 border-t border-[#1F2F20]/12 sm:grid-cols-2 lg:grid-cols-4">
         {partners.map((partner) => (
           <article
             key={partner.name}
-            className="flex min-h-40 items-center justify-center border border-[#24231F]/15 bg-white/40 p-8 transition-colors duration-200 hover:border-[#B87935]/60 hover:bg-[#EAD6BD]/25"
+            className="flex min-h-36 items-center justify-center border-t border-transparent px-6 py-8 transition-colors duration-200 hover:border-[#B87935]/70 hover:bg-white/35"
           >
             <Image
               src={partner.logo}

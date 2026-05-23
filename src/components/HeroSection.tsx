@@ -28,7 +28,7 @@ export function HeroSection({
   const isDark = variant === "dark";
 
   const sectionClasses = isDark
-    ? "bg-[#1F2F20] text-[#F7F4EE]"
+    ? "bg-[#1F2F20] text-[#FAF9F6]"
     : "bg-transparent text-[#24231F]";
 
   const eyebrowClasses = isDark

@@ -5,7 +5,7 @@ import { navigation } from "@/data/navigation";
 
 export function Header() {
   return (
-    <header className="border-b border-neutral-200 bg-[#F7F4EE]">
+    <header className="border-b border-neutral-200 bg-[#FAF9F6]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link href="/">
           <Image

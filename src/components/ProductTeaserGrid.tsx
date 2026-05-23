@@ -37,7 +37,7 @@ export function ProductTeaserGrid({ categories }: ProductTeaserGridProps) {
           <Link
             key={category.title}
             href={category.href}
-            className="border border-[#24231F]/15 bg-[#EAD6BD]/15 p-8 transition-colors duration-200 hover:border-[#B87935]/60 hover:bg-[#EAD6BD]/35 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            className="border-t border-[#1F2F20]/18 bg-transparent p-8 transition-colors duration-200 hover:border-[#B87935]/70 hover:bg-white/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
           >
             <span className="mb-6 block h-px w-10 bg-[#B87935]" />
             <h3 className="font-serif text-3xl">{category.title}</h3>

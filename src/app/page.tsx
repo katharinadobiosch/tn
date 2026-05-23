@@ -8,7 +8,7 @@ import { PartnerSection } from "@/components/PartnerSection";
 
 export default function Home() {
   return (
-    <main className="bg-[#F7F4EE] text-[#24231F]">
+    <main className="bg-[#FAF9F6] text-[#24231F]">
       <HeroSection
         eyebrow={homeIntro.eyebrow}
         title={homeIntro.title}

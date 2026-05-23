@@ -2,7 +2,7 @@ import { login } from "@/app/actions/authActions";
 
 export default function LoginPage() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-[#F7F4EE] px-6 text-[#24231F]">
+    <main className="flex min-h-screen items-center justify-center bg-[#FAF9F6] px-6 text-[#24231F]">
       <section className="w-full max-w-md">
         <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
           Admin

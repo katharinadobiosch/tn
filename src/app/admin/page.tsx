@@ -26,7 +26,7 @@ export default async function AdminPage() {
   }
 
   return (
-    <main className="bg-[#F7F4EE] px-6 py-24 text-[#24231F]">
+    <main className="bg-[#FAF9F6] px-6 py-24 text-[#24231F]">
       <section className="mx-auto max-w-5xl">
         <div className="mb-12 flex items-center justify-between gap-8">
           <div>
