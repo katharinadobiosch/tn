@@ -1,4 +1,5 @@
 import { siteInfo } from "@/data/site";
+import { RevealText } from "@/components/RevealText";
 
 export default function KontaktPage() {
   return (
@@ -8,9 +9,11 @@ export default function KontaktPage() {
           Kontakt
         </p>
 
-        <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
-          Besuchen Sie uns im Hofladen.
-        </h1>
+        <RevealText>
+          <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
+            Besuchen Sie uns im Hofladen.
+          </h1>
+        </RevealText>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
           Für Fragen zu Produkten, Verfügbarkeit, Verkostungen oder zur

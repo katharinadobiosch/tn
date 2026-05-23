@@ -1,3 +1,5 @@
+import { RevealText } from "@/components/RevealText";
+
 type EditorialIntroProps = {
   eyebrow?: string;
   title: string;
@@ -18,9 +20,11 @@ export function EditorialIntro({
           </p>
         )}
 
-        <h2 className="font-serif text-4xl leading-tight md:text-5xl">
-          {title}
-        </h2>
+        <RevealText>
+          <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+            {title}
+          </h2>
+        </RevealText>
       </div>
 
       <div className="max-w-2xl space-y-6 text-lg leading-8 text-[#555149]">

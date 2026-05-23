@@ -1,3 +1,5 @@
+import { RevealText } from "@/components/RevealText";
+
 type UpdatePreview = {
   title: string;
   text: string;
@@ -16,9 +18,11 @@ export function UpdatesPreview({ updates }: UpdatesPreviewProps) {
             Aktuelles
           </p>
 
-          <h2 className="font-serif text-4xl text-[#EAD6BD] md:text-5xl">
-            Neuigkeiten aus Hofladen und Brennerei.
-          </h2>
+          <RevealText>
+            <h2 className="font-serif text-4xl text-[#EAD6BD] md:text-5xl">
+              Neuigkeiten aus Hofladen und Brennerei.
+            </h2>
+          </RevealText>
         </div>
 
         <div className="divide-y divide-[#B87935]/30">

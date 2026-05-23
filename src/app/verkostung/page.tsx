@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RevealText } from "@/components/RevealText";
 import { siteImages } from "@/data/images";
 
 export default function VerkostungPage() {
@@ -10,9 +11,11 @@ export default function VerkostungPage() {
             Verkostung
           </p>
 
-          <h1 className="font-serif text-5xl leading-tight md:text-7xl">
-            Brennerstüble für Verkostungen und Feiern.
-          </h1>
+          <RevealText>
+            <h1 className="font-serif text-5xl leading-tight md:text-7xl">
+              Brennerstüble für Verkostungen und Feiern.
+            </h1>
+          </RevealText>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
             In unserem Brennerstüble können Sie Schnaps- und Likörverkostungen

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
+import { RevealText } from "@/components/RevealText";
 
 type HeroAction = {
   label: string;
@@ -23,9 +24,11 @@ export function HeroSection({ eyebrow, title, text, image, actions }: HeroSectio
           {eyebrow}
         </p>
 
-        <h1 className="max-w-3xl font-serif text-5xl leading-[1.02] md:text-7xl">
-          {title}
-        </h1>
+        <RevealText>
+          <h1 className="max-w-3xl font-serif text-5xl leading-[1.02] md:text-7xl">
+            {title}
+          </h1>
+        </RevealText>
 
         <p className="mt-8 max-w-xl text-lg leading-8 text-[#555149]">{text}</p>
         {actions && (

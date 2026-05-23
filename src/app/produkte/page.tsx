@@ -8,6 +8,7 @@ import {
   wildProducts,
 } from "@/data/products";
 import { ProductList } from "@/components/ProductList";
+import { RevealText } from "@/components/RevealText";
 
 const productCards = [
   {
@@ -49,9 +50,11 @@ export default function ProduktePage() {
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Produkte
         </p>
-        <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
-          Brände, Liköre, Honig, Fruchtaufstriche und Saisonales.
-        </h1>
+        <RevealText>
+          <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
+            Brände, Liköre, Honig, Fruchtaufstriche und Saisonales.
+          </h1>
+        </RevealText>
         <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
           In unserer modernen Brennerei verarbeiten wir ausschließlich
           Obstsorten von Streuobstwiesen am Fuße der Schwäbischen Alb. Auf

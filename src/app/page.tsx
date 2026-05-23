@@ -4,7 +4,6 @@ import { ProductTeaserGrid } from "@/components/ProductTeaserGrid";
 import { UpdatesPreview } from "@/components/UpdatesPreview";
 import { homeIntro, productCategories, updatesPreview } from "@/data/site";
 import { siteImages } from "@/data/images";
-import { FadeInSection } from "@/components/FadeInSection";
 
 export default function Home() {
   return (
@@ -24,29 +23,22 @@ export default function Home() {
         ]}
       />
 
-      <FadeInSection direction="left">
-        <EditorialIntro title="Von Streuobstwiesen, Hofladen und echter Handarbeit.">
-          <p>
-            Die Talbrennerei Neufra verbindet traditionelle Verarbeitung mit
-            regionalen Rohstoffen. Aus Obst, Honig und weiteren Produkten
-            entstehen Spezialitäten, die eng mit der Umgebung und den
-            Jahreszeiten verbunden sind.
-          </p>
-          <p>
-            Neben Bränden und Likören gibt es im Hofladen auch Honig,
-            Fruchtaufstriche, Apfelsaft, Wildspezialitäten und saisonale
-            Produkte.
-          </p>
-        </EditorialIntro>
-      </FadeInSection>
+      <EditorialIntro title="Von Streuobstwiesen, Hofladen und echter Handarbeit.">
+        <p>
+          Die Talbrennerei Neufra verbindet traditionelle Verarbeitung mit
+          regionalen Rohstoffen. Aus Obst, Honig und weiteren Produkten
+          entstehen Spezialitäten, die eng mit der Umgebung und den Jahreszeiten
+          verbunden sind.
+        </p>
+        <p>
+          Neben Bränden und Likören gibt es im Hofladen auch Honig,
+          Fruchtaufstriche, Apfelsaft, Wildspezialitäten und saisonale Produkte.
+        </p>
+      </EditorialIntro>
 
-      <FadeInSection delay={0.3} direction="right">
-        <ProductTeaserGrid categories={productCategories} />
-      </FadeInSection>
+      <ProductTeaserGrid categories={productCategories} />
 
-      <FadeInSection delay={0.3} direction="left">
-        <UpdatesPreview updates={updatesPreview} />
-      </FadeInSection>
+      <UpdatesPreview updates={updatesPreview} />
     </main>
   );
 }

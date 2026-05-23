@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RevealText } from "@/components/RevealText";
 import { supabase } from "@/lib/supabase";
 import type { Update } from "@/types/update";
 
@@ -20,9 +21,11 @@ export default async function AktuellesPage() {
           Aktuelles
         </p>
 
-        <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
-          Neuigkeiten aus Hofladen und Brennerei.
-        </h1>
+        <RevealText>
+          <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
+            Neuigkeiten aus Hofladen und Brennerei.
+          </h1>
+        </RevealText>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
           Hier finden Sie aktuelle Hinweise zu saisonalen Produkten,

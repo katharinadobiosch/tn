@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RevealText } from "@/components/RevealText";
 
 type ProductCategory = {
   title: string;
@@ -18,7 +19,11 @@ export function ProductTeaserGrid({ categories }: ProductTeaserGridProps) {
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Sortiment
           </p>
-          <h2 className="font-serif text-4xl md:text-5xl">Unsere Produkte</h2>
+          <RevealText direction="right">
+            <h2 className="font-serif text-4xl md:text-5xl">
+              Unsere Produkte
+            </h2>
+          </RevealText>
         </div>
 
         <Link

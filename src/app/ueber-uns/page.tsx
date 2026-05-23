@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { RevealText } from "@/components/RevealText";
 import { siteImages } from "@/data/images";
 
 export default function UeberUnsPage() {
@@ -10,9 +11,11 @@ export default function UeberUnsPage() {
             Über uns
           </p>
 
-          <h1 className="font-serif text-5xl leading-tight md:text-7xl">
-            Eine Brennerei mit Geschichte.
-          </h1>
+          <RevealText>
+            <h1 className="font-serif text-5xl leading-tight md:text-7xl">
+              Eine Brennerei mit Geschichte.
+            </h1>
+          </RevealText>
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
             Was mit Streuobstwiesen begann, wird heute mit Erfahrung, Handarbeit
@@ -42,9 +45,11 @@ export default function UeberUnsPage() {
         </div>
 
         <div className="space-y-6 text-lg leading-8 text-[#555149]">
-          <h2 className="font-serif text-4xl leading-tight text-[#24231F] md:text-5xl">
-            Die Geschichte der Talbrennerei beginnt mit einer Streuobstwiese.
-          </h2>
+          <RevealText direction="right">
+            <h2 className="font-serif text-4xl leading-tight text-[#24231F] md:text-5xl">
+              Die Geschichte der Talbrennerei beginnt mit einer Streuobstwiese.
+            </h2>
+          </RevealText>
 
           <div className="space-y-6 text-lg leading-8 text-[#555149]">
             <p>
