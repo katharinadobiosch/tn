@@ -4,7 +4,7 @@ import { RevealText } from "@/components/RevealText";
 export default function KontaktPage() {
   return (
     <main className="bg-[#F7F4EE] text-[#24231F]">
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 pb-16 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Kontakt
         </p>
@@ -22,7 +22,7 @@ export default function KontaktPage() {
         </p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 md:grid-cols-2 lg:grid-cols-4">
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 pb-24 md:grid-cols-2 lg:grid-cols-4">
         <article className="border-t border-[#24231F]/15 pt-8">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Telefon
@@ -74,54 +74,54 @@ export default function KontaktPage() {
           </p>
           <h2 className="font-serif text-4xl">Folgen</h2>
 
-          <div className="mt-6 space-y-3">
+          <div className="mt-6 flex gap-4">
             <a
               href="https://www.instagram.com/talbrennerei_neufra/"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-fit border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              aria-label="Talbrennerei Neufra auf Instagram öffnen"
+              className="flex h-11 w-11 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
-              Instagram
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="0.8"
+                  fill="currentColor"
+                  stroke="none"
+                />
+              </svg>
             </a>
 
             <a
               href="https://www.facebook.com/p/Talbrennerei-Neufra-100070884354091/?locale=de_DE"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-fit border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              aria-label="Talbrennerei Neufra auf Facebook öffnen"
+              className="flex h-11 w-11 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
-              Facebook
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="currentColor"
+              >
+                <path d="M14.5 8.5V7.2c0-.6.4-1 1-1h1.3V3.4c-.6-.1-1.5-.2-2.4-.2-2.4 0-4 1.5-4 4.2v1.1H7.8v3.1h2.6V21h3.3v-9.4h2.7l.4-3.1h-3.1Z" />
+              </svg>
             </a>
           </div>
         </article>
-      </section>
-
-      <section className="mx-auto max-w-7xl px-6 pb-24">
-        <div className="border-t border-[#24231F]/15 pt-12">
-          <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
-            Anfrage
-          </p>
-
-          <h2 className="max-w-3xl font-serif text-4xl leading-tight md:text-5xl">
-            Sie haben Fragen zu Produkten, Verkostungen oder Verfügbarkeit?
-          </h2>
-
-          <div className="mt-8 flex flex-col gap-4 sm:flex-row">
-            <a
-              href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
-              className="inline-flex items-center justify-center bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#B87935] active:bg-[#8F5C29] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-            >
-              Jetzt anrufen
-            </a>
-
-            <a
-              href={`mailto:${siteInfo.email}`}
-              className="inline-flex items-center justify-center border border-[#B87935]/50 px-6 py-3 text-sm text-[#1F2F20] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/45 active:border-[#8F5C29] active:bg-[#EAD6BD]/65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-            >
-              E-Mail schreiben
-            </a>
-          </div>
-        </div>
       </section>
     </main>
   );

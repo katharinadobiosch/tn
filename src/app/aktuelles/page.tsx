@@ -16,17 +16,16 @@ export default async function AktuellesPage() {
 
   return (
     <main className="bg-[#F7F4EE] text-[#24231F]">
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 pb-16 pt-24">
+        
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Aktuelles
         </p>
-
         <RevealText>
           <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
             Neuigkeiten aus Hofladen und Brennerei.
           </h1>
         </RevealText>
-
         <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
           Hier finden Sie aktuelle Hinweise zu saisonalen Produkten,
           Verfügbarkeiten, Öffnungszeiten und Veranstaltungen.

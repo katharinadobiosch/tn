@@ -13,16 +13,14 @@ type ProductTeaserGridProps = {
 
 export function ProductTeaserGrid({ categories }: ProductTeaserGridProps) {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 pb-16 pt-24">
       <div className="mb-12 flex items-end justify-between gap-8">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Sortiment
           </p>
           <RevealText direction="right">
-            <h2 className="font-serif text-4xl md:text-5xl">
-              Unsere Produkte
-            </h2>
+            <h2 className="font-serif text-4xl md:text-5xl">Unsere Produkte</h2>
           </RevealText>
         </div>
 

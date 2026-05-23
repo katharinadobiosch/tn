@@ -34,7 +34,7 @@ const partners = [
 
 export function PartnerSection() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 pb-16 pt-24">
       <div className="mb-12 max-w-3xl">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Partner
