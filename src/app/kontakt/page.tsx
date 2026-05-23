@@ -22,7 +22,7 @@ export default function KontaktPage() {
         </p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 md:grid-cols-3">
+      <section className="mx-auto grid max-w-7xl gap-8 px-6 py-20 md:grid-cols-2 lg:grid-cols-4">
         <article className="border-t border-[#24231F]/15 pt-8">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Telefon
@@ -41,12 +41,11 @@ export default function KontaktPage() {
             )}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-block bg-[#1F2F20] px-6 py-3 text-sm text-white"
+            className="mt-6 inline-flex items-center justify-center bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#B87935] active:bg-[#8F5C29] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
           >
             Auf WhatsApp schreiben
           </a>
         </article>
-
         <article className="border-t border-[#24231F]/15 pt-8">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             E-Mail
@@ -59,7 +58,6 @@ export default function KontaktPage() {
             {siteInfo.email}
           </a>
         </article>
-
         <article className="border-t border-[#24231F]/15 pt-8">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Öffnungszeiten
@@ -69,6 +67,32 @@ export default function KontaktPage() {
             {siteInfo.openingHours}
           </p>
           <p className="mt-2 leading-7 text-[#555149]">{siteInfo.address}</p>
+        </article>
+        <article className="border-t border-[#24231F]/15 pt-8">
+          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+            Social Media
+          </p>
+          <h2 className="font-serif text-4xl">Folgen</h2>
+
+          <div className="mt-6 space-y-3">
+            <a
+              href="https://www.instagram.com/talbrennerei_neufra/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-lg underline underline-offset-4 transition-colors duration-200 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://www.facebook.com/p/Talbrennerei-Neufra-100070884354091/?locale=de_DE"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-lg underline underline-offset-4 transition-colors duration-200 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
+              Facebook
+            </a>
+          </div>
         </article>
       </section>
 
