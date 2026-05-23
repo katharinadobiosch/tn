@@ -5,7 +5,7 @@ import { siteImages } from "@/data/images";
 export default function VerkostungPage() {
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
-      <section className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-24 md:grid-cols-[0.9fr_1.1fr] md:items-center">
+      <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Verkostung
@@ -34,7 +34,6 @@ export default function VerkostungPage() {
           />
         </div>
       </section>
-
       <div className="relative min-h-[420px] overflow-hidden bg-[#D8D2C6]">
         <Image
           src={siteImages.tasting.detail}
@@ -43,7 +42,6 @@ export default function VerkostungPage() {
           className="object-cover"
         />
       </div>
-
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
         <article className="border-t border-[#24231F]/15 pt-10">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
