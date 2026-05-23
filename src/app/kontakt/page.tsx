@@ -4,7 +4,7 @@ import { RevealText } from "@/components/RevealText";
 export default function KontaktPage() {
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
-      <section className="mx-auto max-w-7xl px-6 pb-16 pt-24">
+      <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Kontakt
         </p>

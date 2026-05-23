@@ -5,7 +5,7 @@ import { siteInfo } from "@/data/site";
 export default function HofladenPage() {
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
-      <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 py-24 md:grid-cols-[1fr_0.9fr]">
+      <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Hofladen
