@@ -61,25 +61,57 @@ export default function ProduktePage() {
           dieser Basis entstehen feinste Destillate und sortenreine
           Spezialitäten.
         </p>
+        <div className="mt-10 grid max-w-5xl gap-6 border-l border-[#B87935] pl-6 md:grid-cols-3">
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
+              Herkunft
+            </p>
+            <p className="mt-3 leading-7 text-[#555149]">
+              Obst von Streuobstwiesen am Fuß der Schwäbischen Alb.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
+              Handwerk
+            </p>
+            <p className="mt-3 leading-7 text-[#555149]">
+              Verarbeitung mit Sorgfalt, Erfahrung und traditioneller
+              Brennkunst.
+            </p>
+          </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
+              Saison
+            </p>
+            <p className="mt-3 leading-7 text-[#555149]">
+              Viele Produkte sind saisonal und je nach Verfügbarkeit erhältlich.
+            </p>
+          </div>
+        </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24 pt-12">
+      <section className="mx-auto max-w-7xl px-6 pb-24 pt-8">
         <p className="mb-6 text-xs uppercase tracking-[0.28em] text-[#526247]">
           Sortiment
         </p>
         <div className="grid items-stretch gap-6 md:grid-cols-3">
           {productCards.map((product) => (
-            <article key={product.title} className="group flex h-full flex-col">
+            <article
+              key={product.title}
+              className="group flex h-full flex-col overflow-hidden border border-[#1F2F20]/10 bg-white transition-colors duration-200 hover:border-[#B87935]/60"
+            >
               <div className="relative h-72 overflow-hidden bg-[#D8D2C6]">
                 <Image
                   src={product.image}
                   alt={product.title}
                   fill
-                  className="object-cover transition duration-500 group-hover:scale-105"
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
                 />
               </div>
 
-              <div className="flex flex-1 flex-col border border-t-0 border-[#24231F]/10 bg-white/30 p-6">
+              <div className="flex flex-1 flex-col p-6">
                 <h2 className="font-serif text-3xl">{product.title}</h2>
                 <p className="mt-4 leading-7 text-[#555149]">{product.text}</p>
               </div>
