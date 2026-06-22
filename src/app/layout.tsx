@@ -1,4 +1,5 @@
-import { Cormorant_Garamond, Inter } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
+
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
@@ -10,10 +11,10 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const cormorant = Cormorant_Garamond({
+const raleway = Raleway({
   subsets: ["latin"],
-  variable: "--font-cormorant",
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
 });
 
 const geistSans = Geist({
@@ -40,9 +41,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} ${raleway.variable} h-full antialiased`}
     >
-      <body className={`${inter.variable} ${cormorant.variable}`}>
+      <body className={`${inter.variable} ${raleway.variable}`}>
         {" "}
         <Header />
         {children}
