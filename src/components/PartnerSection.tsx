@@ -42,7 +42,7 @@ export function PartnerSection() {
           </p>
 
           <RevealText>
-            <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+            <h2 className="font-heading text-4xl leading-tight md:text-5xl">
               Regionale Partner und befreundete Betriebe.
             </h2>
           </RevealText>

@@ -25,7 +25,7 @@ export default async function NewUpdatePage() {
           Admin
         </p>
 
-        <h1 className="font-serif text-5xl">Neuer Beitrag</h1>
+        <h1 className="font-heading text-5xl">Neuer Beitrag</h1>
 
         <form action={createUpdate} className="mt-12 space-y-6">
           <div>

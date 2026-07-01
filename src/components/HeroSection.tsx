@@ -51,7 +51,7 @@ export function HeroSection({
           </p>
 
           <RevealText>
-            <h1 className="max-w-3xl font-serif text-5xl leading-[1.02] md:text-7xl">
+            <h1 className="max-w-3xl font-heading text-5xl leading-[1.02] md:text-7xl">
               {title}
             </h1>
           </RevealText>

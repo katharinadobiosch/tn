@@ -12,7 +12,7 @@ export default function UeberUnsPage() {
           </p>
 
           <RevealText>
-            <h1 className="font-serif text-5xl leading-tight md:text-7xl">
+            <h1 className="font-heading text-5xl leading-tight md:text-7xl">
               Eine Brennerei mit Geschichte.
             </h1>
           </RevealText>
@@ -46,7 +46,7 @@ export default function UeberUnsPage() {
 
         <div className="space-y-6 text-lg leading-8 text-[#555149]">
           <RevealText direction="right">
-            <h2 className="font-serif text-4xl leading-tight text-[#24231F] md:text-5xl">
+            <h2 className="font-heading text-4xl leading-tight text-[#24231F] md:text-5xl">
               Die Geschichte der Talbrennerei beginnt mit einer Streuobstwiese.
             </h2>
           </RevealText>
@@ -77,7 +77,7 @@ export default function UeberUnsPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Kreislauf
           </p>
-          <h2 className="font-serif text-4xl">Nichts wird verschwendet.</h2>
+          <h2 className="font-heading text-4xl">Nichts wird verschwendet.</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             Produkte erster Klasse werden als Tafelobst im Hofladen vermarktet.
             Das übrige Obst kommt in die hauseigene Brennerei zur
@@ -90,7 +90,7 @@ export default function UeberUnsPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Handarbeit
           </p>
-          <h2 className="font-serif text-4xl">Schonende Ernte von Hand.</h2>
+          <h2 className="font-heading text-4xl">Schonende Ernte von Hand.</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             Die Obstbäume und Plantagen werden mit Begeisterung und Engagement
             gepflegt. Die Ernte erfolgt mit geschultem Auge und schonend von
@@ -103,16 +103,16 @@ export default function UeberUnsPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Im Haus
           </p>
-          <h2 className="font-serif text-4xl">Außerdem bei uns</h2>
+          <h2 className="font-heading text-4xl">Außerdem bei uns</h2>
 
           <div className="mt-8 grid gap-6 md:grid-cols-2">
             <article className="bg-white/40 p-8">
-              <h3 className="font-serif text-3xl">Home made by Uli Keck</h3>
+              <h3 className="font-heading text-3xl">Home made by Uli Keck</h3>
               <p className="mt-4 text-[#555149]">Deko für Ihr Zuhause.</p>
             </article>
 
             <article className="bg-white/40 p-8">
-              <h3 className="font-serif text-3xl">Sabine Daikeler</h3>
+              <h3 className="font-heading text-3xl">Sabine Daikeler</h3>
               <p className="mt-4 text-[#555149]">Motorsägenschnitzereien.</p>
             </article>
           </div>

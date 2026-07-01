@@ -33,7 +33,7 @@ export default async function AdminPage() {
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Admin
             </p>
-            <h1 className="font-serif text-5xl">Neuigkeiten verwalten</h1>
+            <h1 className="font-heading text-5xl">Neuigkeiten verwalten</h1>
           </div>
 
           <div className="flex gap-3">
@@ -86,7 +86,7 @@ export default async function AdminPage() {
                   {update.published ? "Veröffentlicht" : "Entwurf"}
                 </p>
 
-                <h2 className="mt-3 font-serif text-3xl">{update.title}</h2>
+                <h2 className="mt-3 font-heading text-3xl">{update.title}</h2>
 
                 <p className="mt-3 max-w-2xl text-[#555149]">
                   {update.content}

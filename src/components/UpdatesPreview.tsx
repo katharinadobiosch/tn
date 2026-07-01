@@ -16,7 +16,7 @@ export function UpdatesPreview({ updates }: UpdatesPreviewProps) {
             Aktuelles
           </p>
 
-          <h2 className="font-serif text-4xl text-[#FAF9F6] md:text-5xl">
+          <h2 className="font-heading text-4xl text-[#FAF9F6] md:text-5xl">
             Neuigkeiten aus Hofladen und Brennerei.
           </h2>
         </div>
@@ -24,7 +24,7 @@ export function UpdatesPreview({ updates }: UpdatesPreviewProps) {
         <div className="divide-y divide-[#B87935]/30">
           {updates.map((update) => (
             <article key={update.title} className="py-6 first:pt-0">
-              <h3 className="font-serif text-2xl text-[#FAF9F6]">
+              <h3 className="font-heading text-2xl text-[#FAF9F6]">
                 {update.title}
               </h3>
               <p className="mt-3 leading-7 text-white/70">{update.text}</p>

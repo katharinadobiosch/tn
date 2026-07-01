@@ -8,7 +8,7 @@ export default function LoginPage() {
           Admin
         </p>
 
-        <h1 className="font-serif text-5xl">Einloggen</h1>
+        <h1 className="font-heading text-5xl">Einloggen</h1>
 
         <form action={login} className="mt-10 space-y-5">
           <div>

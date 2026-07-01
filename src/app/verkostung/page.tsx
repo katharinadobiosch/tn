@@ -12,7 +12,7 @@ export default function VerkostungPage() {
           </p>
 
           <RevealText>
-            <h1 className="font-serif text-5xl leading-tight md:text-7xl">
+            <h1 className="font-heading text-5xl leading-tight md:text-7xl">
               Brennerstüble für Verkostungen und Feiern.
             </h1>
           </RevealText>
@@ -47,7 +47,7 @@ export default function VerkostungPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Verkostung
           </p>
-          <h2 className="font-serif text-4xl">Gemeinsam genießen.</h2>
+          <h2 className="font-heading text-4xl">Gemeinsam genießen.</h2>
 
           <p className="mt-6 leading-7 text-[#555149]">
             Zusammen mit Freunden, Kollegen oder Gruppen verbringen Sie schöne
@@ -65,7 +65,7 @@ export default function VerkostungPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Vermietung
           </p>
-          <h2 className="font-serif text-4xl">Location Brennerstüble.</h2>
+          <h2 className="font-heading text-4xl">Location Brennerstüble.</h2>
 
           <p className="mt-6 leading-7 text-[#555149]">
             Das moderne, gut ausgestattete Brennerstüble bietet für ca. 60

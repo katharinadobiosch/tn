@@ -10,7 +10,7 @@ export default function KontaktPage() {
         </p>
 
         <RevealText>
-          <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
+          <h1 className="max-w-5xl font-heading text-5xl leading-tight md:text-7xl">
             Besuchen Sie uns im Hofladen.
           </h1>
         </RevealText>
@@ -27,7 +27,7 @@ export default function KontaktPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Telefon
           </p>
-          <h2 className="font-serif text-4xl">Anrufen</h2>
+          <h2 className="font-heading text-4xl">Anrufen</h2>
           <a
             href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
             className="mt-6 inline-block border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
@@ -50,7 +50,7 @@ export default function KontaktPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             E-Mail
           </p>
-          <h2 className="font-serif text-4xl">Schreiben</h2>
+          <h2 className="font-heading text-4xl">Schreiben</h2>
           <a
             href={`mailto:${siteInfo.email}`}
             className="mt-6 inline-block border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
@@ -62,7 +62,7 @@ export default function KontaktPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Öffnungszeiten
           </p>
-          <h2 className="font-serif text-4xl">Vor Ort</h2>
+          <h2 className="font-heading text-4xl">Vor Ort</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             {siteInfo.openingHours}
           </p>
@@ -72,7 +72,7 @@ export default function KontaktPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Social Media
           </p>
-          <h2 className="font-serif text-4xl">Folgen</h2>
+          <h2 className="font-heading text-4xl">Folgen</h2>
 
           <div className="mt-6 flex gap-4">
             <a

@@ -11,7 +11,7 @@ export default function HofladenPage() {
             Hofladen
           </p>
 
-          <h1 className="max-w-4xl font-serif text-5xl leading-tight md:text-7xl">
+          <h1 className="max-w-4xl font-heading text-5xl leading-tight md:text-7xl">
             Regionale Spezialitäten direkt vor Ort.
           </h1>
 
@@ -36,7 +36,7 @@ export default function HofladenPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Öffnungszeiten
           </p>
-          <h2 className="font-serif text-4xl">Vorbeikommen</h2>
+          <h2 className="font-heading text-4xl">Vorbeikommen</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             {siteInfo.openingHours}
           </p>
@@ -46,7 +46,7 @@ export default function HofladenPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Adresse
           </p>
-          <h2 className="font-serif text-4xl">In Neufra</h2>
+          <h2 className="font-heading text-4xl">In Neufra</h2>
           <p className="mt-6 leading-7 text-[#555149]">{siteInfo.address}</p>
         </article>
 
@@ -54,7 +54,7 @@ export default function HofladenPage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Anfrage
           </p>
-          <h2 className="font-serif text-4xl">Kontakt</h2>
+          <h2 className="font-heading text-4xl">Kontakt</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             Fragen zur Verfügbarkeit saisonaler Produkte beantworten wir gerne
             telefonisch oder per E-Mail.

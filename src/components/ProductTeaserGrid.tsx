@@ -20,7 +20,9 @@ export function ProductTeaserGrid({ categories }: ProductTeaserGridProps) {
             Sortiment
           </p>
           <RevealText direction="right">
-            <h2 className="font-serif text-4xl md:text-5xl">Unsere Produkte</h2>
+            <h2 className="font-heading text-4xl md:text-5xl">
+              Unsere Produkte
+            </h2>
           </RevealText>
         </div>
 
@@ -40,7 +42,7 @@ export function ProductTeaserGrid({ categories }: ProductTeaserGridProps) {
             className="border-t border-[#1F2F20]/18 bg-transparent p-8 transition-colors duration-200 hover:border-[#B87935]/70 hover:bg-white/45 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
           >
             <span className="mb-6 block h-px w-10 bg-[#B87935]" />
-            <h3 className="font-serif text-3xl">{category.title}</h3>
+            <h3 className="font-heading text-3xl">{category.title}</h3>
             <p className="mt-5 leading-7 text-[#555149]">{category.text}</p>
           </Link>
         ))}

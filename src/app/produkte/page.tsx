@@ -51,7 +51,7 @@ export default function ProduktePage() {
           Produkte
         </p>
         <RevealText>
-          <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
+          <h1 className="max-w-5xl font-heading text-5xl leading-tight md:text-7xl">
             Brände, Liköre, Honig, Fruchtaufstriche und Saisonales.
           </h1>
         </RevealText>
@@ -112,7 +112,7 @@ export default function ProduktePage() {
               </div>
 
               <div className="flex flex-1 flex-col p-6">
-                <h2 className="font-serif text-3xl">{product.title}</h2>
+                <h2 className="font-heading text-3xl">{product.title}</h2>
                 <p className="mt-4 leading-7 text-[#555149]">{product.text}</p>
               </div>
             </article>
@@ -125,7 +125,7 @@ export default function ProduktePage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Brennerei
           </p>
-          <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+          <h2 className="font-heading text-4xl leading-tight md:text-5xl">
             Schnaps, Liköre & Spirituosen
           </h2>
           <p className="mt-6 leading-7 text-[#555149]">
@@ -142,7 +142,7 @@ export default function ProduktePage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Eigene Imkerei
           </p>
-          <h2 className="font-serif text-4xl">Honig</h2>
+          <h2 className="font-heading text-4xl">Honig</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             Unser nach alter Tradition geschleuderter Honig stammt aus eigener
             Imkerei. Die Bienenvölker werden von erfahrenem und geschultem
@@ -154,7 +154,7 @@ export default function ProduktePage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Aus Früchten bester Qualität
           </p>
-          <h2 className="font-serif text-4xl">Süße Fruchtaufstriche</h2>
+          <h2 className="font-heading text-4xl">Süße Fruchtaufstriche</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             Unsere Fruchtaufstriche werden mit Sorgfalt hergestellt und sind in
             verschiedenen Größen und Varianten erhältlich.
@@ -171,7 +171,7 @@ export default function ProduktePage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Saisonales
           </p>
-          <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+          <h2 className="font-heading text-4xl leading-tight md:text-5xl">
             Obst der Saison
           </h2>
           <p className="mt-6 leading-7 text-[#555149]">
@@ -188,7 +188,7 @@ export default function ProduktePage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Außerdem
           </p>
-          <h2 className="font-serif text-4xl">Weitere Produkte</h2>
+          <h2 className="font-heading text-4xl">Weitere Produkte</h2>
 
           <div className="mt-8">
             <ProductList items={additionalProducts} />
@@ -199,7 +199,7 @@ export default function ProduktePage() {
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Damwild
           </p>
-          <h2 className="font-serif text-4xl">Wildspezialitäten</h2>
+          <h2 className="font-heading text-4xl">Wildspezialitäten</h2>
           <p className="mt-6 leading-7 text-[#555149]">
             In unserem Damwild-Gehege auf der Alb leben ca. 35 Tiere in
             extensiver, natürlicher Haltungsform. Das kurzfaserige, fettarme

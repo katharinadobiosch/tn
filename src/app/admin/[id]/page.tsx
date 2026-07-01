@@ -47,7 +47,7 @@ export default async function EditUpdatePage({ params }: EditUpdatePageProps) {
           Admin
         </p>
 
-        <h1 className="font-serif text-5xl">Beitrag bearbeiten</h1>
+        <h1 className="font-heading text-5xl">Beitrag bearbeiten</h1>
 
         <form action={updateAction} className="mt-12 space-y-6">
           <div>

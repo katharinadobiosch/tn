@@ -21,7 +21,7 @@ export function EditorialIntro({
         )}
 
         <RevealText>
-          <h2 className="font-serif text-4xl leading-tight md:text-5xl">
+          <h2 className="font-heading text-4xl leading-tight md:text-5xl">
             {title}
           </h2>
         </RevealText>

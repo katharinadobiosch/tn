@@ -21,7 +21,7 @@ export default async function AktuellesPage() {
           Aktuelles
         </p>
         <RevealText>
-          <h1 className="max-w-5xl font-serif text-5xl leading-tight md:text-7xl">
+          <h1 className="max-w-5xl font-heading text-5xl leading-tight md:text-7xl">
             Neuigkeiten aus Hofladen und Brennerei.
           </h1>
         </RevealText>
@@ -64,7 +64,7 @@ export default async function AktuellesPage() {
                   {new Date(update.created_at).toLocaleDateString("de-DE")}
                 </time>
 
-                <h2 className="mt-4 font-serif text-4xl">{update.title}</h2>
+                <h2 className="mt-4 font-heading text-4xl">{update.title}</h2>
 
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[#555149]">
                   {update.content}
