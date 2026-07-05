@@ -4,6 +4,8 @@ import type { Update } from "@/types/update";
 import { sql } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/authActions";
+import { getOpeningHours, getShopStatus } from "@/lib/siteSettings";
+import { updateSiteSettings } from "@/app/actions/siteSettingsActions";
 
 export default async function AdminPage() {
   await requireAdmin();
@@ -13,6 +15,9 @@ export default async function AdminPage() {
   from updates
   order by created_at desc
 `) as Update[];
+
+  const openingHours = await getOpeningHours();
+  const shopStatus = await getShopStatus();
 
   return (
     <main className="bg-[#FAF9F6] px-6 py-24 text-[#24231F]">
@@ -43,6 +48,51 @@ export default async function AdminPage() {
             </form>
           </div>
         </div>
+
+        <form
+          action={updateSiteSettings}
+          className="mb-12 border-t border-[#24231F]/15 pt-8"
+        >
+          <h2 className="font-heading text-3xl">Hofladen-Status</h2>
+
+          <div className="mt-6 grid gap-6 md:grid-cols-[1fr_220px_auto]">
+            <div>
+              <label htmlFor="openingHours" className="mb-2 block text-sm">
+                Öffnungszeiten
+              </label>
+              <input
+                id="openingHours"
+                name="openingHours"
+                type="text"
+                defaultValue={openingHours}
+                required
+                className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="shopStatus" className="mb-2 block text-sm">
+                Status
+              </label>
+              <select
+                id="shopStatus"
+                name="shopStatus"
+                defaultValue={shopStatus}
+                className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
+              >
+                <option value="open">Geöffnet</option>
+                <option value="closed">Geschlossen</option>
+              </select>
+            </div>
+
+            <button
+              type="submit"
+              className="self-end bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#2F432F]"
+            >
+              Speichern
+            </button>
+          </div>
+        </form>
 
         {!updates?.length && (
           <p className="border-t border-[#24231F]/15 pt-8 text-[#555149]">

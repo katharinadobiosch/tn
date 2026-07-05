@@ -1,7 +1,10 @@
 import { siteInfo } from "@/data/site";
 import { RevealText } from "@/components/RevealText";
+import { getOpeningHours } from "@/lib/siteSettings";
 
-export default function KontaktPage() {
+export default async function KontaktPage() {
+  const openingHours = await getOpeningHours();
+
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
@@ -63,9 +66,7 @@ export default function KontaktPage() {
             Öffnungszeiten
           </p>
           <h2 className="font-heading text-4xl">Vor Ort</h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            {siteInfo.openingHours}
-          </p>
+          <p className="mt-6 leading-7 text-[#555149]">{openingHours}</p>
           <p className="mt-2 leading-7 text-[#555149]">{siteInfo.address}</p>
         </article>
         <article className="border-t border-[#24231F]/15 pt-8">

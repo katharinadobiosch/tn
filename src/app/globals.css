@@ -18,3 +18,14 @@ body {
 /* .font-heading {
   font-family: var(--font-heading), sans-serif;
 } */
+
+a,
+button,
+[role="button"],
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"],
+input[type="file"],
+label[for] {
+  cursor: pointer;
+}

@@ -2,8 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { siteImages } from "@/data/images";
 import { navigation } from "@/data/navigation";
+import { getShopStatus } from "@/lib/siteSettings";
 
-export function Header() {
+export async function Header() {
+  const shopStatus = await getShopStatus();
+
   return (
     <header className="border-b border-neutral-200 bg-[#FAF9F6]">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
@@ -30,7 +33,7 @@ export function Header() {
         </nav>
 
         <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm md:inline-block">
-          Hofladen geöffnet
+          Hofladen {shopStatus === "open" ? "geöffnet" : "geschlossen"}
         </span>
       </div>
     </header>

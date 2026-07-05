@@ -1,8 +1,11 @@
 import Image from "next/image";
 import { siteImages } from "@/data/images";
 import { siteInfo } from "@/data/site";
+import { getOpeningHours } from "@/lib/siteSettings";
 
-export default function HofladenPage() {
+export default async function HofladenPage() {
+  const openingHours = await getOpeningHours();
+
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-start gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
@@ -37,9 +40,7 @@ export default function HofladenPage() {
             Öffnungszeiten
           </p>
           <h2 className="font-heading text-4xl">Vorbeikommen</h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            {siteInfo.openingHours}
-          </p>
+          <p className="mt-6 leading-7 text-[#555149]">{openingHours}</p>
         </article>
 
         <article className="border-t border-[#24231F]/15 pt-8">
