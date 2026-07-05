@@ -3,30 +3,30 @@
 import { redirect } from "next/navigation";
 import { sql } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
-import { getOpeningHours } from "@/lib/siteSettings";
+import { weekdays, type OpeningHoursSchedule } from "@/lib/siteSettings";
 
 export async function updateSiteSettings(formData: FormData) {
   await requireAdmin();
 
-  const openingHours = await getOpeningHours();
-  const shopStatus = formData.get("shopStatus") as string;
+  const schedule = weekdays.reduce((acc, { key }) => {
+    const closed = formData.get(`${key}_closed`) === "on";
+    const from = formData.get(`${key}_from`) as string;
+    const to = formData.get(`${key}_to`) as string;
 
-  if (!openingHours) {
-    throw new Error("Öffnungszeiten dürfen nicht leer sein.");
-  }
+    acc[key] = {
+      closed,
+      from: closed ? "" : from,
+      to: closed ? "" : to,
+    };
+
+    return acc;
+  }, {} as OpeningHoursSchedule);
 
   await sql`
     insert into site_settings (key, value, updated_at)
-    values ('opening_hours', ${openingHours}, now())
+    values ('opening_hours_schedule', ${JSON.stringify(schedule)}, now())
     on conflict (key)
-    do update set value = ${openingHours}, updated_at = now()
-  `;
-
-  await sql`
-    insert into site_settings (key, value, updated_at)
-    values ('shop_status', ${shopStatus}, now())
-    on conflict (key)
-    do update set value = ${shopStatus}, updated_at = now()
+    do update set value = ${JSON.stringify(schedule)}, updated_at = now()
   `;
 
   redirect("/admin");

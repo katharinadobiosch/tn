@@ -1,10 +1,10 @@
 import Image from "next/image";
 import { siteImages } from "@/data/images";
 import { siteInfo } from "@/data/site";
-import { getOpeningHours } from "@/lib/siteSettings";
+import { getOpenDaysOnly } from "@/lib/siteSettings";
 
 export default async function HofladenPage() {
-  const openingHours = await getOpeningHours();
+  const openingHours = await getOpenDaysOnly();
 
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
@@ -40,7 +40,9 @@ export default async function HofladenPage() {
             Öffnungszeiten
           </p>
           <h2 className="font-heading text-4xl">Vorbeikommen</h2>
-          <p className="mt-6 leading-7 text-[#555149]">{openingHours}</p>
+          <p className="mt-6 leading-7 text-[#555149] whitespace-pre-line">
+            {openingHours}
+          </p>
         </article>
 
         <article className="border-t border-[#24231F]/15 pt-8">

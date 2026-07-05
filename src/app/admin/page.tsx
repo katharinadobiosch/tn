@@ -4,20 +4,18 @@ import type { Update } from "@/types/update";
 import { sql } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/authActions";
-import { getOpeningHours, getShopStatus } from "@/lib/siteSettings";
+import { getOpeningHoursSchedule, weekdays } from "@/lib/siteSettings";
 import { updateSiteSettings } from "@/app/actions/siteSettingsActions";
 
 export default async function AdminPage() {
   await requireAdmin();
+  const openingHoursSchedule = await getOpeningHoursSchedule();
 
   const updates = (await sql`
   select *
   from updates
   order by created_at desc
 `) as Update[];
-
-  const openingHours = await getOpeningHours();
-  const shopStatus = await getShopStatus();
 
   return (
     <main className="bg-[#FAF9F6] px-6 py-24 text-[#24231F]">
@@ -53,45 +51,67 @@ export default async function AdminPage() {
           action={updateSiteSettings}
           className="mb-12 border-t border-[#24231F]/15 pt-8"
         >
-          <h2 className="font-heading text-3xl">Hofladen-Status</h2>
+          <h2 className="font-heading text-3xl">Öffnungszeiten</h2>
 
-          <div className="mt-6 grid gap-6 md:grid-cols-[1fr_220px_auto]">
-            <div>
-              <label htmlFor="openingHours" className="mb-2 block text-sm">
-                Öffnungszeiten
-              </label>
-              <input
-                id="openingHours"
-                name="openingHours"
-                type="text"
-                defaultValue={openingHours}
-                required
-                className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
-              />
-            </div>
+          <div className="mt-6 grid gap-4">
+            {weekdays.map(({ key, label }) => {
+              const day = openingHoursSchedule[key];
 
-            <div>
-              <label htmlFor="shopStatus" className="mb-2 block text-sm">
-                Status
-              </label>
-              <select
-                id="shopStatus"
-                name="shopStatus"
-                defaultValue={shopStatus}
-                className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
-              >
-                <option value="open">Geöffnet</option>
-                <option value="closed">Geschlossen</option>
-              </select>
-            </div>
+              return (
+                <div
+                  key={key}
+                  className="grid items-end gap-4 md:grid-cols-[160px_1fr_1fr_160px]"
+                >
+                  <p className="pb-3 text-sm">{label}</p>
 
-            <button
-              type="submit"
-              className="self-end bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#2F432F]"
-            >
-              Speichern
-            </button>
+                  <div>
+                    <label
+                      htmlFor={`${key}_from`}
+                      className="mb-2 block text-sm"
+                    >
+                      Von
+                    </label>
+                    <input
+                      id={`${key}_from`}
+                      name={`${key}_from`}
+                      type="time"
+                      defaultValue={day.from}
+                      className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
+                    />
+                  </div>
+
+                  <div>
+                    <label htmlFor={`${key}_to`} className="mb-2 block text-sm">
+                      Bis
+                    </label>
+                    <input
+                      id={`${key}_to`}
+                      name={`${key}_to`}
+                      type="time"
+                      defaultValue={day.to}
+                      className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
+                    />
+                  </div>
+
+                  <label className="flex gap-3 pb-3 text-sm">
+                    <input
+                      name={`${key}_closed`}
+                      type="checkbox"
+                      defaultChecked={day.closed}
+                    />
+                    Geschlossen
+                  </label>
+                </div>
+              );
+            })}
           </div>
+
+          <button
+            type="submit"
+            className="mt-8 bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#2F432F]"
+          >
+            Öffnungszeiten speichern
+          </button>
         </form>
 
         {!updates?.length && (

@@ -1,15 +1,15 @@
 import { siteInfo } from "@/data/site";
-import { getOpeningHours } from "@/lib/siteSettings";
+import { getOpenDaysOnly } from "@/lib/siteSettings";
 
 export async function Footer() {
-  const openingHours = await getOpeningHours();
+  const openingHours = await getOpenDaysOnly();
 
   return (
     <footer className="border-t border-[#1F2F20]/20 bg-white px-6 py-8 text-sm">
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
           <strong>Öffnungszeiten</strong>
-          <p>{openingHours}</p>
+          <p className="whitespace-pre-line">{openingHours}</p>
         </div>
 
         <div>
