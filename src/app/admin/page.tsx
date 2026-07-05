@@ -1,29 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Update } from "@/types/update";
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { sql } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/authActions";
 
 export default async function AdminPage() {
-  const authSupabase = await createClient();
+  await requireAdmin();
 
-  const {
-    data: { user },
-  } = await authSupabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
-
-  const { data: updates, error } = await authSupabase
-    .from("updates")
-    .select("*")
-    .order("created_at", { ascending: false });
-
-  if (error) {
-    console.error(error);
-  }
+  const updates = (await sql`
+  select *
+  from updates
+  order by created_at desc
+`) as Update[];
 
   return (
     <main className="bg-[#FAF9F6] px-6 py-24 text-[#24231F]">
@@ -81,6 +70,7 @@ export default async function AdminPage() {
                   </div>
                 )}
               </div>
+
               <div>
                 <p className="text-xs uppercase tracking-[0.22em] text-[#526247]">
                   {update.published ? "Veröffentlicht" : "Entwurf"}
@@ -92,6 +82,7 @@ export default async function AdminPage() {
                   {update.content}
                 </p>
               </div>
+
               <div className="flex shrink-0 gap-4 text-sm">
                 <Link
                   href={`/admin/${update.id}`}

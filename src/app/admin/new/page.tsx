@@ -1,18 +1,9 @@
-import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { requireAdmin } from "@/lib/auth";
 import Link from "next/link";
 import { createUpdate } from "@/app/actions/updateActions";
 
 export default async function NewUpdatePage() {
-  const supabase = await createClient();
-
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
+  await requireAdmin();
 
   return (
     <main className="bg-[#FAF9F6] px-6 py-24 text-[#24231F]">

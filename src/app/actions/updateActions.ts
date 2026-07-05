@@ -1,48 +1,21 @@
 "use server";
 
+import { put } from "@vercel/blob";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { sql } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
 
-async function requireUser() {
-  const supabase = await createClient();
+async function uploadImage(image: File) {
+  const blob = await put(image.name, image, {
+    access: "public",
+    addRandomSuffix: true,
+  });
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
-
-  if (!user) {
-    redirect("/login");
-  }
-
-  return supabase;
-}
-
-async function uploadImage(
-  supabase: Awaited<ReturnType<typeof createClient>>,
-  image: File,
-) {
-  const fileExt = image.name.split(".").pop();
-  const fileName = `${Date.now()}.${fileExt}`;
-
-  const { error: uploadError } = await supabase.storage
-    .from("update-images")
-    .upload(fileName, image, {
-      contentType: image.type,
-    });
-
-  if (uploadError) {
-    throw new Error(uploadError.message);
-  }
-
-  const { data } = supabase.storage
-    .from("update-images")
-    .getPublicUrl(fileName);
-
-  return data.publicUrl;
+  return blob.url;
 }
 
 export async function createUpdate(formData: FormData) {
-  const supabase = await requireUser();
+  await requireAdmin();
 
   const title = formData.get("title") as string;
   const content = formData.get("content") as string;
@@ -56,25 +29,19 @@ export async function createUpdate(formData: FormData) {
   let imageUrl: string | null = null;
 
   if (image && image.size > 0) {
-    imageUrl = await uploadImage(supabase, image);
+    imageUrl = await uploadImage(image);
   }
 
-  const { error } = await supabase.from("updates").insert({
-    title,
-    content,
-    published,
-    image_url: imageUrl,
-  });
-
-  if (error) {
-    throw new Error(error.message);
-  }
+  await sql`
+    insert into updates (title, content, published, image_url)
+    values (${title}, ${content}, ${published}, ${imageUrl})
+  `;
 
   redirect("/admin");
 }
 
 export async function updateUpdate(id: string, formData: FormData) {
-  const supabase = await requireUser();
+  await requireAdmin();
 
   const title = formData.get("title") as string;
   const content = formData.get("content") as string;
@@ -85,43 +52,41 @@ export async function updateUpdate(id: string, formData: FormData) {
     throw new Error("Titel und Inhalt sind erforderlich.");
   }
 
-  const updateData: {
-    title: string;
-    content: string;
-    published: boolean;
-    updated_at: string;
-    image_url?: string;
-  } = {
-    title,
-    content,
-    published,
-    updated_at: new Date().toISOString(),
-  };
-
   if (image && image.size > 0) {
-    updateData.image_url = await uploadImage(supabase, image);
-  }
+    const imageUrl = await uploadImage(image);
 
-  const { error } = await supabase
-    .from("updates")
-    .update(updateData)
-    .eq("id", id);
-
-  if (error) {
-    throw new Error(error.message);
+    await sql`
+      update updates
+      set
+        title = ${title},
+        content = ${content},
+        published = ${published},
+        image_url = ${imageUrl},
+        updated_at = now()
+      where id = ${id}
+    `;
+  } else {
+    await sql`
+      update updates
+      set
+        title = ${title},
+        content = ${content},
+        published = ${published},
+        updated_at = now()
+      where id = ${id}
+    `;
   }
 
   redirect("/admin");
 }
 
 export async function deleteUpdate(id: string) {
-  const supabase = await requireUser();
+  await requireAdmin();
 
-  const { error } = await supabase.from("updates").delete().eq("id", id);
-
-  if (error) {
-    throw new Error(error.message);
-  }
+  await sql`
+    delete from updates
+    where id = ${id}
+  `;
 
   redirect("/admin");
 }

@@ -1,18 +1,15 @@
 import Image from "next/image";
 import { RevealText } from "@/components/RevealText";
-import { supabase } from "@/lib/supabase";
+import { sql } from "@/lib/db";
 import type { Update } from "@/types/update";
 
 export default async function AktuellesPage() {
-  const { data: updates, error } = await supabase
-    .from("updates")
-    .select("*")
-    .eq("published", true)
-    .order("created_at", { ascending: false });
-
-  if (error) {
-    console.error(error);
-  }
+  const updates = (await sql`
+  select *
+  from updates
+  where published = true
+  order by created_at desc
+`) as Update[];
 
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">

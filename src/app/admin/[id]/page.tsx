@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
+import { notFound } from "next/navigation";
+import { sql } from "@/lib/db";
+import { requireAdmin } from "@/lib/auth";
 import type { Update } from "@/types/update";
 import { deleteUpdate, updateUpdate } from "@/app/actions/updateActions";
 
@@ -13,23 +14,18 @@ type EditUpdatePageProps = {
 export default async function EditUpdatePage({ params }: EditUpdatePageProps) {
   const { id } = await params;
 
-  const authSupabase = await createClient();
+  await requireAdmin();
 
-  const {
-    data: { user },
-  } = await authSupabase.auth.getUser();
+  const updates = (await sql`
+  select *
+  from updates
+  where id = ${id}
+  limit 1
+`) as Update[];
 
-  if (!user) {
-    redirect("/login");
-  }
+  const update = updates[0];
 
-  const { data: update, error } = await authSupabase
-    .from("updates")
-    .select("*")
-    .eq("id", id)
-    .single<Update>();
-
-  if (error || !update) {
+  if (!update) {
     notFound();
   }
 

@@ -5,30 +5,37 @@ const partners = [
   {
     name: "Bärenhof Gemüse",
     logo: "/partner/baerenhof-gemuese.png",
+    url: "http://www.bärenhof-gemüse.de/",
   },
   {
     name: "Birkhof",
     logo: "/partner/birkhof.png",
+    url: "http://www.gestuet-birkhof.com/",
   },
   {
     name: "Fink's Hofladen",
     logo: "/partner/finks-hofladen.png",
+    url: "https://finks-hofladen.de/",
   },
   {
     name: "Herre Schröger",
     logo: "/partner/herre-schroeger.png",
+    url: "https://herre-schroeger.de/",
   },
   {
     name: "Lautertal Eis",
     logo: "/partner/lauertal-eis.png",
+    url: "https://www.lautertal-eis.blog/",
   },
   {
     name: "Spargelbauer Landerer",
     logo: "/partner/spargelbauer-landerer.png",
+    url: "http://www.spargelbauer-landerer.de/",
   },
   {
     name: "Spross & Spore",
     logo: "/partner/spross-spore.png",
+    url: "https://spross-spore.de/",
   },
 ];
 
@@ -60,13 +67,29 @@ export function PartnerSection() {
               className="group border-t border-[#1F2F20]/12 pt-6"
             >
               <div className="flex h-20 items-center">
-                <Image
-                  src={partner.logo}
-                  alt={`${partner.name} Logo`}
-                  width={220}
-                  height={120}
-                  className="max-h-16 w-auto object-contain transition duration-300 group-hover:scale-[1.03]"
-                />
+                {partner.url ? (
+                  <a
+                    href={partner.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={`${partner.name} Logo`}
+                      width={220}
+                      height={120}
+                      className="max-h-16 w-auto object-contain transition duration-300 group-hover:scale-[1.03]"
+                    />
+                  </a>
+                ) : (
+                  <Image
+                    src={partner.logo}
+                    alt={`${partner.name} Logo`}
+                    width={220}
+                    height={120}
+                    className="max-h-16 w-auto object-contain transition duration-300 group-hover:scale-[1.03]"
+                  />
+                )}
               </div>
 
               <p className="mt-4 text-xs uppercase tracking-[0.2em] text-[#526247]">
