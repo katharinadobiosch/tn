@@ -4,8 +4,8 @@ import type { Update } from "@/types/update";
 import { sql } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
 import { logout } from "@/app/actions/authActions";
-import { getOpeningHoursSchedule, weekdays } from "@/lib/siteSettings";
-import { updateSiteSettings } from "@/app/actions/siteSettingsActions";
+import { getOpeningHoursSchedule } from "@/lib/siteSettings";
+import { OpeningHoursForm } from "@/components/admin/OpeningHoursForm";
 
 export default async function AdminPage() {
   await requireAdmin();
@@ -47,72 +47,7 @@ export default async function AdminPage() {
           </div>
         </div>
 
-        <form
-          action={updateSiteSettings}
-          className="mb-12 border-t border-[#24231F]/15 pt-8"
-        >
-          <h2 className="font-heading text-3xl">Öffnungszeiten</h2>
-
-          <div className="mt-6 grid gap-4">
-            {weekdays.map(({ key, label }) => {
-              const day = openingHoursSchedule[key];
-
-              return (
-                <div
-                  key={key}
-                  className="grid items-end gap-4 md:grid-cols-[160px_1fr_1fr_160px]"
-                >
-                  <p className="pb-3 text-sm">{label}</p>
-
-                  <div>
-                    <label
-                      htmlFor={`${key}_from`}
-                      className="mb-2 block text-sm"
-                    >
-                      Von
-                    </label>
-                    <input
-                      id={`${key}_from`}
-                      name={`${key}_from`}
-                      type="time"
-                      defaultValue={day.from}
-                      className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor={`${key}_to`} className="mb-2 block text-sm">
-                      Bis
-                    </label>
-                    <input
-                      id={`${key}_to`}
-                      name={`${key}_to`}
-                      type="time"
-                      defaultValue={day.to}
-                      className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
-                    />
-                  </div>
-
-                  <label className="flex gap-3 pb-3 text-sm">
-                    <input
-                      name={`${key}_closed`}
-                      type="checkbox"
-                      defaultChecked={day.closed}
-                    />
-                    Geschlossen
-                  </label>
-                </div>
-              );
-            })}
-          </div>
-
-          <button
-            type="submit"
-            className="mt-8 bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#2F432F]"
-          >
-            Öffnungszeiten speichern
-          </button>
-        </form>
+        <OpeningHoursForm openingHoursSchedule={openingHoursSchedule} />
 
         {!updates?.length && (
           <p className="border-t border-[#24231F]/15 pt-8 text-[#555149]">

@@ -131,7 +131,7 @@ export function formatOpenDaysOnly(schedule: OpeningHoursSchedule) {
     .map(({ key, label }) => {
       const day = schedule[key];
 
-      return `${label}: ${day.from}–${day.to} Uhr`;
+      return `${label}: ${day.from}{" "}–{" "}${day.to} Uhr`;
     })
     .join("\n");
 }
