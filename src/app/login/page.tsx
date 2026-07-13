@@ -5,20 +5,20 @@ export default function LoginPage() {
     <main className="flex min-h-screen items-center justify-center bg-[#FAF9F6] px-6 text-[#24231F]">
       <section className="w-full max-w-md">
         <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-          Admin
+          Administrator
         </p>
 
         <h1 className="font-heading text-5xl">Einloggen</h1>
 
         <form action={login} className="mt-10 space-y-5">
           <div>
-            <label htmlFor="email" className="mb-2 block text-sm">
-              E-Mail
+            <label htmlFor="username" className="mb-2 block text-sm">
+              Benutzername
             </label>
             <input
-              id="email"
-              name="email"
-              type="email"
+              id="username"
+              name="username"
+              type="text"
               required
               className="w-full border border-[#24231F]/20 bg-transparent px-4 py-3"
             />

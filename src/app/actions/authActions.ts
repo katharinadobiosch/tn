@@ -4,14 +4,20 @@ import { redirect } from "next/navigation";
 import { clearAdminSession, setAdminSession } from "@/lib/auth";
 
 export async function login(formData: FormData) {
-  const email = formData.get("email") as string;
+  const username = formData.get("username") as string;
   const password = formData.get("password") as string;
 
+  console.log({
+    hasAdminUsername: Boolean(process.env.ADMIN_USERNAME),
+    hasAdminPassword: Boolean(process.env.ADMIN_PASSWORD),
+    hasSessionToken: Boolean(process.env.ADMIN_SESSION_TOKEN),
+  });
+
   if (
-    email !== process.env.ADMIN_EMAIL ||
+    username !== process.env.ADMIN_USERNAME ||
     password !== process.env.ADMIN_PASSWORD
   ) {
-    throw new Error("E-Mail oder Passwort ist falsch.");
+    throw new Error("Benutzername oder Passwort ist falsch.");
   }
 
   await setAdminSession();
