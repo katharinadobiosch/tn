@@ -35,11 +35,11 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="de"
+      suppressHydrationWarning
       className={`${josefinSans.variable} ${inter.variable} h-full antialiased`}
     >
       <body className={`${inter.variable} ${josefinSans.variable}`}>
-        {" "}
         <Header />
         {children}
         <Footer />
