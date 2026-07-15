@@ -21,7 +21,7 @@ export async function Header() {
         </Link>
 
         <nav className="hidden items-center gap-10 text-sm md:flex">
-          {navigation.map((item) => (
+          {/* {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
@@ -29,12 +29,12 @@ export async function Header() {
             >
               {item.label}
             </Link>
-          ))}
+          ))} */}
         </nav>
 
-        <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm md:inline-block">
+        {/* <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm md:inline-block">
           Hofladen {shopStatus === "open" ? "geöffnet" : "geschlossen"}
-        </span>
+        </span> */}
       </div>
     </header>
   );
