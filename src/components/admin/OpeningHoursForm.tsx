@@ -5,7 +5,7 @@ import {
   updateSiteSettings,
   type SiteSettingsState,
 } from "@/app/actions/siteSettingsActions";
-import { weekdays, type OpeningHoursSchedule } from "@/lib/siteSettings";
+import { weekdays, type OpeningHoursSchedule } from "@/lib/siteSettings.shared";
 
 type OpeningHoursFormProps = {
   openingHoursSchedule: OpeningHoursSchedule;

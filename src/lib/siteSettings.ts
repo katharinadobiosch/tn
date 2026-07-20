@@ -1,32 +1,11 @@
+import "server-only";
+
 import { sql } from "@/lib/db";
-
-export type Weekday =
-  | "monday"
-  | "tuesday"
-  | "wednesday"
-  | "thursday"
-  | "friday"
-  | "saturday"
-  | "sunday";
-
-export type OpeningHoursSchedule = Record<
-  Weekday,
-  {
-    closed: boolean;
-    from: string;
-    to: string;
-  }
->;
-
-export const weekdays: { key: Weekday; label: string }[] = [
-  { key: "monday", label: "Montag" },
-  { key: "tuesday", label: "Dienstag" },
-  { key: "wednesday", label: "Mittwoch" },
-  { key: "thursday", label: "Donnerstag" },
-  { key: "friday", label: "Freitag" },
-  { key: "saturday", label: "Samstag" },
-  { key: "sunday", label: "Sonntag" },
-];
+import {
+  weekdays,
+  type OpeningHoursSchedule,
+  type Weekday,
+} from "@/lib/siteSettings.shared";
 
 const fallbackSchedule: OpeningHoursSchedule = {
   monday: { closed: true, from: "", to: "" },
@@ -94,6 +73,7 @@ function getBerlinTimeInMinutes(date: Date) {
 
 function timeToMinutes(time: string) {
   const [hour, minute] = time.split(":").map(Number);
+
   return hour * 60 + minute;
 }
 
@@ -131,7 +111,7 @@ export function formatOpenDaysOnly(schedule: OpeningHoursSchedule) {
     .map(({ key, label }) => {
       const day = schedule[key];
 
-      return `${label}: ${day.from}{" "}–{" "}${day.to} Uhr`;
+      return `${label}: ${day.from}–${day.to} Uhr`;
     })
     .join("\n");
 }

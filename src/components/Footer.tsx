@@ -8,16 +8,16 @@ export async function Footer() {
     <footer className="border-t border-[#1F2F20]/20 bg-white px-6 py-8 text-sm">
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
-          {/* <strong>Öffnungszeiten</strong>
-          <p className="whitespace-pre-line">{openingHours}</p> */}
+          <strong>Öffnungszeiten</strong>
+          <p className="whitespace-pre-line">{openingHours}</p>
         </div>
 
         <div>
-          {/* <strong>Standort</strong>
-          <p>{siteInfo.address}</p> */}
+          <strong>Standort</strong>
+          <p>{siteInfo.address}</p>
         </div>
 
-        {/* <div>
+        <div>
           <strong>Kontakt</strong>
           <p>{siteInfo.phone}</p>
           <a
@@ -26,7 +26,7 @@ export async function Footer() {
           >
             {siteInfo.email}
           </a>
-        </div> */}
+        </div>
 
         <div>
           <strong>Folgen Sie uns</strong>
