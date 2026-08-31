@@ -2,10 +2,11 @@ import { HeroSection } from "@/components/HeroSection";
 import { EditorialIntro } from "@/components/EditorialIntro";
 import { ProductTeaserGrid } from "@/components/ProductTeaserGrid";
 import { UpdatesPreview } from "@/components/UpdatesPreview";
-import { updatesPreview } from "@/data/site";
 import { siteImages } from "@/data/images";
 import { PartnerSection } from "@/components/PartnerSection";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
+import { sql } from "@/lib/db";
+import type { Update } from "@/types/update";
 import type { Metadata } from "next";
 
 const ownSpecialties = [
@@ -34,6 +35,14 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const openingHours = await getOpenDaysOnly();
+
+  const latestUpdates = (await sql`
+    select *
+    from updates
+    where published = true
+    order by created_at desc
+    limit 3
+  `) as Update[];
 
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
@@ -75,6 +84,7 @@ export default async function Home() {
                 Umgebung.
               </p>
             </div>
+
             <div className="grid gap-2 py-5 sm:grid-cols-[10rem_1fr]">
               <h3 className="font-heading text-xl text-[#1F2F20]">
                 Für jeden Tag
@@ -84,6 +94,7 @@ export default async function Home() {
                 regionaler Betriebe.
               </p>
             </div>
+
             <div className="grid gap-2 py-5 sm:grid-cols-[10rem_1fr]">
               <h3 className="font-heading text-xl text-[#1F2F20]">
                 Von uns gemacht
@@ -106,6 +117,7 @@ export default async function Home() {
                 72419 Neufra
               </p>
             </div>
+
             <div>
               <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
                 Öffnungszeiten
@@ -128,7 +140,13 @@ export default async function Home() {
 
       <PartnerSection />
 
-      <UpdatesPreview updates={updatesPreview} />
+      <UpdatesPreview
+        updates={latestUpdates.map((update) => ({
+          title: update.title,
+          text: update.content,
+          date: new Date(update.created_at).toISOString(),
+        }))}
+      />
     </main>
   );
 }
