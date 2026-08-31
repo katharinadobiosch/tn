@@ -2,6 +2,13 @@ import Image from "next/image";
 import { ButtonLink } from "@/components/ButtonLink";
 import { RevealText } from "@/components/RevealText";
 import { siteImages } from "@/data/images";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Verkostungen in Neufra",
+  description:
+    "Verkostungen, private Feiern und Veranstaltungen im Brennerstüble der Talbrennerei Neufra.",
+};
 
 export default function VerkostungPage() {
   return (

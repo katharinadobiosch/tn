@@ -23,9 +23,12 @@ const josefinSans = Josefin_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Talbrennerei Neufra",
+  title: {
+    default: "Talbrennerei Neufra | Hofladen & regionale Spezialitäten",
+    template: "%s | Talbrennerei Neufra",
+  },
   description:
-    "Talbrennerei Neufra - Produkte aus regionalem Anbau in bester Qualität. Entdecken Sie unsere Brände, Liköre, Honig, Fruchtaufstriche und Wildspezialitäten aus eigener Herstellung.",
+    "Hofladen in Neufra mit regionalem Obst und Gemüse, ausgewählten Lebensmitteln aus der Region sowie Spezialitäten aus eigener Herstellung.",
 };
 
 export default function RootLayout({

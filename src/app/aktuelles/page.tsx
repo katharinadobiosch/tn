@@ -2,6 +2,13 @@ import Image from "next/image";
 import { RevealText } from "@/components/RevealText";
 import { sql } from "@/lib/db";
 import type { Update } from "@/types/update";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aktuelles",
+  description:
+    "Neuigkeiten aus dem Hofladen der Talbrennerei Neufra: saisonale Produkte, regionale Angebote, Verkostungen und Veranstaltungen.",
+};
 
 export default async function AktuellesPage() {
   const updates = (await sql`

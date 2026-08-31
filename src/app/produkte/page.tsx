@@ -9,6 +9,13 @@ import {
 } from "@/data/products";
 import { ProductList } from "@/components/ProductList";
 import { RevealText } from "@/components/RevealText";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Spezialitäten aus Neufra",
+  description:
+    "Brände, Liköre, Honig, Fruchtaufstriche, Apfelsaft und weitere Spezialitäten der Talbrennerei Neufra.",
+};
 
 const productCards = [
   {

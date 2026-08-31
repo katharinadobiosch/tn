@@ -6,6 +6,7 @@ import { updatesPreview } from "@/data/site";
 import { siteImages } from "@/data/images";
 import { PartnerSection } from "@/components/PartnerSection";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
+import type { Metadata } from "next";
 
 const ownSpecialties = [
   {
@@ -24,6 +25,12 @@ const ownSpecialties = [
     href: "/produkte",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "Hofladen in Neufra",
+  description:
+    "Regionale Lebensmittel, saisonales Obst und Gemüse sowie Spezialitäten aus eigener Herstellung im Hofladen der Talbrennerei Neufra.",
+};
 
 export default async function Home() {
   const openingHours = await getOpenDaysOnly();
@@ -94,7 +101,8 @@ export default async function Home() {
                 Hier finden Sie uns
               </p>
               <p className="mt-3 text-base leading-7 text-[#1F2F20]">
-                Rathausstr. 15<br />
+                Rathausstr. 15
+                <br />
                 72419 Neufra
               </p>
             </div>

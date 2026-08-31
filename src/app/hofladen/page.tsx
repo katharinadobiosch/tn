@@ -3,6 +3,13 @@ import { ButtonLink } from "@/components/ButtonLink";
 import { RevealText } from "@/components/RevealText";
 import { siteImages } from "@/data/images";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hofladen Neufra",
+  description:
+    "Entdecken Sie den Hofladen der Talbrennerei Neufra mit regionalem Obst und Gemüse, Lebensmitteln ausgewählter Erzeuger und eigenen Spezialitäten.",
+};
 
 export default async function HofladenPage() {
   const openingHours = await getOpenDaysOnly();
@@ -23,8 +30,8 @@ export default async function HofladenPage() {
 
           <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
             Regionale Lebensmittel, ausgewählte Erzeuger und eigene
-            Spezialitäten – persönlich ausgesucht und mit Blick auf Herkunft
-            und Qualität.
+            Spezialitäten – persönlich ausgesucht und mit Blick auf Herkunft und
+            Qualität.
           </p>
         </div>
 
@@ -114,13 +121,13 @@ export default async function HofladenPage() {
             <p>
               Der Hofladen verbindet ein sorgfältig ausgewähltes regionales
               Angebot an einem Ort. So entsteht ein Einkaufserlebnis wie auf
-              einem kleinen Wochenmarkt: persönlich, überschaubar und nah an
-              den Menschen, die die Lebensmittel erzeugen.
+              einem kleinen Wochenmarkt: persönlich, überschaubar und nah an den
+              Menschen, die die Lebensmittel erzeugen.
             </p>
             <p>
-              Im Mittelpunkt stehen hochwertige Produkte direkt von
-              regionalen Betrieben und eine Herkunft, die für unsere Kundinnen
-              und Kunden verständlich bleibt.
+              Im Mittelpunkt stehen hochwertige Produkte direkt von regionalen
+              Betrieben und eine Herkunft, die für unsere Kundinnen und Kunden
+              verständlich bleibt.
             </p>
           </div>
         </div>

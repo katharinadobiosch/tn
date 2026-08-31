@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Datenschutz",
+  description: "Datenschutzerklärung der Talbrennerei Neufra.",
+};
+
 export default function DatenschutzPage() {
   return (
     <main>

@@ -1,6 +1,13 @@
 import { siteInfo } from "@/data/site";
 import { RevealText } from "@/components/RevealText";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Kontakt",
+  description:
+    "Kontakt, Öffnungszeiten und Standorte der Talbrennerei Neufra und des Hofladens in der Rathausstraße.",
+};
 
 export default async function KontaktPage() {
   const openingHours = await getOpenDaysOnly();

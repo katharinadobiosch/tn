@@ -1,6 +1,13 @@
 import Image from "next/image";
 import { RevealText } from "@/components/RevealText";
 import { siteImages } from "@/data/images";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Über uns",
+  description:
+    "Die Geschichte der Talbrennerei Neufra: von der eigenen Streuobstwiese zur regionalen Vermarktung und zum Hofladen im Herzen von Neufra.",
+};
 
 export default function UeberUnsPage() {
   return (
@@ -50,8 +57,8 @@ export default function UeberUnsPage() {
                 </h2>
               </RevealText>
               <p className="text-lg leading-8 text-[#555149]">
-                Im Jahr 2008 kauften Detlef Zamzow und seine Frau Annemarie
-                ihre erste Obstwiese in Dettingen/Erms. Mit der wachsenden
+                Im Jahr 2008 kauften Detlef Zamzow und seine Frau Annemarie ihre
+                erste Obstwiese in Dettingen/Erms. Mit der wachsenden
                 Begeisterung für den Obstbau kamen im Laufe der Zeit weitere
                 Flächen hinzu.
               </p>
@@ -65,10 +72,9 @@ export default function UeberUnsPage() {
               </RevealText>
               <div className="space-y-5 text-lg leading-8 text-[#555149]">
                 <p>
-                  Über die Jahre bewirtschaftete das Unternehmen rund 15
-                  Hektar Obstwiesen und Waldflächen. Mit den wachsenden
-                  Obsterträgen wurde auch die Frage der Verarbeitung immer
-                  wichtiger.
+                  Über die Jahre bewirtschaftete das Unternehmen rund 15 Hektar
+                  Obstwiesen und Waldflächen. Mit den wachsenden Obsterträgen
+                  wurde auch die Frage der Verarbeitung immer wichtiger.
                 </p>
                 <p>
                   Daraus entwickelten sich die eigene Brennerei und der
@@ -116,10 +122,10 @@ export default function UeberUnsPage() {
                 </h2>
                 <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/80">
                   <p>
-                    Neben den langjährigen regionalen Partnern beziehen wir
-                    Obst von weiteren ausgewählten Erzeugern, darunter Betriebe
-                    rund um den Bodensee. Besuche vor Ort helfen uns dabei,
-                    Herkunft, Arbeitsweise und Qualität kennenzulernen.
+                    Neben den langjährigen regionalen Partnern beziehen wir Obst
+                    von weiteren ausgewählten Erzeugern, darunter Betriebe rund
+                    um den Bodensee. Besuche vor Ort helfen uns dabei, Herkunft,
+                    Arbeitsweise und Qualität kennenzulernen.
                   </p>
                   <p>
                     Entscheidend bleibt eine Zusammenarbeit, die auf
