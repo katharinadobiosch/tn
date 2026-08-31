@@ -39,6 +39,7 @@ export async function createUpdate(formData: FormData) {
   `;
 
   revalidatePath("/aktuelles");
+  revalidatePath("/");
 
   redirect("/admin");
 }
@@ -81,6 +82,7 @@ export async function updateUpdate(id: string, formData: FormData) {
   }
 
   revalidatePath("/aktuelles");
+  revalidatePath("/");
 
   redirect("/admin");
 }
@@ -94,6 +96,7 @@ export async function deleteUpdate(id: string) {
   `;
 
   revalidatePath("/aktuelles");
+  revalidatePath("/");
 
   redirect("/admin");
 }
