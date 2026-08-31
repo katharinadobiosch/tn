@@ -2,9 +2,9 @@ import "server-only";
 
 import { sql } from "@/lib/db";
 import {
+  isShopOpenAt,
   weekdays,
   type OpeningHoursSchedule,
-  type Weekday,
 } from "@/lib/siteSettings.shared";
 
 const fallbackSchedule: OpeningHoursSchedule = {
@@ -46,51 +46,8 @@ export function formatOpeningHours(schedule: OpeningHoursSchedule) {
     .join("\n");
 }
 
-function getBerlinWeekdayKey(date: Date): Weekday {
-  const weekday = new Intl.DateTimeFormat("en-US", {
-    weekday: "long",
-    timeZone: "Europe/Berlin",
-  })
-    .format(date)
-    .toLowerCase();
-
-  return weekday as Weekday;
-}
-
-function getBerlinTimeInMinutes(date: Date) {
-  const parts = new Intl.DateTimeFormat("de-DE", {
-    hour: "2-digit",
-    minute: "2-digit",
-    hour12: false,
-    timeZone: "Europe/Berlin",
-  }).formatToParts(date);
-
-  const hour = Number(parts.find((part) => part.type === "hour")?.value);
-  const minute = Number(parts.find((part) => part.type === "minute")?.value);
-
-  return hour * 60 + minute;
-}
-
-function timeToMinutes(time: string) {
-  const [hour, minute] = time.split(":").map(Number);
-
-  return hour * 60 + minute;
-}
-
 export function isShopOpenNow(schedule: OpeningHoursSchedule) {
-  const now = new Date();
-  const todayKey = getBerlinWeekdayKey(now);
-  const today = schedule[todayKey];
-
-  if (!today || today.closed || !today.from || !today.to) {
-    return false;
-  }
-
-  const currentMinutes = getBerlinTimeInMinutes(now);
-  const fromMinutes = timeToMinutes(today.from);
-  const toMinutes = timeToMinutes(today.to);
-
-  return currentMinutes >= fromMinutes && currentMinutes <= toMinutes;
+  return isShopOpenAt(schedule, new Date());
 }
 
 export async function getOpeningHours() {

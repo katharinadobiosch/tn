@@ -1,8 +1,19 @@
 import { HeaderNavigation } from "@/components/HeaderNavigation";
-import { getShopStatus } from "@/lib/siteSettings";
+import {
+  getOpeningHoursSchedule,
+  isShopOpenNow,
+} from "@/lib/siteSettings";
 
 export async function Header() {
-  const shopStatus = await getShopStatus();
+  const openingHoursSchedule = await getOpeningHoursSchedule();
+  const initialShopStatus = isShopOpenNow(openingHoursSchedule)
+    ? "open"
+    : "closed";
 
-  return <HeaderNavigation shopStatus={shopStatus} />;
+  return (
+    <HeaderNavigation
+      openingHoursSchedule={openingHoursSchedule}
+      initialShopStatus={initialShopStatus}
+    />
+  );
 }

@@ -5,21 +5,68 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { siteImages } from "@/data/images";
+import { isNavigationItemActive, navigation } from "@/data/navigation";
 import {
-  isNavigationItemActive,
-  navigation,
-} from "@/data/navigation";
+  isShopOpenAt,
+  type OpeningHoursSchedule,
+} from "@/lib/siteSettings.shared";
 
 type HeaderNavigationProps = {
-  shopStatus: "open" | "closed";
+  openingHoursSchedule: OpeningHoursSchedule;
+  initialShopStatus: "open" | "closed";
 };
 
 const linkFocusClasses =
   "focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]";
 
-export function HeaderNavigation({ shopStatus }: HeaderNavigationProps) {
+export function HeaderNavigation({
+  openingHoursSchedule,
+  initialShopStatus,
+}: HeaderNavigationProps) {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [shopStatus, setShopStatus] = useState(initialShopStatus);
+
+  useEffect(() => {
+    let timeoutId: number | undefined;
+
+    function updateShopStatus() {
+      const now = new Date();
+
+      setShopStatus(
+        isShopOpenAt(openingHoursSchedule, now) ? "open" : "closed",
+      );
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+
+      const millisecondsIntoMinute =
+        now.getSeconds() * 1000 + now.getMilliseconds();
+
+      timeoutId = window.setTimeout(
+        updateShopStatus,
+        60_000 - millisecondsIntoMinute + 50,
+      );
+    }
+
+    function updateWhenVisible() {
+      if (document.visibilityState === "visible") {
+        updateShopStatus();
+      }
+    }
+
+    updateShopStatus();
+    document.addEventListener("visibilitychange", updateWhenVisible);
+
+    return () => {
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+
+      document.removeEventListener("visibilitychange", updateWhenVisible);
+    };
+  }, [openingHoursSchedule]);
 
   useEffect(() => {
     if (!isMobileMenuOpen) {
@@ -59,7 +106,10 @@ export function HeaderNavigation({ shopStatus }: HeaderNavigationProps) {
           />
         </Link>
 
-        <nav aria-label="Hauptnavigation" className="hidden items-center gap-10 text-sm md:flex">
+        <nav
+          aria-label="Hauptnavigation"
+          className="hidden items-center gap-10 text-sm md:flex"
+        >
           {navigation.map((item) => {
             const isActive = isNavigationItemActive(pathname, item.href);
 
@@ -119,7 +169,7 @@ export function HeaderNavigation({ shopStatus }: HeaderNavigationProps) {
         <nav
           id="mobile-navigation"
           aria-label="Mobile Navigation"
-          className="border-t border-[#1F2F20]/12 bg-white md:hidden"
+          className="border-t border-[#1F2F20]/12 bg-[#FAF9F6] md:hidden"
         >
           <div className="mx-auto max-w-7xl divide-y divide-[#1F2F20]/10 px-6 py-2">
             {navigation.map((item) => {
