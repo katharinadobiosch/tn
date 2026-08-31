@@ -3,23 +3,41 @@ import { getOpenDaysOnly } from "@/lib/siteSettings";
 
 export async function Footer() {
   const openingHours = await getOpenDaysOnly();
+  const [productionStreet, productionLocality] = siteInfo.address.split(", ");
 
   return (
     <footer className="border-t border-[#1F2F20]/20 bg-white px-6 py-8 text-sm">
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
-          <strong>Öffnungszeiten</strong>
+          <strong>Hofladen / Verkauf</strong>
+          <p>
+            Rathausstr. 15
+            <br />
+            72419 Neufra
+          </p>
+          <p className="mt-3 text-xs uppercase tracking-[0.16em] text-[#526247]">
+            Öffnungszeiten
+          </p>
           <p className="whitespace-pre-line">{openingHours}</p>
         </div>
 
         <div>
-          <strong>Standort</strong>
-          <p>{siteInfo.address}</p>
+          <strong>Produktion / Lager</strong>
+          <p>
+            {productionStreet}
+            <br />
+            {productionLocality}
+          </p>
         </div>
 
         <div>
           <strong>Kontakt</strong>
-          <p>{siteInfo.phone}</p>
+          <a
+            href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
+            className="block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+          >
+            {siteInfo.phone}
+          </a>
           <a
             href={`mailto:${siteInfo.email}`}
             className="mt-1 block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
