@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { siteInfo } from "@/data/site";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
 
@@ -7,95 +9,106 @@ export async function Footer() {
 
   return (
     <footer className="border-t border-[#1F2F20]/20 bg-[#FAF9F6] px-6 py-8 text-sm">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
-        <div>
-          <strong>Hofladen / Verkauf</strong>
-          <p>
-            Rathausstr. 15
-            <br />
-            72419 Neufra
-          </p>
-          <p className="mt-3 text-xs uppercase tracking-[0.16em] text-[#526247]">
-            Öffnungszeiten
-          </p>
-          <p className="whitespace-pre-line">{openingHours}</p>
-        </div>
+      <div className="mx-auto max-w-7xl">
+        <div className="grid gap-8 md:grid-cols-4">
+          <div>
+            <strong>Hofladen / Verkauf</strong>
+            <p>
+              Rathausstr. 15
+              <br />
+              72419 Neufra
+            </p>
+            <p className="mt-3 text-xs uppercase tracking-[0.16em] text-[#526247]">
+              Öffnungszeiten
+            </p>
+            <p className="whitespace-pre-line">{openingHours}</p>
+          </div>
 
-        <div>
-          <strong>Produktion / Lager</strong>
-          <p>
-            {productionStreet}
-            <br />
-            {productionLocality}
-          </p>
-        </div>
+          <div>
+            <strong>Produktion / Lager</strong>
+            <p>
+              {productionStreet}
+              <br />
+              {productionLocality}
+            </p>
+          </div>
 
-        <div>
-          <strong>Kontakt</strong>
-          <a
-            href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
-            className="block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-          >
-            {siteInfo.phone}
-          </a>
-          <a
-            href={`mailto:${siteInfo.email}`}
-            className="mt-1 block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-          >
-            {siteInfo.email}
-          </a>
-        </div>
-
-        <div>
-          <strong>Folgen Sie uns</strong>
-
-          <div className="mt-3 flex gap-3">
+          <div>
+            <strong>Kontakt</strong>
             <a
-              href="https://www.instagram.com/talbrennerei_neufra/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Talbrennerei Neufra auf Instagram öffnen"
-              className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
+              className="block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle
-                  cx="17.5"
-                  cy="6.5"
-                  r="0.8"
-                  fill="currentColor"
-                  stroke="none"
-                />
-              </svg>
+              {siteInfo.phone}
             </a>
-
             <a
-              href="https://www.facebook.com/p/Talbrennerei-Neufra-100070884354091/?locale=de_DE"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Talbrennerei Neufra auf Facebook öffnen"
-              className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              href={`mailto:${siteInfo.email}`}
+              className="mt-1 block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                className="h-4 w-4"
-                fill="currentColor"
-              >
-                <path d="M14.5 8.5V7.2c0-.6.4-1 1-1h1.3V3.4c-.6-.1-1.5-.2-2.4-.2-2.4 0-4 1.5-4 4.2v1.1H7.8v3.1h2.6V21h3.3v-9.4h2.7l.4-3.1h-3.1Z" />
-              </svg>
+              {siteInfo.email}
             </a>
           </div>
+
+          <div>
+            <strong>Folgen Sie uns</strong>
+
+            <div className="mt-3 flex gap-3">
+              <a
+                href="https://www.instagram.com/talbrennerei_neufra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Talbrennerei Neufra auf Instagram öffnen"
+                className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle
+                    cx="17.5"
+                    cy="6.5"
+                    r="0.8"
+                    fill="currentColor"
+                    stroke="none"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.facebook.com/p/Talbrennerei-Neufra-100070884354091/?locale=de_DE"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Talbrennerei Neufra auf Facebook öffnen"
+                className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              >
+                <svg
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                  className="h-4 w-4"
+                  fill="currentColor"
+                >
+                  <path d="M14.5 8.5V7.2c0-.6.4-1 1-1h1.3V3.4c-.6-.1-1.5-.2-2.4-.2-2.4 0-4 1.5-4 4.2v1.1H7.8v3.1h2.6V21h3.3v-9.4h2.7l.4-3.1h-3.1Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 border-t border-[#1F2F20]/10 pt-5 text-xs text-[#1F2F20]/65">
+          <Link
+            href="/impressum"
+            className="transition-colors duration-200 hover:text-[#526247] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+          >
+            Impressum
+          </Link>
         </div>
       </div>
     </footer>
