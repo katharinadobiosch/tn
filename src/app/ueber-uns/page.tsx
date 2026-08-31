@@ -82,7 +82,7 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="bg-[#1F2F20] px-6 py-24 text-[#FAF9F6]">
+      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-14 md:grid-cols-[0.65fr_1.35fr]">
             <p className="flex h-fit items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -94,7 +94,7 @@ export default function UeberUnsPage() {
                 <h2 className="font-heading text-4xl leading-tight">
                   2024 – Ein neuer Weg
                 </h2>
-                <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/75">
+                <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/80">
                   <p>
                     Im Jahr 2024 beendete die Talbrennerei den eigenen Obstbau.
                     Gründe dafür waren der Personalmangel, der steigende
@@ -114,7 +114,7 @@ export default function UeberUnsPage() {
                 <h2 className="font-heading text-4xl leading-tight">
                   Regionalität, Qualität und Vertrauen
                 </h2>
-                <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/75">
+                <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/80">
                   <p>
                     Neben den langjährigen regionalen Partnern beziehen wir
                     Obst von weiteren ausgewählten Erzeugern, darunter Betriebe
@@ -133,7 +133,7 @@ export default function UeberUnsPage() {
                 <h2 className="font-heading text-4xl leading-tight">
                   Unser Sortiment wächst
                 </h2>
-                <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/75">
+                <div className="space-y-5 text-lg leading-8 text-[#FAF9F6]/80">
                   <p>
                     Mit der Zeit wurde das Angebot um Gemüse und weitere
                     regionale Lebensmittel ergänzt. So entstand aus dem

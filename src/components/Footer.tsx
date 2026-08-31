@@ -6,7 +6,7 @@ export async function Footer() {
   const [productionStreet, productionLocality] = siteInfo.address.split(", ");
 
   return (
-    <footer className="border-t border-[#1F2F20]/20 bg-white px-6 py-8 text-sm">
+    <footer className="border-t border-[#1F2F20]/20 bg-[#FAF9F6] px-6 py-8 text-sm">
       <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
         <div>
           <strong>Hofladen / Verkauf</strong>

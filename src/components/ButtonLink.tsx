@@ -18,7 +18,7 @@ export function ButtonLink({
     primary: "bg-[#1F2F20] text-white hover:bg-[#B87935] active:bg-[#8F5C29]",
     secondary:
       "border border-[#B87935]/50 text-[#1F2F20] hover:border-[#B87935] hover:bg-[#EAD6BD]/45 active:border-[#8F5C29] active:bg-[#EAD6BD]/65",
-    dark: "border border-[#B8C0A6] text-[#B8C0A6] hover:bg-[#B8C0A6] hover:text-[#24231F] active:bg-white active:text-[#24231F]",
+    dark: "border border-[#FAF9F6] text-[#FAF9F6] hover:bg-[#FAF9F6] hover:text-[#24231F] active:bg-white active:text-[#24231F]",
     light: "bg-[#FAF9F6] text-[#1F2F20] hover:bg-[#EAD6BD] active:bg-[#D8D2C6]",
   };
 

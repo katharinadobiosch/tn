@@ -25,7 +25,7 @@ export default async function KontaktPage() {
         </p>
       </section>
 
-      <section className="bg-[#1F2F20] px-6 py-24 text-[#FAF9F6]">
+      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -36,7 +36,7 @@ export default async function KontaktPage() {
                 Besuchen Sie unseren Hofladen
               </h2>
             </RevealText>
-            <p className="mt-6 max-w-xl text-lg leading-8 text-[#FAF9F6]/75">
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[#FAF9F6]/80">
               Im Hofladen in der Rathausstraße finden Sie unser regionales
               Sortiment und die Spezialitäten der Talbrennerei.
             </p>
