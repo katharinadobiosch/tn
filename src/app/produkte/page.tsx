@@ -62,7 +62,7 @@ export default function ProduktePage() {
     <main className="bg-[#FAF9F6] text-[#24231F]">
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
-          Aus eigener Herstellung
+          Spezialitäten · Saisonales · Neufra
         </p>
         <RevealText>
           <h1 className="max-w-5xl font-heading text-5xl leading-tight md:text-7xl">
@@ -72,12 +72,11 @@ export default function ProduktePage() {
         <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
           Neben unserem regionalen Hofladen bleibt die eigene Herstellung ein
           wichtiger Teil der Talbrennerei. Entdecken Sie unsere Brände, Liköre,
-          Honig, Fruchtaufstriche, Säfte und weitere Spezialitäten.
+          Honig, Fruchtaufstriche und weitere Spezialitäten aus Neufra.
         </p>
         <p className="mt-5 max-w-2xl border-l border-[#B87935] pl-6 leading-7 text-[#555149]">
-          Im Hofladen finden Sie außerdem ausgewählte regionale Produkte
-          anderer Erzeuger. Diese Seite konzentriert sich auf die
-          Spezialitäten, die von der Talbrennerei selbst hergestellt werden.
+          Ergänzt wird das Sortiment durch saisonales Obst und ausgewählte
+          regionale Produkte. Die Verfügbarkeit kann je nach Saison variieren.
         </p>
         <div className="mt-10 grid max-w-5xl gap-6 border-l border-[#B87935] pl-6 md:grid-cols-3">
           <div>
@@ -85,7 +84,9 @@ export default function ProduktePage() {
               Herkunft
             </p>
             <p className="mt-3 leading-7 text-[#555149]">
-              Obst von Streuobstwiesen am Fuß der Schwäbischen Alb.
+              <p className="mt-3 leading-7 text-[#555149]">
+                Ausgewählte Zutaten und Produkte mit Bezug zur Region.
+              </p>
             </p>
           </div>
 
@@ -143,7 +144,10 @@ export default function ProduktePage() {
                     <p className="mt-4 leading-7 text-[#555149]">
                       {product.text}
                     </p>
-                    <span className="mt-6 text-sm text-[#526247]" aria-hidden="true">
+                    <span
+                      className="mt-6 text-sm text-[#526247]"
+                      aria-hidden="true"
+                    >
                       Zur Auswahl ↓
                     </span>
                   </div>
@@ -155,7 +159,10 @@ export default function ProduktePage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
-        <article id="braende" className="scroll-mt-8 border-t border-[#24231F]/15 pt-10">
+        <article
+          id="braende"
+          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+        >
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Brennerei
           </p>
@@ -171,7 +178,10 @@ export default function ProduktePage() {
           </div>
         </article>
 
-        <article id="likoere" className="scroll-mt-8 border-t border-[#24231F]/15 pt-10">
+        <article
+          id="likoere"
+          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+        >
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Aus der Talbrennerei
           </p>
@@ -188,7 +198,10 @@ export default function ProduktePage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
-        <article id="honig" className="scroll-mt-8 border-t border-[#24231F]/15 pt-10">
+        <article
+          id="honig"
+          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+        >
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Eigene Imkerei
           </p>
