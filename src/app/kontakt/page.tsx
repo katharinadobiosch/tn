@@ -1,74 +1,134 @@
 import { siteInfo } from "@/data/site";
 import { RevealText } from "@/components/RevealText";
+import { getOpenDaysOnly } from "@/lib/siteSettings";
 
-export default function KontaktPage() {
+export default async function KontaktPage() {
+  const openingHours = await getOpenDaysOnly();
+
   return (
     <main className="bg-[#FAF9F6] text-[#24231F]">
-      <section className="mx-auto max-w-7xl px-6 pb-16 pt-24">
+      <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Kontakt
         </p>
 
         <RevealText>
           <h1 className="max-w-5xl font-heading text-5xl leading-tight md:text-7xl">
-            Wir freuen uns auf Ihre Anfrage.
+            Kontakt zur Talbrennerei Neufra
           </h1>
         </RevealText>
 
         <p className="mt-8 max-w-2xl text-lg leading-8 text-[#555149]">
-          Für Fragen zu Produkten, Verfügbarkeit, Verkostungen oder zur
-          Vermietung des Brennerstübles erreichen Sie uns telefonisch, per
-          WhatsApp oder per E-Mail.
+          Ob Fragen zu Produkten und Verfügbarkeit, zum Hofladen, zu
+          Verkostungen und dem Brennerstüble oder ein anderes Anliegen – wir
+          helfen Ihnen gerne weiter.
         </p>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-8 px-6 pb-24 md:grid-cols-3">
-        <article className="border-t border-[#24231F]/15 pt-8">
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Telefon
+      <section className="bg-[#1F2F20] px-6 py-24 text-[#FAF9F6]">
+        <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
+              Vor Ort
+            </p>
+            <RevealText>
+              <h2 className="font-heading text-4xl leading-tight md:text-5xl">
+                Besuchen Sie unseren Hofladen
+              </h2>
+            </RevealText>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-[#FAF9F6]/75">
+              Im Hofladen in der Rathausstraße finden Sie unser regionales
+              Sortiment und die Spezialitäten der Talbrennerei.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2">
+            <article className="border-t border-[#EAD6BD]/35 pt-8">
+              <p className="text-xs uppercase tracking-[0.28em] text-[#EAD6BD]">
+                Hofladen
+              </p>
+              <p className="mt-5 font-heading text-3xl leading-relaxed">
+                Rathausstr. 15
+                <br />
+                72419 Neufra
+              </p>
+            </article>
+
+            <article className="border-t border-[#EAD6BD]/35 pt-8">
+              <p className="text-xs uppercase tracking-[0.28em] text-[#EAD6BD]">
+                Öffnungszeiten
+              </p>
+              <p className="mt-5 whitespace-pre-line font-heading text-3xl leading-relaxed">
+                {openingHours}
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-24">
+        <div className="mb-12 max-w-3xl">
+          <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
+            Kontaktmöglichkeiten
           </p>
-          <h2 className="font-heading text-4xl">Anrufen</h2>
+          <RevealText direction="right">
+            <h2 className="font-heading text-4xl leading-tight md:text-5xl">
+              So erreichen Sie uns
+            </h2>
+          </RevealText>
+        </div>
 
-          <a
-            href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
-            className="mt-6 inline-block border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-          >
-            {siteInfo.phone}
-          </a>
+        <div className="grid gap-8 md:grid-cols-3">
+          <article className="border-t border-[#24231F]/15 pt-8">
+            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Telefon
+            </p>
+            <a
+              href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
+              className="mt-6 inline-block font-heading text-2xl transition-colors duration-200 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
+              {siteInfo.phone}
+            </a>
+          </article>
 
-          <a
-            href={`https://wa.me/${siteInfo.whatsapp.replace("+", "")}?text=${encodeURIComponent(
-              "Hallo, ich habe eine Anfrage zur Talbrennerei Neufra.",
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-6 block w-fit bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#B87935] active:bg-[#8F5C29] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-          >
-            Auf WhatsApp schreiben
-          </a>
-        </article>
+          <article className="border-t border-[#24231F]/15 pt-8">
+            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+              E-Mail
+            </p>
+            <a
+              href={`mailto:${siteInfo.email}`}
+              className="mt-6 inline-block font-heading text-2xl transition-colors duration-200 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
+              {siteInfo.email}
+            </a>
+          </article>
 
-        <article className="border-t border-[#24231F]/15 pt-8">
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            E-Mail
-          </p>
-          <h2 className="font-heading text-4xl">Schreiben</h2>
+          <article className="border-t border-[#24231F]/15 pt-8">
+            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+              WhatsApp
+            </p>
+            <a
+              href={`https://wa.me/${siteInfo.whatsapp.replace("+", "")}?text=${encodeURIComponent(
+                "Hallo, ich habe eine Anfrage zur Talbrennerei Neufra.",
+              )}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex bg-[#1F2F20] px-6 py-3 text-sm text-white transition-colors duration-200 hover:bg-[#B87935] active:bg-[#8F5C29] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+            >
+              Auf WhatsApp schreiben
+            </a>
+          </article>
+        </div>
 
-          <a
-            href={`mailto:${siteInfo.email}`}
-            className="mt-6 inline-block border-b border-transparent pb-1 text-lg transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
-          >
-            {siteInfo.email}
-          </a>
-        </article>
+        <div className="mt-16 flex flex-col gap-6 border-t border-[#24231F]/15 pt-8 sm:flex-row sm:items-center">
+          <div>
+            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Social Media
+            </p>
+            <h3 className="mt-2 font-heading text-2xl">Talbrennerei folgen</h3>
+          </div>
 
-        <article className="border-t border-[#24231F]/15 pt-8">
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Social Media
-          </p>
-          <h2 className="font-heading text-4xl">Folgen</h2>
-
-          <div className="mt-6 flex gap-4">
+          <div className="flex gap-4 sm:ml-auto">
             <a
               href="https://www.instagram.com/talbrennerei_neufra/"
               target="_blank"
@@ -115,7 +175,33 @@ export default function KontaktPage() {
               </svg>
             </a>
           </div>
-        </article>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 pb-24">
+        <div className="grid gap-10 border-y border-[#1F2F20]/15 py-12 md:grid-cols-[0.8fr_1.2fr]">
+          <div>
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Betriebsstandort
+            </p>
+            <h2 className="font-heading text-4xl leading-tight">
+              Produktion und Lager
+            </h2>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2">
+            <p className="font-heading text-2xl leading-relaxed text-[#1F2F20]">
+              Talstr. 25
+              <br />
+              72419 Neufra
+            </p>
+            <p className="leading-7 text-[#555149]">
+              Hier befinden sich Produktion und Lager der Talbrennerei. Für
+              Ihren Besuch und Einkauf begrüßen wir Sie in unserem Hofladen in
+              der Rathausstr. 15.
+            </p>
+          </div>
+        </div>
       </section>
     </main>
   );
