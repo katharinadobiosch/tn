@@ -109,6 +109,12 @@ export async function Footer() {
           >
             Impressum
           </Link>
+          <Link
+            href="/datenschutz"
+            className="transition-colors duration-200 hover:text-[#526247] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+          >
+            Datenschutz
+          </Link>
         </div>
       </div>
     </footer>
