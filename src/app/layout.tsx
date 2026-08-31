@@ -1,4 +1,4 @@
-import { Inter, Raleway, Josefin_Sans } from "next/font/google";
+import { Inter, Josefin_Sans } from "next/font/google";
 
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -8,12 +8,6 @@ import "./globals.css";
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-});
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
 });
 
 const josefinSans = Josefin_Sans({
@@ -42,7 +36,7 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${josefinSans.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className={`${inter.variable} ${josefinSans.variable}`}>
+      <body>
         <Header />
         {children}
         <Footer />
