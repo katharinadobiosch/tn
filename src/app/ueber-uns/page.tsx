@@ -77,6 +77,12 @@ export default function UeberUnsPage() {
                   wurde auch die Frage der Verarbeitung immer wichtiger.
                 </p>
                 <p>
+                  Die Pflege der Obstwiesen und Plantagen war für die Familie
+                  weit mehr als reine Arbeit. Die Bäume wurden mit viel
+                  Erfahrung gepflegt und die Früchte zur Erntezeit schonend von
+                  Hand geerntet.
+                </p>
+                <p>
                   Daraus entwickelten sich die eigene Brennerei und der
                   Direktverkauf in Neufra. Obst, das auf den Flächen wuchs,
                   konnte so verarbeitet und als eigene Spezialität angeboten
@@ -108,10 +114,12 @@ export default function UeberUnsPage() {
                     Bereich Pflanzenschutz.
                   </p>
                   <p>
-                    Die Plantagen wurden an regionale Obstbaubetriebe verkauft.
-                    Mit einigen dieser Betriebe arbeiten wir weiterhin eng
-                    zusammen; sie liefern auch heute Obst für unsere
-                    Verarbeitung.
+                    <p>
+                      Die Plantagen wurden an regionale Obstbaubetriebe
+                      verkauft. Mit einigen dieser Betriebe arbeiten wir
+                      weiterhin eng zusammen und beziehen teilweise weiterhin
+                      deren Obst.
+                    </p>
                   </p>
                 </div>
               </article>
@@ -147,10 +155,11 @@ export default function UeberUnsPage() {
                   </p>
                   <p>
                     Regionalität verstehen wir saisonal: Was in Deutschland
-                    wächst, soll nach Möglichkeit auch aus deutschem Anbau
-                    stammen. Ist ein Produkt saisonal oder klimatisch nicht aus
-                    deutschem Anbau verfügbar, bieten wir es möglicherweise
-                    nicht an.
+                    wächst, möchten wir möglichst auch aus deutschem Anbau
+                    beziehen. Ist ein Produkt zu einer bestimmten Jahreszeit
+                    oder aufgrund der klimatischen Bedingungen nicht aus
+                    heimischem Anbau verfügbar, führen wir es entsprechend
+                    nicht.
                   </p>
                 </div>
               </article>

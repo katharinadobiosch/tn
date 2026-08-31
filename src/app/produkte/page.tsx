@@ -91,9 +91,7 @@ export default function ProduktePage() {
               Herkunft
             </p>
             <p className="mt-3 leading-7 text-[#555149]">
-              <p className="mt-3 leading-7 text-[#555149]">
-                Ausgewählte Zutaten und Produkte mit Bezug zur Region.
-              </p>
+              Ausgewählte Zutaten und Produkte mit Bezug zur Region.
             </p>
           </div>
 
