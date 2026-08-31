@@ -57,7 +57,7 @@ export const seasonalFruit = [
 export const additionalProducts = [
   "Kerzen aus Bienenwachs",
   "Getrocknete Früchte",
-  "100 % naturtrüber Apfelsaft, gepresst aus eigenen Äpfeln",
+  "100 % naturtrüber Apfelsaft",
   "Geschenkkörbe mit Produkten aus der Region",
 ];
 
