@@ -169,7 +169,7 @@ export default function UeberUnsPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-[440px] overflow-hidden bg-[#D8D2C6]">
             <Image
-              src={siteImages.about.shop}
+              src={siteImages.about.outside}
               alt="Innenraum des Hofladens in Neufra"
               fill
               className="object-cover object-[0%_center]"

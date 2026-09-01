@@ -122,10 +122,10 @@ export default function ProduktePage() {
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl">
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
-              Sortiment
+              Aus eigener Herstellung
             </p>
             <h2 className="font-heading text-4xl leading-tight md:text-5xl">
-              Unsere Spezialitäten im Überblick
+              Unsere eigenen Spezialitäten
             </h2>
           </div>
 
@@ -238,22 +238,6 @@ export default function ProduktePage() {
           </div>
         </article>
       </section>
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] talbrennerei-produkte-seasonal">
-        <div>
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Saisonales
-          </p>
-          <h2 className="font-heading text-4xl leading-tight md:text-5xl">
-            Obst der Saison
-          </h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            Gerne können Sie uns kontaktieren und anfragen, welche Obstsorten
-            aktuell verfügbar sind.
-          </p>
-        </div>
-
-        <ProductList items={seasonalFruit} />
-      </section>
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
         <article
           id="saefte"
@@ -290,6 +274,98 @@ export default function ProduktePage() {
             <ProductList items={wildProducts} />
           </div>
         </article>
+      </section>
+      <section className="bg-[#EAD6BD]/35 px-6 py-24 talbrennerei-produkte-hofladen-sortiment">
+        <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.82fr_1.18fr]">
+          <div>
+            <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
+              Im Hofladen
+            </p>
+            <h2 className="font-heading text-4xl leading-tight text-[#1F2F20] md:text-5xl">
+              Regionales und Saisonales für den täglichen Einkauf
+            </h2>
+            <p className="mt-6 max-w-xl leading-7 text-[#555149]">
+              Zum Sortiment gehören regionales Obst und Gemüse sowie Brot,
+              Eier, Gewürze, Wurst, Käse und weitere regionale Lebensmittel.
+              Das Angebot richtet sich nach Saison und Verfügbarkeit.
+            </p>
+
+            <ul className="mt-10 border-y border-[#1F2F20]/15 text-lg text-[#1F2F20]">
+              <li className="border-b border-[#1F2F20]/15 py-4">
+                Regionales Obst und Gemüse
+              </li>
+              <li className="border-b border-[#1F2F20]/15 py-4">
+                Brot und Eier
+              </li>
+              <li className="border-b border-[#1F2F20]/15 py-4">
+                Gewürze, Wurst und Käse
+              </li>
+              <li className="py-4">Weitere regionale Lebensmittel</li>
+            </ul>
+          </div>
+
+          <figure>
+            <div className="grid grid-cols-12 items-start gap-4">
+              <div className="relative col-span-7 min-h-72 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[12px_12px_0_rgba(82,98,71,0.12)] md:min-h-96">
+                <Image
+                  src={siteImages.products.apples}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 35vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative col-span-5 mt-12 min-h-52 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] md:min-h-64">
+                <Image
+                  src={siteImages.products.carrotsAlt}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 24vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative col-span-5 -mt-8 min-h-48 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] md:min-h-60">
+                <Image
+                  src={siteImages.products.flour}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 24vw, 40vw"
+                  className="object-cover"
+                />
+              </div>
+              <div className="relative col-span-7 min-h-64 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[12px_12px_0_rgba(184,121,53,0.12)] md:min-h-80">
+                <Image
+                  src={siteImages.products.shopSausage}
+                  alt=""
+                  fill
+                  sizes="(min-width: 1024px) 35vw, 58vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <figcaption className="mt-6 max-w-xl text-sm leading-6 text-[#555149]">
+              Die Bilder dienen ausschließlich als Illustration und zeigen
+              keine verbindliche Auswahl. Das aktuelle Angebot richtet sich
+              nach Saison und Verfügbarkeit.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] talbrennerei-produkte-seasonal">
+        <div>
+          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+            Im Hofladen · Saisonales
+          </p>
+          <h2 className="font-heading text-4xl leading-tight md:text-5xl">
+            Obst der Saison
+          </h2>
+          <p className="mt-6 leading-7 text-[#555149]">
+            Gerne können Sie uns kontaktieren und anfragen, welche Obstsorten
+            aktuell verfügbar sind.
+          </p>
+        </div>
+
+        <ProductList items={seasonalFruit} />
       </section>
     </main>
   );
