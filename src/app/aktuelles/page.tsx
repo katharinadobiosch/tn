@@ -19,7 +19,10 @@ export default async function AktuellesPage() {
   `) as Update[];
 
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main
+      className="bg-[#FAF9F6] text-[#24231F]"
+      style={{ "--page-accent": "#6B8F5A" } as React.CSSProperties}
+    >
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Aktuelles
@@ -37,7 +40,6 @@ export default async function AktuellesPage() {
           Veranstaltungen.
         </p>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 pb-24">
         {!updates.length && (
           <div className="border-y border-[#24231F]/15 py-12">

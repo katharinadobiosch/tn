@@ -15,7 +15,10 @@ export default async function HofladenPage() {
   const openingHours = await getOpenDaysOnly();
 
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main
+      className="bg-[#FAF9F6] text-[#24231F]"
+      style={{ "--page-accent": "#C98A2C" } as React.CSSProperties}
+    >
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -45,7 +48,6 @@ export default async function HofladenPage() {
           />
         </div>
       </section>
-
       <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
@@ -103,7 +105,6 @@ export default async function HofladenPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#EAD6BD]/35 px-6 py-24">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.85fr_1.15fr]">
           <div>
@@ -132,7 +133,6 @@ export default async function HofladenPage() {
           </div>
         </div>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -146,7 +146,7 @@ export default async function HofladenPage() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <article className="border-t-2 border-[#B87935] bg-[#EAD6BD]/25 p-8 md:p-10">
+          <article className="border-t-2 border-[var(--page-accent)] bg-[#EAD6BD]/25 p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Öffnungszeiten
             </p>
@@ -155,7 +155,7 @@ export default async function HofladenPage() {
             </p>
           </article>
 
-          <article className="border-t-2 border-[#B87935] bg-[#EAD6BD]/25 p-8 md:p-10">
+          <article className="border-t-2 border-[var(--page-accent)] bg-[#EAD6BD]/25 p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Hofladen
             </p>
@@ -167,7 +167,6 @@ export default async function HofladenPage() {
           </article>
         </div>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <div className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-12 md:flex-row md:items-center">
           <p className="max-w-3xl font-heading text-3xl leading-snug text-[#1F2F20] md:text-4xl">

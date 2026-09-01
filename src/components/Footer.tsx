@@ -37,13 +37,13 @@ export async function Footer() {
             <strong>Kontakt</strong>
             <a
               href={`tel:${siteInfo.phone.replaceAll(" ", "")}`}
-              className="block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[var(--page-accent)] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               {siteInfo.phone}
             </a>
             <a
               href={`mailto:${siteInfo.email}`}
-              className="mt-1 block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[#B87935] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="mt-1 block w-fit border-b border-transparent pb-0.5 transition-colors duration-200 hover:border-[var(--page-accent)] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               {siteInfo.email}
             </a>
@@ -58,7 +58,7 @@ export async function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Talbrennerei Neufra auf Instagram öffnen"
-                className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+                className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[var(--page-accent)] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
               >
                 <svg
                   aria-hidden="true"
@@ -87,7 +87,7 @@ export async function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Talbrennerei Neufra auf Facebook öffnen"
-                className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+                className="flex h-9 w-9 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[var(--page-accent)] hover:bg-[#FAF9F6] hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
               >
                 <svg
                   aria-hidden="true"

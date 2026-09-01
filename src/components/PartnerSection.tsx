@@ -37,6 +37,11 @@ const partners = [
     logo: "/partner/spross-spore.png",
     url: "https://spross-spore.de/",
   },
+  {
+    name: "Wildhof Hildegrund",
+    logo: "/partner/wildhof-hildegrund.jpeg",
+    url: "https://wildhof-hildegrund.de/",
+  },
 ];
 
 export function PartnerSection() {

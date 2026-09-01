@@ -138,7 +138,7 @@ export function HeaderNavigation({
           aria-expanded={isMobileMenuOpen}
           aria-controls="mobile-navigation"
           onClick={() => setIsMobileMenuOpen((isOpen) => !isOpen)}
-          className={`inline-flex h-11 w-11 items-center justify-center border border-[#1F2F20]/25 text-[#1F2F20] transition-colors duration-200 hover:border-[#B87935] hover:text-[#526247] ${linkFocusClasses} md:hidden`}
+          className={`inline-flex h-11 w-11 items-center justify-center border border-[#1F2F20]/25 text-[#1F2F20] transition-colors duration-200 hover:border-[var(--page-accent)] hover:text-[#526247] ${linkFocusClasses} md:hidden`}
         >
           <svg
             aria-hidden="true"

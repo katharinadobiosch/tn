@@ -12,7 +12,10 @@ export const metadata: Metadata = {
 
 export default function VerkostungPage() {
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main
+      className="bg-[#FAF9F6] text-[#24231F]"
+      style={{ "--page-accent": "#A9583E" } as React.CSSProperties}
+    >
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -110,11 +113,11 @@ export default function VerkostungPage() {
             Ausstattung und Vermietung
           </h2>
           <p className="mt-6 text-lg leading-8 text-[#555149]">
-            Parkmöglichkeiten befinden sich direkt vor dem Gebäude. Die
-            Eingänge und Toiletten sind barrierefrei zugänglich.
+            Parkmöglichkeiten befinden sich direkt vor dem Gebäude. Die Eingänge
+            und Toiletten sind barrierefrei zugänglich.
           </p>
 
-          <div className="mt-8 border-t-2 border-[#B87935] bg-[#EAD6BD]/25 p-6">
+          <div className="mt-8 border-t-2 border-[var(--page-accent)] bg-[#EAD6BD]/25 p-6">
             <p className="text-xs uppercase tracking-[0.24em] text-[#526247]">
               Mietpreis
             </p>

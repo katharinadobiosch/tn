@@ -7,6 +7,9 @@
   --accent-muted-green: #526247;
   --accent-warm: #b87935;
   --accent-warm-soft: #ead6bd;
+  --page-accent: var(
+    --accent-warm
+  ); /* Fallback, wird pro Seite überschrieben */
 }
 
 body {

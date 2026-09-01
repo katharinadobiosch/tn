@@ -11,7 +11,11 @@ export const metadata: Metadata = {
 
 export default function UeberUnsPage() {
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main
+      className="bg-[#FAF9F6] text-[#24231F]"
+      style={{ "--page-accent": "#526247" } as React.CSSProperties}
+    >
+      
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -42,7 +46,6 @@ export default function UeberUnsPage() {
           />
         </div>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="grid gap-14 md:grid-cols-[0.65fr_1.35fr]">
           <p className="flex h-fit items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -93,7 +96,6 @@ export default function UeberUnsPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-14 md:grid-cols-[0.65fr_1.35fr]">
@@ -167,7 +169,6 @@ export default function UeberUnsPage() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#EAD6BD]/35 px-6 py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-[440px] overflow-hidden bg-[#D8D2C6]">
@@ -198,7 +199,6 @@ export default function UeberUnsPage() {
           </div>
         </div>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 py-24">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -214,7 +214,7 @@ export default function UeberUnsPage() {
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <article className="border-t-2 border-[#B87935] bg-[#EAD6BD]/25 p-8 md:p-10">
+          <article className="border-t-2 border-[var(--page-accent)] bg-[#EAD6BD]/25 p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Hofladen / Verkauf
             </p>
@@ -225,7 +225,7 @@ export default function UeberUnsPage() {
             </p>
           </article>
 
-          <article className="border-t-2 border-[#B87935] bg-[#FAF9F6] p-8 md:p-10">
+          <article className="border-t-2 border-[var(--page-accent)] bg-[#FAF9F6] p-8 md:p-10">
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Produktion / Lager
             </p>
@@ -237,10 +237,9 @@ export default function UeberUnsPage() {
           </article>
         </div>
       </section>
-
       <section className="mx-auto max-w-7xl px-6 pb-24">
         <div className="border-y border-[#1F2F20]/15 py-16">
-          <blockquote className="max-w-5xl border-l-2 border-[#B87935] pl-8 font-heading text-3xl leading-snug text-[#1F2F20] md:text-5xl">
+          <blockquote className="max-w-5xl border-l-2 border-[var(--page-accent)] pl-8 font-heading text-3xl leading-snug text-[#1F2F20] md:text-5xl">
             Von der eigenen Streuobstwiese zur regionalen Vermarktung – unsere
             Geschichte verändert sich, aber unsere Leidenschaft für gute
             Produkte bleibt.

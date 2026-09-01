@@ -66,7 +66,10 @@ const brandAndSpiritProducts = spiritProducts.filter(
 
 export default function ProduktePage() {
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main
+      className="bg-[#FAF9F6] text-[#24231F]"
+      style={{ "--page-accent": "#7A3B2E" } as React.CSSProperties}
+    >
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Spezialitäten · Saisonales · Neufra
@@ -81,11 +84,11 @@ export default function ProduktePage() {
           wichtiger Teil der Talbrennerei. Entdecken Sie unsere Brände, Liköre,
           Honig, Fruchtaufstriche und weitere Spezialitäten aus Neufra.
         </p>
-        <p className="mt-5 max-w-2xl border-l border-[#B87935] pl-6 leading-7 text-[#555149]">
+        <p className="mt-5 max-w-2xl border-l border-[var(--page-accent)] pl-6 leading-7 text-[#555149]">
           Ergänzt wird das Sortiment durch saisonales Obst und ausgewählte
           regionale Produkte. Die Verfügbarkeit kann je nach Saison variieren.
         </p>
-        <div className="mt-10 grid max-w-5xl gap-6 border-l border-[#B87935] pl-6 md:grid-cols-3">
+        <div className="mt-10 grid max-w-5xl gap-6 border-l border-[var(--page-accent)] pl-6 md:grid-cols-3">
           <div>
             <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
               Herkunft
@@ -115,7 +118,6 @@ export default function ProduktePage() {
           </div>
         </div>
       </section>
-
       <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl">
@@ -133,7 +135,7 @@ export default function ProduktePage() {
                 <a
                   key={product.title}
                   href={product.href}
-                  className="group flex h-full flex-col overflow-hidden border border-[#EAD6BD]/20 bg-[#FAF9F6] text-[#24231F] transition-colors duration-200 hover:border-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#EAD6BD]"
+                  className="group flex h-full flex-col overflow-hidden border border-[#EAD6BD]/20 bg-[#FAF9F6] text-[#24231F] transition-colors duration-200 hover:border-[var(--page-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#EAD6BD]"
                 >
                   <div className="relative h-72 overflow-hidden bg-[#D8D2C6]">
                     <Image
@@ -162,7 +164,6 @@ export default function ProduktePage() {
           </nav>
         </div>
       </section>
-
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
         <article
           id="braende"
@@ -201,7 +202,6 @@ export default function ProduktePage() {
           </div>
         </article>
       </section>
-
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
         <article
           id="honig"
@@ -238,7 +238,6 @@ export default function ProduktePage() {
           </div>
         </article>
       </section>
-
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
@@ -255,7 +254,6 @@ export default function ProduktePage() {
 
         <ProductList items={seasonalFruit} />
       </section>
-
       <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
         <article
           id="saefte"

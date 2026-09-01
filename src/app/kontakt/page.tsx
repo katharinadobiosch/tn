@@ -141,7 +141,7 @@ export default async function KontaktPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Talbrennerei Neufra auf Instagram öffnen"
-              className="flex h-11 w-11 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="flex h-11 w-11 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[var(--page-accent)] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               <svg
                 aria-hidden="true"
@@ -170,7 +170,7 @@ export default async function KontaktPage() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Talbrennerei Neufra auf Facebook öffnen"
-              className="flex h-11 w-11 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[#B87935] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
+              className="flex h-11 w-11 items-center justify-center border border-[#24231F]/20 text-[#24231F] transition-colors duration-200 hover:border-[var(--page-accent)] hover:bg-[#EAD6BD]/35 hover:text-[#B87935] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#1F2F20]"
             >
               <svg
                 aria-hidden="true"

@@ -32,8 +32,8 @@ export function HeroSection({
     : "bg-transparent text-[#24231F]";
 
   const eyebrowClasses = isDark
-    ? "text-[#EAD6BD] before:bg-[#B87935]"
-    : "text-[#526247] before:bg-[#B87935]";
+    ? "text-[#EAD6BD] before:bg-[var(--page-accent)]"
+    : "text-[#526247] before:bg-[var(--page-accent)]";
 
   const bodyClasses = isDark ? "text-[#E8E1D3]" : "text-[#555149]";
   const containerClasses = isDark
