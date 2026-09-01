@@ -164,11 +164,11 @@ export default function ProduktePage() {
           </nav>
         </div>
       </section>
-      <section className="px-6 py-24">
+      <section className="bg-[#FAF9F6] px-6 py-28 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
           <article
             id="braende"
-            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+            className="scroll-mt-8"
           >
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Brennerei
@@ -187,7 +187,7 @@ export default function ProduktePage() {
 
           <article
             id="likoere"
-            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+            className="scroll-mt-8"
           >
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Aus der Talbrennerei
@@ -204,11 +204,11 @@ export default function ProduktePage() {
           </article>
         </div>
       </section>
-      <section className="border-y border-[#1F2F20]/10 bg-[#EAD6BD]/20 px-6 py-24">
+      <section className="bg-[#EAD6BD]/35 px-6 py-32 md:py-40">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
           <article
             id="honig"
-            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+            className="scroll-mt-8"
           >
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Eigene Imkerei
@@ -223,7 +223,7 @@ export default function ProduktePage() {
 
           <article
             id="fruchtaufstriche"
-            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+            className="scroll-mt-8"
           >
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Aus Früchten bester Qualität
@@ -242,11 +242,11 @@ export default function ProduktePage() {
           </article>
         </div>
       </section>
-      <section className="px-6 py-24">
+      <section className="bg-[#FAF9F6] px-6 py-28 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
           <article
             id="saefte"
-            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+            className="scroll-mt-8"
           >
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Außerdem
@@ -262,7 +262,7 @@ export default function ProduktePage() {
 
           <article
             id="wild"
-            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+            className="scroll-mt-8"
           >
             <span
               id="damwild"
