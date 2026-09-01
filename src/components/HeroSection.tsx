@@ -38,8 +38,8 @@ export function HeroSection({
   const bodyClasses = isDark ? "text-[#E8E1D3]" : "text-[#555149]";
 
   const containerClasses = isDark
-    ? "mx-auto grid max-w-[96rem] items-center gap-12 px-6 py-16 sm:px-8 sm:py-20 md:gap-16 md:px-10 lg:min-h-[max(760px,calc(100svh-7rem))] lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:gap-12 lg:py-16 xl:gap-16"
-    : "mx-auto grid min-h-[82vh] max-w-7xl items-center gap-14 px-6 py-20 md:grid-cols-[1.05fr_0.95fr]";
+    ? "mx-auto grid max-w-[96rem] items-center gap-12 px-6 py-12 sm:px-8 sm:py-16 md:gap-16 md:px-10 lg:min-h-[max(760px,calc(100svh-7rem))] lg:grid-cols-[minmax(0,0.96fr)_minmax(0,1.04fr)] lg:gap-12 lg:py-12 xl:gap-16"
+    : "mx-auto grid min-h-[82vh] max-w-7xl items-center gap-14 px-6 py-16 md:grid-cols-[1.05fr_0.95fr]";
 
   const titleClasses = isDark
     ? "max-w-[9.5ch] font-heading text-[3.75rem] font-bold leading-[1.02] tracking-[-0.025em] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] xl:text-[8.5rem] 2xl:text-[9rem]"

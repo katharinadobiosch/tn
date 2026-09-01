@@ -63,7 +63,7 @@ export default async function Home() {
           ]}
         />
 
-        <section className="bg-[#EAD6BD]/35 px-6 py-16 talbrennerei-home-hofladen-intro md:py-36">
+        <section className="bg-[#EAD6BD]/35 px-6 py-12 talbrennerei-home-hofladen-intro md:py-36">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div>
@@ -154,7 +154,7 @@ export default async function Home() {
         </section>
 
         <section
-          className="mx-auto max-w-7xl px-6 py-16 md:py-28"
+          className="mx-auto max-w-7xl px-6 py-12 md:py-28"
           aria-label="Einblicke in den Hofladen"
         >
           <div className="grid grid-cols-12 items-start gap-4 md:gap-6">

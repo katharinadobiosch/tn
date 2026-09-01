@@ -16,7 +16,7 @@ export default function UeberUnsPage() {
       style={{ "--page-accent": "#526247" } as React.CSSProperties}
     >
       {/* HERO */}
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-16 md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 md:pt-24 lg:gap-20">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-12 md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 md:pt-24 lg:gap-20">
         <div>
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Über uns
@@ -48,7 +48,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* DIE ERSTEN JAHRE */}
-      <section className="px-6 py-16 md:py-40">
+      <section className="px-6 py-12 md:py-40">
         <div className="mx-auto max-w-7xl">
           <p className="mb-10 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935] md:mb-16">
             Die ersten Jahre
@@ -110,7 +110,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* WEITERENTWICKLUNG */}
-      <section className="bg-[#526247] px-6 py-16 text-[#FAF9F6] talbrennerei-ueber-uns-history md:py-40">
+      <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-ueber-uns-history md:py-40">
         <div className="mx-auto max-w-7xl">
           <p className="mb-10 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935] md:mb-16">
             Weiterentwicklung
@@ -188,7 +188,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* 2025 / NEUER HOFLADEN */}
-      <section className="bg-[#EAD6BD]/35 px-6 py-16 talbrennerei-ueber-uns-development md:py-40">
+      <section className="bg-[#EAD6BD]/35 px-6 py-12 talbrennerei-ueber-uns-development md:py-40">
         <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
           <div className="relative min-h-[360px] overflow-hidden bg-[#D8D2C6] md:min-h-[500px]">
             <Image
@@ -226,7 +226,7 @@ export default function UeberUnsPage() {
       </section>
 
       {/* STANDORTE */}
-      <section className="mx-auto max-w-7xl px-6 py-16 talbrennerei-ueber-uns-locations md:py-40">
+      <section className="mx-auto max-w-7xl px-6 py-12 talbrennerei-ueber-uns-locations md:py-40">
         <div className="mb-10 max-w-3xl md:mb-16">
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Unsere Standorte

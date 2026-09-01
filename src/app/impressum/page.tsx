@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function ImpressumPage() {
   return (
     <main className="talbrennerei-impressum bg-[#FAF9F6] text-[#24231F]">
-      <section className="px-6 py-20 md:py-28">
+      <section className="px-6 py-16 md:py-28">
         <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-[#526247]">
             Rechtliches

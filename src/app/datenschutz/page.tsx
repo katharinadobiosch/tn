@@ -16,7 +16,7 @@ const textClassName = "mt-4 leading-7 text-[#1F2F20]/75";
 export default function DatenschutzPage() {
   return (
     <main className="talbrennerei-datenschutz">
-      <section className="bg-[#FAF9F6] px-6 py-20 md:py-28">
+      <section className="bg-[#FAF9F6] px-6 py-16 md:py-28">
         <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-[#526247]">
             Rechtliches

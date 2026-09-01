@@ -16,7 +16,7 @@ export default function VerkostungPage() {
       className="bg-[#FAF9F6] text-[#24231F] talbrennerei-verkostung"
       style={{ "--page-accent": "#A9583E" } as React.CSSProperties}
     >
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-16 md:min-h-[70vh] md:grid-cols-[1fr_0.9fr] md:gap-14 md:pb-20 md:pt-24">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-12 md:min-h-[70vh] md:grid-cols-[1fr_0.9fr] md:gap-14 md:pb-20 md:pt-24">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Verkostung
@@ -45,7 +45,7 @@ export default function VerkostungPage() {
         </div>
       </section>
 
-      <section className="bg-[#EAD6BD] px-6 py-16 talbrennerei-verkostung-tastings md:py-24">
+      <section className="bg-[#EAD6BD] px-6 py-12 talbrennerei-verkostung-tastings md:py-24">
         <div className="mx-auto grid max-w-7xl items-center gap-10 md:grid-cols-[1fr_0.9fr] md:gap-14">
           <div>
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#526247] before:h-px before:w-8 before:bg-[#B87935]">
@@ -92,7 +92,7 @@ export default function VerkostungPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-16 talbrennerei-verkostung-private-events md:grid-cols-2 md:gap-14 md:py-24">
+      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-12 talbrennerei-verkostung-private-events md:grid-cols-2 md:gap-14 md:py-24">
         <article className="border-t border-[#24231F]/15 pt-8 md:pt-10">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Private Veranstaltungen
