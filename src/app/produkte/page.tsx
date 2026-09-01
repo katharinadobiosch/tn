@@ -70,7 +70,7 @@ export default function ProduktePage() {
       className="bg-[#FAF9F6] text-[#24231F] talbrennerei-produkte"
       style={{ "--page-accent": "#7A3B2E" } as React.CSSProperties}
     >
-      <section className="mx-auto max-w-7xl px-6 pb-14 pt-8 md:pb-20 md:pt-24">
+      <section className="mx-auto max-w-7xl px-6 pb-14 pt-8 md:pb-24 md:pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Spezialitäten · Saisonales · Neufra
         </p>
@@ -126,7 +126,7 @@ export default function ProduktePage() {
         </div>
       </section>
 
-      <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-produkte-category-navigation md:py-24">
+      <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-produkte-category-navigation md:py-36">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 max-w-3xl md:mb-10">
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -296,7 +296,7 @@ export default function ProduktePage() {
         </div>
       </section>
 
-      <section className="bg-[#EAD6BD]/35 px-6 py-12 talbrennerei-produkte-hofladen-sortiment md:py-24">
+      <section className="bg-[#EAD6BD]/35 px-6 py-12 talbrennerei-produkte-hofladen-sortiment md:py-32">
         <div className="mx-auto grid max-w-7xl items-center gap-10 md:gap-16 lg:grid-cols-[0.82fr_1.18fr]">
           <div>
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -377,7 +377,7 @@ export default function ProduktePage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-12 talbrennerei-produkte-seasonal md:grid-cols-[0.8fr_1.2fr] md:gap-14 md:py-16">
+      <section className="mx-auto grid max-w-7xl gap-10 px-6 py-12 talbrennerei-produkte-seasonal md:grid-cols-[0.8fr_1.2fr] md:gap-14 md:py-24">
         <div>
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Im Hofladen · Saisonales

@@ -18,7 +18,7 @@ export function UpdatesPreview({ updates }: UpdatesPreviewProps) {
   }
 
   return (
-    <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6] talbrennerei-updates-preview">
+    <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6] talbrennerei-updates-preview md:py-36">
       <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.75fr_1.25fr] md:gap-16">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">

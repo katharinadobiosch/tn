@@ -14,7 +14,7 @@ export default async function KontaktPage() {
 
   return (
     <main className="bg-[#FAF9F6] text-[#24231F] talbrennerei-kontakt">
-      <section className="mx-auto max-w-7xl px-6 pb-12 pt-12 md:pb-20 md:pt-24">
+      <section className="mx-auto max-w-7xl px-6 pb-12 pt-12 md:pb-24 md:pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Kontakt
         </p>
@@ -32,7 +32,7 @@ export default async function KontaktPage() {
         </p>
       </section>
 
-      <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-kontakt-location md:py-24">
+      <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-kontakt-location md:py-36">
         <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-[0.9fr_1.1fr] md:gap-14">
           <div>
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -77,7 +77,7 @@ export default async function KontaktPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-12 talbrennerei-kontakt-options md:py-24">
+      <section className="mx-auto max-w-7xl px-6 py-12 talbrennerei-kontakt-options md:py-32">
         <div className="mb-8 max-w-3xl md:mb-12">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Kontaktmöglichkeiten

@@ -23,7 +23,7 @@ export default async function AktuellesPage() {
       className="bg-[#FAF9F6] text-[#24231F] talbrennerei-aktuelles"
       style={{ "--page-accent": "#6B8F5A" } as React.CSSProperties}
     >
-      <section className="mx-auto max-w-7xl px-6 pb-12 pt-12 md:pb-20 md:pt-24">
+      <section className="mx-auto max-w-7xl px-6 pb-12 pt-12 md:pb-24 md:pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Aktuelles
         </p>

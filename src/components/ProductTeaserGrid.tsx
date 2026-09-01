@@ -23,7 +23,7 @@ export function ProductTeaserGrid({
   linkLabel = "Alle Produkte ansehen",
 }: ProductTeaserGridProps) {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 talbrennerei-product-teaser-grid talbrennerei-home-own-specialties">
+    <section className="mx-auto max-w-7xl px-6 pb-16 pt-24 talbrennerei-product-teaser-grid talbrennerei-home-own-specialties md:pb-32 md:pt-32">
       <div className="mb-12 flex items-end justify-between gap-8">
         <div className="max-w-3xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
