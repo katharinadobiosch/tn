@@ -21,9 +21,8 @@ export const siteImages = {
     wild: "/images/products/wild.png",
 
     // Hofladen / regionales Sortiment
-    apples: "/images/products/hofladen-äpfel.png",
-    carrots: "/images/products/hofladen-möhren.png",
-    carrotsAlt: "/images/products/hofladen-möhren-2.png",
+    apples: "/images/products/hofladen-äpfel.png",
+    carrots: "/images/products/hofladen-möhren-2.png",
     marmalade: "/images/products/hofladen-marmelade.png",
     marmaladeAlt: "/images/products/hofladen-marmelade-2.png",
     flour: "/images/products/hofladen-mehl.png",

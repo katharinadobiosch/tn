@@ -327,7 +327,7 @@ export default function ProduktePage() {
               </div>
               <div className="relative col-span-5 mt-12 min-h-52 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] md:min-h-64">
                 <Image
-                  src={siteImages.products.carrotsAlt}
+                  src={siteImages.products.carrots}
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 24vw, 40vw"
