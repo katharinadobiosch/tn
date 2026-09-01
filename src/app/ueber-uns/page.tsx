@@ -96,8 +96,10 @@ export default function UeberUnsPage() {
 
               <p>
                 Daraus entwickelten sich die eigene Brennerei und der
-                Direktverkauf in Neufra. Obst, das auf den Flächen wuchs, konnte
-                so verarbeitet und als eigene Spezialität angeboten werden.
+                Direktverkauf in Neufra. Obst von erster Qualität wurde als
+                Tafelobst im Hofladen angeboten. Das übrige Obst wurde in der
+                hauseigenen Brennerei zu eigenen Spezialitäten weiterverarbeitet
+                oder fand im familieneigenen Damwild-Gehege Verwendung.
               </p>
             </div>
           </article>

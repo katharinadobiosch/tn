@@ -196,6 +196,7 @@ export default async function Home() {
             title: update.title,
             text: update.content,
             date: new Date(update.created_at).toISOString(),
+            imageUrl: update.image_url,
           }))}
         />
       </main>
