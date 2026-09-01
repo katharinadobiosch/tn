@@ -63,9 +63,9 @@ export default async function Home() {
           ]}
         />
 
-        <section className="bg-[#EAD6BD]/35 px-6 py-28 talbrennerei-home-hofladen-intro md:py-36">
+        <section className="bg-[#EAD6BD]/35 px-6 py-16 talbrennerei-home-hofladen-intro md:py-36">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
               <div>
                 <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
                   Der Hofladen
@@ -85,12 +85,15 @@ export default async function Home() {
                 </p>
               </div>
             </div>
-            <div className="mt-20 grid gap-12 md:grid-cols-3 md:gap-10 lg:mt-28 lg:gap-16">
+
+            <div className="mt-14 grid gap-10 md:mt-20 md:grid-cols-3 md:gap-10 lg:mt-28 lg:gap-16">
               <article>
                 <span className="mb-6 block h-px w-10 bg-[#B87935]" />
+
                 <h3 className="font-heading text-3xl leading-tight text-[#1F2F20]">
                   Frisch aus der Region
                 </h3>
+
                 <p className="mt-5 leading-7 text-[#555149]">
                   Saisonales Obst und Gemüse von ausgewählten Erzeugern aus der
                   Umgebung.
@@ -99,9 +102,11 @@ export default async function Home() {
 
               <article>
                 <span className="mb-6 block h-px w-10 bg-[#B87935]" />
+
                 <h3 className="font-heading text-3xl leading-tight text-[#1F2F20]">
                   Für jeden Tag
                 </h3>
+
                 <p className="mt-5 leading-7 text-[#555149]">
                   Brot, Eier, Käse, Wurst, Gewürze und weitere gute Lebensmittel
                   regionaler Betriebe.
@@ -110,9 +115,11 @@ export default async function Home() {
 
               <article>
                 <span className="mb-6 block h-px w-10 bg-[#B87935]" />
+
                 <h3 className="font-heading text-3xl leading-tight text-[#1F2F20]">
                   Von uns gemacht
                 </h3>
+
                 <p className="mt-5 leading-7 text-[#555149]">
                   Liköre, Spirituosen, Honig, Fruchtaufstriche und Säfte aus
                   eigener Herstellung.
@@ -120,21 +127,24 @@ export default async function Home() {
               </article>
             </div>
 
-            <div className="mt-16 grid gap-6 bg-[#FAF9F6]/80 p-6 sm:grid-cols-2 sm:p-8 lg:mt-20">
+            <div className="mt-12 grid gap-6 bg-[#FAF9F6]/80 p-6 sm:grid-cols-2 sm:p-8 md:mt-16 lg:mt-20">
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
                   Hier finden Sie uns
                 </p>
+
                 <p className="mt-3 text-base leading-7 text-[#1F2F20]">
                   Rathausstr. 15
                   <br />
                   72419 Neufra
                 </p>
               </div>
+
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
                   Öffnungszeiten
                 </p>
+
                 <p className="mt-3 whitespace-pre-line text-base leading-7 text-[#1F2F20]">
                   {openingHours}
                 </p>
@@ -144,11 +154,11 @@ export default async function Home() {
         </section>
 
         <section
-          className="mx-auto max-w-7xl px-6 py-28"
+          className="mx-auto max-w-7xl px-6 py-16 md:py-28"
           aria-label="Einblicke in den Hofladen"
         >
           <div className="grid grid-cols-12 items-start gap-4 md:gap-6">
-            <div className="relative col-span-12 min-h-[340px] overflow-hidden md:col-span-7 md:min-h-[620px]">
+            <div className="relative col-span-12 min-h-[300px] overflow-hidden md:col-span-7 md:min-h-[620px]">
               <Image
                 src={siteImages.hofladen.inside}
                 alt="Einblick in den Hofladen der Talbrennerei Neufra"
@@ -158,7 +168,7 @@ export default async function Home() {
               />
             </div>
 
-            <div className="relative col-span-7 min-h-[280px] overflow-hidden md:col-span-5 md:mt-20 md:min-h-[390px]">
+            <div className="relative col-span-7 min-h-[230px] overflow-hidden md:col-span-5 md:mt-20 md:min-h-[390px]">
               <Image
                 src={siteImages.products.apples}
                 alt="Obst im Hofladen"
@@ -168,7 +178,7 @@ export default async function Home() {
               />
             </div>
 
-            <div className="relative col-span-5 mt-8 min-h-[220px] overflow-hidden md:col-span-4 md:-mt-28 md:min-h-[310px]">
+            <div className="relative col-span-5 mt-6 min-h-[190px] overflow-hidden md:col-span-4 md:-mt-28 md:min-h-[310px]">
               <Image
                 src={siteImages.products.shopTea}
                 alt="Tee und Gewürze im Hofladen"

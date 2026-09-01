@@ -19,7 +19,7 @@ export default async function HofladenPage() {
       className="bg-[#FAF9F6] text-[#24231F] talbrennerei-hofladen"
       style={{ "--page-accent": "#C98A2C" } as React.CSSProperties}
     >
-      <section className="mx-auto grid min-h-[74vh] max-w-7xl items-center gap-14 px-6 pb-24 pt-24 md:grid-cols-[1fr_0.95fr] lg:gap-20">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-16 md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 md:pt-24 lg:gap-20">
         <div>
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Hofladen in Neufra
@@ -31,14 +31,14 @@ export default async function HofladenPage() {
             </h1>
           </RevealText>
 
-          <p className="mt-9 max-w-xl text-lg leading-8 text-[#555149]">
+          <p className="mt-7 max-w-xl text-lg leading-8 text-[#555149] md:mt-9">
             Regionale Lebensmittel, ausgewählte Erzeuger und eigene
             Spezialitäten – persönlich ausgesucht und mit Blick auf Herkunft und
             Qualität.
           </p>
         </div>
 
-        <div className="relative min-h-[520px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
+        <div className="relative min-h-[360px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[12px_12px_0_rgba(234,214,189,0.45)] md:min-h-[520px] md:shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
           <Image
             src={siteImages.hofladen.inside}
             alt="Hofladen der Talbrennerei Neufra"
@@ -49,9 +49,9 @@ export default async function HofladenPage() {
         </div>
       </section>
 
-      <section className="bg-[#526247] px-6 py-28 text-[#FAF9F6] talbrennerei-hofladen-sortiment md:py-36">
+      <section className="bg-[#526247] px-6 py-16 text-[#FAF9F6] talbrennerei-hofladen-sortiment md:py-36">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-16 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
+          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
             <div>
               <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
                 Unser Sortiment
@@ -64,11 +64,12 @@ export default async function HofladenPage() {
               </RevealText>
             </div>
 
-            <div className="space-y-16">
-              <article className="grid gap-5 sm:grid-cols-[13rem_1fr]">
+            <div className="space-y-10 md:space-y-16">
+              <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
                 <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
                   Regional &amp; saisonal
                 </h3>
+
                 <p className="leading-7 text-[#FAF9F6]/80">
                   Je nach Saison finden Sie bei uns Obst und Gemüse von
                   regionalen Erzeugern. Das Angebot orientiert sich daran, was
@@ -76,10 +77,11 @@ export default async function HofladenPage() {
                 </p>
               </article>
 
-              <article className="grid gap-5 sm:grid-cols-[13rem_1fr]">
+              <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
                 <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
                   Von Betrieben, die wir kennen
                 </h3>
+
                 <p className="leading-7 text-[#FAF9F6]/80">
                   Brot, Eier, Käse, Wurst, Gewürze und weitere Lebensmittel
                   beziehen wir von ausgewählten Betrieben aus Neufra und der
@@ -88,11 +90,12 @@ export default async function HofladenPage() {
                 </p>
               </article>
 
-              <article className="grid gap-5 sm:grid-cols-[13rem_1fr]">
+              <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
                 <div>
                   <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[#EAD6BD]">
                     Aus eigener Herstellung
                   </p>
+
                   <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
                     Spezialitäten aus eigener Herstellung
                   </h3>
@@ -110,8 +113,8 @@ export default async function HofladenPage() {
         </div>
       </section>
 
-      <section className="bg-[#EAD6BD]/35 px-6 py-32 talbrennerei-hofladen-wochenmarkt md:py-40">
-        <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[0.78fr_1.22fr] lg:gap-24">
+      <section className="bg-[#EAD6BD]/35 px-6 py-20 talbrennerei-hofladen-wochenmarkt md:py-40">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-24">
           <div>
             <p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#B87935]">
               Persönlich einkaufen
@@ -124,13 +127,14 @@ export default async function HofladenPage() {
             </RevealText>
           </div>
 
-          <div className="max-w-2xl space-y-7 self-end text-lg leading-8 text-[#555149]">
+          <div className="max-w-2xl space-y-5 self-end text-lg leading-8 text-[#555149] md:space-y-7">
             <p>
               Der Hofladen verbindet ein sorgfältig ausgewähltes regionales
               Angebot an einem Ort. So entsteht ein Einkaufserlebnis wie auf
               einem kleinen Wochenmarkt: persönlich, überschaubar und nah an den
               Menschen, die die Lebensmittel erzeugen.
             </p>
+
             <p>
               Im Mittelpunkt stehen hochwertige Produkte direkt von regionalen
               Betrieben und eine Herkunft, die für unsere Kundinnen und Kunden
@@ -140,8 +144,8 @@ export default async function HofladenPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-28 talbrennerei-hofladen-opening-hours md:py-36">
-        <div className="mb-16 max-w-4xl">
+      <section className="mx-auto max-w-7xl px-6 py-20 talbrennerei-hofladen-opening-hours md:py-36">
+        <div className="mb-10 max-w-4xl md:mb-16">
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Vorbeikommen
           </p>
@@ -153,12 +157,13 @@ export default async function HofladenPage() {
           </RevealText>
         </div>
 
-        <div className="grid gap-12 border-t border-[#1F2F20]/20 pt-12 md:grid-cols-2 md:gap-20">
+        <div className="grid gap-10 border-t border-[#1F2F20]/20 pt-10 md:grid-cols-2 md:gap-20 md:pt-12">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Öffnungszeiten
             </p>
-            <p className="mt-6 whitespace-pre-line font-heading text-4xl leading-relaxed text-[#1F2F20]">
+
+            <p className="mt-5 whitespace-pre-line font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
               {openingHours}
             </p>
           </div>
@@ -167,7 +172,8 @@ export default async function HofladenPage() {
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Hofladen
             </p>
-            <p className="mt-6 font-heading text-4xl leading-relaxed text-[#1F2F20]">
+
+            <p className="mt-5 font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
               Rathausstr. 15
               <br />
               72419 Neufra
@@ -176,8 +182,8 @@ export default async function HofladenPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-28 md:pb-36">
-        <div className="flex flex-col items-start justify-between gap-10 border-t border-[#1F2F20]/15 pt-14 md:flex-row md:items-center">
+      <section className="mx-auto max-w-7xl px-6 pb-20 md:pb-36">
+        <div className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-10 md:flex-row md:items-center md:gap-10 md:pt-14">
           <p className="max-w-3xl font-heading text-4xl leading-snug text-[#1F2F20] md:text-5xl">
             Kommen Sie vorbei, lernen Sie unser Sortiment kennen und überzeugen
             Sie sich selbst.

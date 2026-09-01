@@ -15,7 +15,8 @@ export default function UeberUnsPage() {
       className="bg-[#FAF9F6] text-[#24231F] talbrennerei-ueber-uns"
       style={{ "--page-accent": "#526247" } as React.CSSProperties}
     >
-      <section className="mx-auto grid min-h-[74vh] max-w-7xl items-center gap-14 px-6 pb-24 pt-24 md:grid-cols-[1fr_0.95fr] lg:gap-20">
+      {/* HERO */}
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-16 md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 md:pt-24 lg:gap-20">
         <div>
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Über uns
@@ -27,7 +28,7 @@ export default function UeberUnsPage() {
             </h1>
           </RevealText>
 
-          <p className="mt-9 max-w-2xl text-lg leading-8 text-[#555149]">
+          <p className="mt-7 max-w-2xl text-lg leading-8 text-[#555149] md:mt-9">
             Was mit eigenen Obstwiesen und einer Brennerei begann, hat sich
             Schritt für Schritt zu einem regionalen Hofladen entwickelt. Heute
             verbinden wir ausgewählte Partner und Lebensmittel aus der Region
@@ -35,7 +36,7 @@ export default function UeberUnsPage() {
           </p>
         </div>
 
-        <div className="relative min-h-[520px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
+        <div className="relative min-h-[360px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[14px_14px_0_rgba(234,214,189,0.45)] md:min-h-[520px] md:shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
           <Image
             src={siteImages.about.inside}
             alt="Außenansicht der Talbrennerei Neufra"
@@ -46,19 +47,21 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="px-6 py-32 md:py-40">
+      {/* DIE ERSTEN JAHRE */}
+      <section className="px-6 py-16 md:py-40">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-16 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
+          <p className="mb-10 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935] md:mb-16">
             Die ersten Jahre
           </p>
 
-          <article className="grid gap-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
+          <article className="grid gap-8 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
             <div>
               <p className="font-heading text-8xl leading-none text-[#526247] md:text-9xl">
                 2008
               </p>
+
               <RevealText>
-                <h2 className="mt-5 font-heading text-4xl leading-tight">
+                <h2 className="mt-4 font-heading text-4xl leading-tight md:mt-5">
                   Der Anfang
                 </h2>
               </RevealText>
@@ -71,7 +74,7 @@ export default function UeberUnsPage() {
             </p>
           </article>
 
-          <article className="mt-28 grid gap-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
+          <article className="mt-16 grid gap-8 md:mt-28 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
             <div>
               <RevealText direction="right">
                 <h2 className="font-heading text-5xl leading-tight md:text-6xl">
@@ -106,18 +109,20 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="bg-[#526247] px-6 py-32 text-[#FAF9F6] talbrennerei-ueber-uns-history md:py-40">
+      {/* WEITERENTWICKLUNG */}
+      <section className="bg-[#526247] px-6 py-16 text-[#FAF9F6] talbrennerei-ueber-uns-history md:py-40">
         <div className="mx-auto max-w-7xl">
-          <p className="mb-16 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
+          <p className="mb-10 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935] md:mb-16">
             Weiterentwicklung
           </p>
 
-          <article className="grid gap-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
+          <article className="grid gap-8 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
             <div>
               <p className="font-heading text-8xl leading-none text-[#EAD6BD] md:text-9xl">
                 2024
               </p>
-              <h2 className="mt-5 font-heading text-4xl leading-tight">
+
+              <h2 className="mt-4 font-heading text-4xl leading-tight md:mt-5">
                 Ein neuer Weg
               </h2>
             </div>
@@ -138,7 +143,7 @@ export default function UeberUnsPage() {
             </div>
           </article>
 
-          <article className="mt-28 grid gap-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
+          <article className="mt-16 grid gap-8 md:mt-28 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
             <h2 className="font-heading text-5xl leading-tight md:text-6xl">
               Regionalität, Qualität und Vertrauen
             </h2>
@@ -158,7 +163,7 @@ export default function UeberUnsPage() {
             </div>
           </article>
 
-          <article className="mt-28 grid gap-10 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
+          <article className="mt-16 grid gap-8 md:mt-28 lg:grid-cols-[0.55fr_1.45fr] lg:gap-20">
             <h2 className="font-heading text-5xl leading-tight md:text-6xl">
               Unser Sortiment wächst
             </h2>
@@ -182,9 +187,10 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="bg-[#EAD6BD]/35 px-6 py-32 talbrennerei-ueber-uns-development md:py-40">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
-          <div className="relative min-h-[500px] overflow-hidden bg-[#D8D2C6]">
+      {/* 2025 / NEUER HOFLADEN */}
+      <section className="bg-[#EAD6BD]/35 px-6 py-16 talbrennerei-ueber-uns-development md:py-40">
+        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-20">
+          <div className="relative min-h-[360px] overflow-hidden bg-[#D8D2C6] md:min-h-[500px]">
             <Image
               src={siteImages.about.outside}
               alt="Innenraum des Hofladens in Neufra"
@@ -203,12 +209,12 @@ export default function UeberUnsPage() {
             </p>
 
             <RevealText direction="right">
-              <h2 className="mt-5 font-heading text-5xl leading-tight md:text-6xl">
+              <h2 className="mt-4 font-heading text-5xl leading-tight md:mt-5 md:text-6xl">
                 Der neue Hofladen
               </h2>
             </RevealText>
 
-            <p className="mt-8 text-lg leading-8 text-[#555149]">
+            <p className="mt-6 text-lg leading-8 text-[#555149] md:mt-8">
               Ende 2025 eröffnete der neue Hofladen im ehemaligen
               Volksbank-Gebäude im Herzen von Neufra. Die größere Verkaufsfläche
               schafft Platz für mehr Auswahl und bringt das Angebot näher zu
@@ -219,8 +225,9 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-32 talbrennerei-ueber-uns-locations md:py-40">
-        <div className="mb-16 max-w-3xl">
+      {/* STANDORTE */}
+      <section className="mx-auto max-w-7xl px-6 py-16 talbrennerei-ueber-uns-locations md:py-40">
+        <div className="mb-10 max-w-3xl md:mb-16">
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Unsere Standorte
           </p>
@@ -229,18 +236,19 @@ export default function UeberUnsPage() {
             Hofladen und Produktion
           </h2>
 
-          <p className="mt-7 text-lg leading-8 text-[#555149]">
+          <p className="mt-6 text-lg leading-8 text-[#555149] md:mt-7">
             Einkauf und Verkauf finden in unserem Hofladen in der Rathausstraße
             statt.
           </p>
         </div>
 
-        <div className="grid gap-12 border-t border-[#1F2F20]/20 pt-12 md:grid-cols-2 md:gap-20">
+        <div className="grid gap-10 border-t border-[#1F2F20]/20 pt-8 md:grid-cols-2 md:gap-20 md:pt-12">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Hofladen / Verkauf
             </p>
-            <p className="mt-6 font-heading text-4xl leading-relaxed text-[#1F2F20]">
+
+            <p className="mt-5 font-heading text-4xl leading-relaxed text-[#1F2F20] md:mt-6">
               Rathausstr. 15
               <br />
               72419 Neufra
@@ -251,7 +259,8 @@ export default function UeberUnsPage() {
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Produktion / Lager
             </p>
-            <p className="mt-6 font-heading text-4xl leading-relaxed text-[#1F2F20]">
+
+            <p className="mt-5 font-heading text-4xl leading-relaxed text-[#1F2F20] md:mt-6">
               Talstr. 25
               <br />
               72419 Neufra
@@ -260,8 +269,9 @@ export default function UeberUnsPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-32 md:pb-40">
-        <blockquote className="max-w-6xl border-l-2 border-[var(--page-accent)] py-4 pl-8 font-heading text-4xl leading-[1.1] text-[#1F2F20] md:pl-12 md:text-6xl">
+      {/* ABSCHLUSS */}
+      <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-40">
+        <blockquote className="max-w-6xl border-l-2 border-[var(--page-accent)] py-4 pl-6 font-heading text-4xl leading-[1.1] text-[#1F2F20] md:pl-12 md:text-6xl">
           Von der eigenen Streuobstwiese zur regionalen Vermarktung – unsere
           Geschichte verändert sich, aber unsere Leidenschaft für gute Produkte
           bleibt.
