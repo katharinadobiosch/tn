@@ -85,7 +85,6 @@ export default async function Home() {
                 </p>
               </div>
             </div>
-
             <div className="mt-20 grid gap-12 md:grid-cols-3 md:gap-10 lg:mt-28 lg:gap-16">
               <article>
                 <span className="mb-6 block h-px w-10 bg-[#B87935]" />
@@ -120,7 +119,8 @@ export default async function Home() {
                 </p>
               </article>
             </div>
-            <div className="grid gap-6 bg-[#FAF9F6]/80 p-6 sm:grid-cols-2 sm:p-8">
+
+            <div className="mt-16 grid gap-6 bg-[#FAF9F6]/80 p-6 sm:grid-cols-2 sm:p-8 lg:mt-20">
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
                   Hier finden Sie uns
@@ -131,7 +131,6 @@ export default async function Home() {
                   72419 Neufra
                 </p>
               </div>
-
               <div>
                 <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
                   Öffnungszeiten
