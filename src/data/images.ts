@@ -31,7 +31,7 @@ export const siteImages = {
     marmaladeAlt: "/images/products/hofladen-marmelade-2.png",
     flour: "/images/products/hofladen-mehl.png",
     shopNoodles: "/images/products/hofladen-nudeln.png",
-    shopTea: "/images/products/hofladen-tee.webp",
+    shopTea: "/images/products/hofladen-tee.png",
     shopSausage: "/images/products/hofladen-wurst.png",
 
     // Weitere Produktbilder

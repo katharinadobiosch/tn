@@ -94,7 +94,7 @@ export default function ProduktePage() {
               Herkunft
             </p>
             <p className="mt-3 leading-7 text-[#555149]">
-              Ausgewählte Zutaten und Produkte mit Bezug zur Region.
+              Eigene Spezialitäten und ausgewählte regionale Produkte.
             </p>
           </div>
 
@@ -164,116 +164,126 @@ export default function ProduktePage() {
           </nav>
         </div>
       </section>
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
-        <article
-          id="braende"
-          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
-        >
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Brennerei
-          </p>
-          <h2 className="font-heading text-4xl leading-tight">
-            Brände und Spirituosen aus eigener Herstellung
-          </h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            Erhältlich in verschiedenen Abfüllgrößen. Saisonbedingt sind nicht
-            immer alle Produkte verfügbar.
-          </p>
-          <div className="mt-8">
-            <ProductList items={brandAndSpiritProducts} />
-          </div>
-        </article>
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
+          <article
+            id="braende"
+            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+          >
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Brennerei
+            </p>
+            <h2 className="font-heading text-4xl leading-tight">
+              Brände und Spirituosen aus eigener Herstellung
+            </h2>
+            <p className="mt-6 leading-7 text-[#555149]">
+              Erhältlich in verschiedenen Abfüllgrößen. Saisonbedingt sind nicht
+              immer alle Produkte verfügbar.
+            </p>
+            <div className="mt-8">
+              <ProductList items={brandAndSpiritProducts} />
+            </div>
+          </article>
 
-        <article
-          id="likoere"
-          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
-        >
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Aus der Talbrennerei
-          </p>
-          <h2 className="font-heading text-4xl leading-tight">
-            Liköre aus Neufra
-          </h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            Liköre in verschiedenen Sorten und Abfüllgrößen.
-          </p>
-          <div className="mt-8">
-            <ProductList items={liqueurProducts} />
-          </div>
-        </article>
+          <article
+            id="likoere"
+            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+          >
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Aus der Talbrennerei
+            </p>
+            <h2 className="font-heading text-4xl leading-tight">
+              Liköre aus Neufra
+            </h2>
+            <p className="mt-6 leading-7 text-[#555149]">
+              Liköre in verschiedenen Sorten und Abfüllgrößen.
+            </p>
+            <div className="mt-8">
+              <ProductList items={liqueurProducts} />
+            </div>
+          </article>
+        </div>
       </section>
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
-        <article
-          id="honig"
-          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
-        >
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Eigene Imkerei
-          </p>
-          <h2 className="font-heading text-4xl">Honig aus eigener Imkerei</h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            Unser nach alter Tradition geschleuderter Honig stammt aus eigener
-            Imkerei. Die Bienenvölker werden von erfahrenem und geschultem
-            Personal überwacht und betreut.
-          </p>
-        </article>
+      <section className="border-y border-[#1F2F20]/10 bg-[#EAD6BD]/20 px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
+          <article
+            id="honig"
+            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+          >
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Eigene Imkerei
+            </p>
+            <h2 className="font-heading text-4xl">Honig aus eigener Imkerei</h2>
+            <p className="mt-6 leading-7 text-[#555149]">
+              Unser nach alter Tradition geschleuderter Honig stammt aus eigener
+              Imkerei. Die Bienenvölker werden von erfahrenem und geschultem
+              Personal überwacht und betreut.
+            </p>
+          </article>
 
-        <article
-          id="fruchtaufstriche"
-          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
-        >
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Aus Früchten bester Qualität
-          </p>
-          <h2 className="font-heading text-4xl">
-            Fruchtaufstriche aus eigener Herstellung
-          </h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            Unsere Fruchtaufstriche werden mit Sorgfalt hergestellt und sind in
-            verschiedenen Größen und Varianten erhältlich.
-          </p>
+          <article
+            id="fruchtaufstriche"
+            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+          >
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Aus Früchten bester Qualität
+            </p>
+            <h2 className="font-heading text-4xl">
+              Fruchtaufstriche aus eigener Herstellung
+            </h2>
+            <p className="mt-6 leading-7 text-[#555149]">
+              Unsere Fruchtaufstriche werden mit Sorgfalt hergestellt und sind
+              in verschiedenen Größen und Varianten erhältlich.
+            </p>
 
-          <div className="mt-8">
-            <ProductList items={fruitSpreads} />
-          </div>
-        </article>
+            <div className="mt-8">
+              <ProductList items={fruitSpreads} />
+            </div>
+          </article>
+        </div>
       </section>
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-2">
-        <article
-          id="saefte"
-          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
-        >
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Außerdem
-          </p>
-          <h2 className="font-heading text-4xl">
-            Naturtrüber Apfelsaft und weitere Produkte
-          </h2>
+      <section className="px-6 py-24">
+        <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
+          <article
+            id="saefte"
+            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+          >
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Außerdem
+            </p>
+            <h2 className="font-heading text-4xl">
+              Naturtrüber Apfelsaft und weitere Produkte
+            </h2>
 
-          <div className="mt-8">
-            <ProductList items={additionalProducts} />
-          </div>
-        </article>
+            <div className="mt-8">
+              <ProductList items={additionalProducts} />
+            </div>
+          </article>
 
-        <article
-          id="wild"
-          className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
-        >
-          <span id="damwild" className="block scroll-mt-8" aria-hidden="true" />
-          <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
-            Damwild
-          </p>
-          <h2 className="font-heading text-4xl">Wildspezialitäten</h2>
-          <p className="mt-6 leading-7 text-[#555149]">
-            In unserem Damwild-Gehege auf der Alb leben ca. 35 Tiere in
-            extensiver, natürlicher Haltungsform. Das kurzfaserige, fettarme
-            Fleisch mit feinem Wildgeschmack ist besonders saftig.
-          </p>
+          <article
+            id="wild"
+            className="scroll-mt-8 border-t border-[#24231F]/15 pt-10"
+          >
+            <span
+              id="damwild"
+              className="block scroll-mt-8"
+              aria-hidden="true"
+            />
+            <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Damwild
+            </p>
+            <h2 className="font-heading text-4xl">Wildspezialitäten</h2>
+            <p className="mt-6 leading-7 text-[#555149]">
+              In unserem Damwild-Gehege auf der Alb leben ca. 35 Tiere in
+              extensiver, natürlicher Haltungsform. Das kurzfaserige, fettarme
+              Fleisch mit feinem Wildgeschmack ist besonders saftig.
+            </p>
 
-          <div className="mt-8">
-            <ProductList items={wildProducts} />
-          </div>
-        </article>
+            <div className="mt-8">
+              <ProductList items={wildProducts} />
+            </div>
+          </article>
+        </div>
       </section>
       <section className="bg-[#EAD6BD]/35 px-6 py-24 talbrennerei-produkte-hofladen-sortiment">
         <div className="mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-[0.82fr_1.18fr]">
@@ -285,9 +295,9 @@ export default function ProduktePage() {
               Regionales und Saisonales für den täglichen Einkauf
             </h2>
             <p className="mt-6 max-w-xl leading-7 text-[#555149]">
-              Zum Sortiment gehören regionales Obst und Gemüse sowie Brot,
-              Eier, Gewürze, Wurst, Käse und weitere regionale Lebensmittel.
-              Das Angebot richtet sich nach Saison und Verfügbarkeit.
+              Zum Sortiment gehören regionales Obst und Gemüse sowie Brot, Eier,
+              Gewürze, Wurst, Käse und weitere regionale Lebensmittel. Das
+              Angebot richtet sich nach Saison und Verfügbarkeit.
             </p>
 
             <ul className="mt-10 border-y border-[#1F2F20]/15 text-lg text-[#1F2F20]">
@@ -330,23 +340,21 @@ export default function ProduktePage() {
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 24vw, 40vw"
-                  className="object-cover"
+                  className="object-cover object-[0%_1%]"
                 />
               </div>
               <div className="relative col-span-7 min-h-64 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[12px_12px_0_rgba(184,121,53,0.12)] md:min-h-80">
                 <Image
-                  src={siteImages.products.shopSausage}
+                  src={siteImages.products.shopTea}
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 35vw, 58vw"
-                  className="object-cover"
+                  className="object-cover object-[0%_1%]"
                 />
               </div>
             </div>
             <figcaption className="mt-6 max-w-xl text-sm leading-6 text-[#555149]">
-              Die Bilder dienen ausschließlich als Illustration und zeigen
-              keine verbindliche Auswahl. Das aktuelle Angebot richtet sich
-              nach Saison und Verfügbarkeit.
+              Das aktuelle Angebot richtet sich nach Saison und Verfügbarkeit.
             </figcaption>
           </figure>
         </div>
