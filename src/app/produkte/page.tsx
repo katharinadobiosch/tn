@@ -88,31 +88,34 @@ export default function ProduktePage() {
           Ergänzt wird das Sortiment durch saisonales Obst und ausgewählte
           regionale Produkte. Die Verfügbarkeit kann je nach Saison variieren.
         </p>
-        <div className="mt-10 grid max-w-5xl gap-6 border-l border-[var(--page-accent)] pl-6 md:grid-cols-3">
+        <div className="mt-14 grid max-w-5xl gap-10 md:grid-cols-3 md:gap-14">
           <div>
+            <span className="mb-5 block h-px w-10 bg-[var(--page-accent)]" />
             <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
               Herkunft
             </p>
-            <p className="mt-3 leading-7 text-[#555149]">
+            <p className="mt-4 leading-7 text-[#555149]">
               Eigene Spezialitäten und ausgewählte regionale Produkte.
             </p>
           </div>
 
           <div>
+            <span className="mb-5 block h-px w-10 bg-[var(--page-accent)]" />
             <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
               Handwerk
             </p>
-            <p className="mt-3 leading-7 text-[#555149]">
+            <p className="mt-4 leading-7 text-[#555149]">
               Verarbeitung mit Sorgfalt, Erfahrung und traditioneller
               Brennkunst.
             </p>
           </div>
 
           <div>
+            <span className="mb-5 block h-px w-10 bg-[var(--page-accent)]" />
             <p className="text-xs uppercase tracking-[0.24em] text-[#B87935]">
               Saison
             </p>
-            <p className="mt-3 leading-7 text-[#555149]">
+            <p className="mt-4 leading-7 text-[#555149]">
               Viele Produkte sind saisonal und je nach Verfügbarkeit erhältlich.
             </p>
           </div>
@@ -135,14 +138,14 @@ export default function ProduktePage() {
                 <a
                   key={product.title}
                   href={product.href}
-                  className="group flex h-full flex-col overflow-hidden border border-[#EAD6BD]/20 bg-[#FAF9F6] text-[#24231F] transition-colors duration-200 hover:border-[var(--page-accent)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#EAD6BD]"
+                  className="group flex h-full flex-col overflow-hidden bg-[#FAF9F6] text-[#24231F] transition-transform duration-300 hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#EAD6BD]"
                 >
                   <div className="relative h-72 overflow-hidden bg-[#D8D2C6]">
                     <Image
                       src={product.image}
                       alt={product.title}
                       fill
-                      className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                      className="object-cover transition-transform duration-500 group-hover:scale-[1.015]"
                     />
                   </div>
 
@@ -166,10 +169,7 @@ export default function ProduktePage() {
       </section>
       <section className="bg-[#FAF9F6] px-6 py-28 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
-          <article
-            id="braende"
-            className="scroll-mt-8"
-          >
+          <article id="braende" className="scroll-mt-8">
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Brennerei
             </p>
@@ -185,10 +185,7 @@ export default function ProduktePage() {
             </div>
           </article>
 
-          <article
-            id="likoere"
-            className="scroll-mt-8"
-          >
+          <article id="likoere" className="scroll-mt-8">
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Aus der Talbrennerei
             </p>
@@ -206,10 +203,7 @@ export default function ProduktePage() {
       </section>
       <section className="bg-[#EAD6BD]/35 px-6 py-32 md:py-40">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
-          <article
-            id="honig"
-            className="scroll-mt-8"
-          >
+          <article id="honig" className="scroll-mt-8">
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Eigene Imkerei
             </p>
@@ -221,10 +215,7 @@ export default function ProduktePage() {
             </p>
           </article>
 
-          <article
-            id="fruchtaufstriche"
-            className="scroll-mt-8"
-          >
+          <article id="fruchtaufstriche" className="scroll-mt-8">
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Aus Früchten bester Qualität
             </p>
@@ -244,10 +235,7 @@ export default function ProduktePage() {
       </section>
       <section className="bg-[#FAF9F6] px-6 py-28 md:py-32">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-2">
-          <article
-            id="saefte"
-            className="scroll-mt-8"
-          >
+          <article id="saefte" className="scroll-mt-8">
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
               Außerdem
             </p>
@@ -260,10 +248,7 @@ export default function ProduktePage() {
             </div>
           </article>
 
-          <article
-            id="wild"
-            className="scroll-mt-8"
-          >
+          <article id="wild" className="scroll-mt-8">
             <span
               id="damwild"
               className="block scroll-mt-8"
