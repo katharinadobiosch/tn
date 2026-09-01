@@ -5,8 +5,7 @@ export const siteImages = {
   },
 
   hofladen: {
-    inside: "/images/hofladen/hofladen-gemüse.png",
-    insideAlt: "/images/hofladen/hofladen-innen-2.png",
+    inside: "/images/hofladen/hofladen-innen-2.png",
   },
 
   products: {
