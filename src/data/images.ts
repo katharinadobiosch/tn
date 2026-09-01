@@ -5,7 +5,7 @@ export const siteImages = {
   },
 
   hofladen: {
-    inside: "/images/hofladen/hofladen-gemüse.png",
+    inside: "/images/hofladen/hofladen-gemüse.png",
     insideAlt: "/images/hofladen/hofladen-innen-2.png",
   },
 
@@ -13,10 +13,8 @@ export const siteImages = {
     hero: "/images/products/produkte-flaschen.jpg",
 
     // Eigene Spezialitäten
-    spirits: "/images/products/edelbrände.png",
-    liqueur: "/images/products/hofladen-likör-3.png",
-    liqueurAlt: "/images/products/hofladen-likör.png",
-    liqueurAltTwo: "/images/products/hofladen-likör-2.png",
+    spirits: "/images/products/edelbrände.png",
+    liqueur: "/images/products/hofladen-likör-3.png",
     honey: "/images/products/honig.png",
     jam: "/images/products/fruchtaufstriche.png",
     juice: "/images/products/apfelsaft.png",
