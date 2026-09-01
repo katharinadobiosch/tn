@@ -4,42 +4,42 @@ import { RevealText } from "@/components/RevealText";
 const partners = [
   {
     name: "Bärenhof Gemüse",
-    logo: "/partner/baerenhof-gemuese.png",
+    logo: "/images/partner/baerenhof-gemuese.png",
     url: "http://www.bärenhof-gemüse.de/",
   },
   {
     name: "Birkhof",
-    logo: "/partner/birkhof.png",
+    logo: "/images/partner/birkhof.png",
     url: "http://www.gestuet-birkhof.com/",
   },
   {
     name: "Fink's Hofladen",
-    logo: "/partner/finks-hofladen.png",
+    logo: "/images/partner/finks-hofladen.png",
     url: "https://finks-hofladen.de/",
   },
   {
     name: "Herre Schröger",
-    logo: "/partner/herre-schroeger.png",
+    logo: "/images/partner/herre-schroeger.png",
     url: "https://herre-schroeger.de/",
   },
   {
     name: "Lautertal Eis",
-    logo: "/partner/lauertal-eis.png",
+    logo: "/images/partner/lauertal-eis.png",
     url: "https://www.lautertal-eis.blog/",
   },
   {
     name: "Spargelbauer Landerer",
-    logo: "/partner/spargelbauer-landerer.png",
+    logo: "/images/partner/spargelbauer-landerer.png",
     url: "http://www.spargelbauer-landerer.de/",
   },
   {
     name: "Spross & Spore",
-    logo: "/partner/spross-spore.png",
+    logo: "/images/partner/spross-spore.png",
     url: "https://spross-spore.de/",
   },
   {
     name: "Wildhof Hildegrund",
-    logo: "/partner/wildhof-hildegrund.jpeg",
+    logo: "/images/partner/wildhof-hildegrund.jpeg",
     url: "https://wildhof-hildegrund.de/",
   },
 ];
