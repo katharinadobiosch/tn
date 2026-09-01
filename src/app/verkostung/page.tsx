@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function VerkostungPage() {
   return (
     <main
-      className="bg-[#FAF9F6] text-[#24231F]"
+      className="bg-[#FAF9F6] text-[#24231F] talbrennerei-verkostung"
       style={{ "--page-accent": "#A9583E" } as React.CSSProperties}
     >
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
@@ -45,7 +45,7 @@ export default function VerkostungPage() {
         </div>
       </section>
 
-      <section className="bg-[#EAD6BD] px-6 py-24">
+      <section className="bg-[#EAD6BD] px-6 py-24 talbrennerei-verkostung-tastings">
         <div className="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-[1fr_0.9fr]">
           <div>
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#526247] before:h-px before:w-8 before:bg-[#B87935]">
@@ -91,7 +91,7 @@ export default function VerkostungPage() {
         </div>
       </section>
 
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2">
+      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-24 md:grid-cols-2 talbrennerei-verkostung-private-events">
         <article className="border-t border-[#24231F]/15 pt-10">
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Private Veranstaltungen

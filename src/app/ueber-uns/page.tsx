@@ -12,10 +12,9 @@ export const metadata: Metadata = {
 export default function UeberUnsPage() {
   return (
     <main
-      className="bg-[#FAF9F6] text-[#24231F]"
+      className="bg-[#FAF9F6] text-[#24231F] talbrennerei-ueber-uns"
       style={{ "--page-accent": "#526247" } as React.CSSProperties}
     >
-      
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
@@ -38,10 +37,10 @@ export default function UeberUnsPage() {
 
         <div className="relative min-h-[480px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
           <Image
-            src={siteImages.about.outside}
+            src={siteImages.about.inside}
             alt="Außenansicht der Talbrennerei Neufra"
             fill
-            className="object-cover saturate-[0.92] contrast-[1.03]"
+            className="object-cover object-[0%_center] saturate-[0.92] contrast-[1.03]"
             priority
           />
         </div>
@@ -96,7 +95,7 @@ export default function UeberUnsPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
+      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6] talbrennerei-ueber-uns-history">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-14 md:grid-cols-[0.65fr_1.35fr]">
             <p className="flex h-fit items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -116,12 +115,9 @@ export default function UeberUnsPage() {
                     Bereich Pflanzenschutz.
                   </p>
                   <p>
-                    <p>
-                      Die Plantagen wurden an regionale Obstbaubetriebe
-                      verkauft. Mit einigen dieser Betriebe arbeiten wir
-                      weiterhin eng zusammen und beziehen teilweise weiterhin
-                      deren Obst.
-                    </p>
+                    Die Plantagen wurden an regionale Obstbaubetriebe verkauft.
+                    Mit einigen dieser Betriebe arbeiten wir weiterhin eng
+                    zusammen und beziehen teilweise weiterhin deren Obst.
                   </p>
                 </div>
               </article>
@@ -169,14 +165,14 @@ export default function UeberUnsPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#EAD6BD]/35 px-6 py-24">
+      <section className="bg-[#EAD6BD]/35 px-6 py-24 talbrennerei-ueber-uns-development">
         <div className="mx-auto grid max-w-7xl items-center gap-14 md:grid-cols-[0.9fr_1.1fr]">
           <div className="relative min-h-[440px] overflow-hidden bg-[#D8D2C6]">
             <Image
               src={siteImages.about.shop}
               alt="Innenraum des Hofladens in Neufra"
               fill
-              className="object-cover"
+              className="object-cover object-[0%_center]"
             />
           </div>
 
@@ -199,7 +195,7 @@ export default function UeberUnsPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-24 talbrennerei-ueber-uns-locations">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Unsere Standorte

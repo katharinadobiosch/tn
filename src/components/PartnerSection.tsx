@@ -46,7 +46,7 @@ const partners = [
 
 export function PartnerSection() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24">
+    <section className="mx-auto max-w-7xl px-6 py-24 talbrennerei-partner-section">
       <div className="grid gap-14 border-y border-[#1F2F20]/10 py-20 md:grid-cols-[0.85fr_1.15fr]">
         <div>
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">

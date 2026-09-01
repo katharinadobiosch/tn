@@ -20,7 +20,7 @@ export default async function AktuellesPage() {
 
   return (
     <main
-      className="bg-[#FAF9F6] text-[#24231F]"
+      className="bg-[#FAF9F6] text-[#24231F] talbrennerei-aktuelles"
       style={{ "--page-accent": "#6B8F5A" } as React.CSSProperties}
     >
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
@@ -40,7 +40,7 @@ export default async function AktuellesPage() {
           Veranstaltungen.
         </p>
       </section>
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-7xl px-6 pb-24 talbrennerei-aktuelles-list">
         {!updates.length && (
           <div className="border-y border-[#24231F]/15 py-12">
             <p className="text-xs uppercase tracking-[0.28em] text-[#B87935]">

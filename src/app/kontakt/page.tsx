@@ -13,7 +13,7 @@ export default async function KontaktPage() {
   const openingHours = await getOpenDaysOnly();
 
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main className="bg-[#FAF9F6] text-[#24231F] talbrennerei-kontakt">
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
         <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
           Kontakt
@@ -32,7 +32,7 @@ export default async function KontaktPage() {
         </p>
       </section>
 
-      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
+      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6] talbrennerei-kontakt-location">
         <div className="mx-auto grid max-w-7xl gap-14 md:grid-cols-[0.9fr_1.1fr]">
           <div>
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -73,7 +73,7 @@ export default async function KontaktPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-24 talbrennerei-kontakt-options">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Kontaktmöglichkeiten
@@ -185,7 +185,7 @@ export default async function KontaktPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-24">
+      <section className="mx-auto max-w-7xl px-6 pb-24 talbrennerei-kontakt-production">
         <div className="grid gap-10 border-y border-[#1F2F20]/15 py-12 md:grid-cols-[0.8fr_1.2fr]">
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">

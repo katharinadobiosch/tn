@@ -16,7 +16,7 @@ export default async function HofladenPage() {
 
   return (
     <main
-      className="bg-[#FAF9F6] text-[#24231F]"
+      className="bg-[#FAF9F6] text-[#24231F] talbrennerei-hofladen"
       style={{ "--page-accent": "#C98A2C" } as React.CSSProperties}
     >
       <section className="mx-auto grid min-h-[70vh] max-w-7xl items-center gap-14 px-6 pb-20 pt-24 md:grid-cols-[1fr_0.9fr]">
@@ -40,15 +40,15 @@ export default async function HofladenPage() {
 
         <div className="relative min-h-[480px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
           <Image
-            src={siteImages.about.shop}
+            src={siteImages.hofladen.inside}
             alt="Hofladen der Talbrennerei Neufra"
             fill
             priority
-            className="object-cover saturate-[0.92] contrast-[1.03]"
+            className="object-cover saturate-[0.92] contrast-[1.03] scale-[1.05]"
           />
         </div>
       </section>
-      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
+      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6] talbrennerei-hofladen-sortiment">
         <div className="mx-auto max-w-7xl">
           <div className="grid gap-12 md:grid-cols-[0.8fr_1.2fr]">
             <div>
@@ -105,7 +105,7 @@ export default async function HofladenPage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#EAD6BD]/35 px-6 py-24">
+      <section className="bg-[#EAD6BD]/35 px-6 py-24 talbrennerei-hofladen-wochenmarkt">
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-[0.85fr_1.15fr]">
           <div>
             <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#B87935]">
@@ -133,7 +133,7 @@ export default async function HofladenPage() {
           </div>
         </div>
       </section>
-      <section className="mx-auto max-w-7xl px-6 py-24">
+      <section className="mx-auto max-w-7xl px-6 py-24 talbrennerei-hofladen-opening-hours">
         <div className="mb-12 max-w-3xl">
           <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Vorbeikommen

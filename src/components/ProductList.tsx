@@ -4,7 +4,7 @@ type ProductListProps = {
 
 export function ProductList({ items }: ProductListProps) {
   return (
-    <ul className="grid gap-3 sm:grid-cols-2">
+    <ul className="grid gap-3 sm:grid-cols-2 talbrennerei-product-list">
       {items.map((item) => (
         <li
           key={item}

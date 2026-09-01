@@ -89,7 +89,7 @@ export function HeaderNavigation({
   }
 
   return (
-    <header className="border-b border-neutral-200 bg-[#FAF9F6]">
+    <header className="border-b border-neutral-200 bg-[#FAF9F6] talbrennerei-header">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         <Link
           href="/"
@@ -98,7 +98,7 @@ export function HeaderNavigation({
           className={linkFocusClasses}
         >
           <Image
-            src={siteImages.logo}
+            src={siteImages.home.logo}
             alt="Talbrennerei Neufra Logo"
             width={160}
             height={80}

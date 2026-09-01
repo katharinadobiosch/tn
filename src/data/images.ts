@@ -1,6 +1,12 @@
 export const siteImages = {
-  hero: "/images/general/hero-flaschenregal.jpg",
-  logo: "/images/general/logo.png",
+  home: {
+    hero: "/images/home/hofladen-innen 2.png",
+    logo: "/images/general/logo.png",
+  },
+
+  hofladen: {
+    inside: "/images/hofladen/hofladen-gemüse.png",
+  },
 
   products: {
     hero: "/images/products/produkte-flaschen.jpg",
@@ -21,7 +27,7 @@ export const siteImages = {
   },
 
   about: {
-    outside: "/images/about/aussenansicht.jpg",
-    shop: "/images/about/hofladen-innen.jpg",
+    inside: "/images/about/hofladen-innen-2.png",
+    shop: "/images/about/hofladen-innen.png",
   },
 };

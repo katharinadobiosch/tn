@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function DatenschutzPage() {
   return (
-    <main>
+    <main className="talbrennerei-datenschutz">
       <section className="bg-[#FAF9F6] px-6 py-20 md:py-28">
         <div className="mx-auto max-w-4xl">
           <p className="mb-4 text-sm font-medium uppercase tracking-[0.18em] text-[#526247]">

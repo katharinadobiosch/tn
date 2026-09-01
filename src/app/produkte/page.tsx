@@ -67,7 +67,7 @@ const brandAndSpiritProducts = spiritProducts.filter(
 export default function ProduktePage() {
   return (
     <main
-      className="bg-[#FAF9F6] text-[#24231F]"
+      className="bg-[#FAF9F6] text-[#24231F] talbrennerei-produkte"
       style={{ "--page-accent": "#7A3B2E" } as React.CSSProperties}
     >
       <section className="mx-auto max-w-7xl px-6 pb-20 pt-24">
@@ -118,7 +118,7 @@ export default function ProduktePage() {
           </div>
         </div>
       </section>
-      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6]">
+      <section className="bg-[#526247] px-6 py-24 text-[#FAF9F6] talbrennerei-produkte-category-navigation">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 max-w-3xl">
             <p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
@@ -238,7 +238,7 @@ export default function ProduktePage() {
           </div>
         </article>
       </section>
-      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr]">
+      <section className="mx-auto grid max-w-7xl gap-14 px-6 py-20 md:grid-cols-[0.8fr_1.2fr] talbrennerei-produkte-seasonal">
         <div>
           <p className="mb-4 text-xs uppercase tracking-[0.28em] text-[#526247]">
             Saisonales

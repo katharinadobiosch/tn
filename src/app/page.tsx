@@ -45,12 +45,12 @@ export default async function Home() {
   `) as Update[];
 
   return (
-    <main className="bg-[#FAF9F6] text-[#24231F]">
+    <main className="bg-[#FAF9F6] text-[#24231F] talbrennerei-home">
       <HeroSection
         eyebrow="HOFLADEN · REGIONALE PRODUKTE · NEUFRA"
         title="Gutes aus der Region. Mitten in Neufra."
         text="In unserem Hofladen finden Sie hochwertiges Obst und Gemüse, Lebensmittel ausgewählter regionaler Erzeuger und Spezialitäten aus eigener Herstellung."
-        image={siteImages.about.shop}
+        image={siteImages.home.hero}
         variant="dark"
         actions={[
           { label: "Hofladen entdecken", href: "/hofladen" },
@@ -62,7 +62,7 @@ export default async function Home() {
         ]}
       />
 
-      <div className="bg-[#EAD6BD]/35">
+      <div className="bg-[#EAD6BD]/35 talbrennerei-home-hofladen-intro">
         <EditorialIntro
           eyebrow="Der Hofladen"
           title="Ein kleiner Wochenmarkt unter einem Dach."
