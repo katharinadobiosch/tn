@@ -1,11 +1,11 @@
 export const siteImages = {
   home: {
-    hero: "/images/home/hofladen-innen 2.png",
+    hero: "/images/home/hofladen-innen.png",
     logo: "/images/general/logo.png",
   },
 
   hofladen: {
-    inside: "/images/hofladen/hofladen-innen-2.png",
+    inside: "/images/hofladen/hofladen-gemüse.png",
   },
 
   products: {

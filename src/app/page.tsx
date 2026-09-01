@@ -175,7 +175,7 @@ export default async function Home() {
                 alt="Tee und Gewürze im Hofladen"
                 fill
                 sizes="(min-width: 768px) 32vw, 42vw"
-                className="object-cover"
+                className="object-cover object-[50%_1%]"
               />
             </div>
           </div>

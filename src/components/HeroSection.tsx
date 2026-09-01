@@ -42,7 +42,7 @@ export function HeroSection({
     : "mx-auto grid min-h-[82vh] max-w-7xl items-center gap-14 px-6 py-20 md:grid-cols-[1.05fr_0.95fr]";
 
   const titleClasses = isDark
-    ? "max-w-[9.5ch] font-heading text-[3.75rem] font-bold leading-[0.95] tracking-[-0.025em] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] xl:text-[8.5rem] 2xl:text-[9rem]"
+    ? "max-w-[9.5ch] font-heading text-[3.75rem] font-bold leading-[1.02] tracking-[-0.025em] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] xl:text-[8.5rem] 2xl:text-[9rem]"
     : "max-w-3xl font-heading text-5xl leading-[1.02] md:text-7xl";
 
   const imageFrameClasses = isDark
@@ -94,7 +94,7 @@ export function HeroSection({
               alt={title}
               fill
               priority
-              className="object-cover object-[0%_center] saturate-[0.92] contrast-[1.03]"
+              className="object-cover  saturate-[0.92] contrast-[1.03]"
             />
           </div>
         ) : (
