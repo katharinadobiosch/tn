@@ -13,6 +13,16 @@ const partners = [
     url: "http://www.gestuet-birkhof.com/",
   },
   {
+    name: "Bäckerei Wolf",
+    logo: "/images/partner/baeckerei-wolf.png",
+    url: "https://handwerksbaeckerei-wolf.de/",
+  },
+  {
+    name: "Bögle Metzgerei",
+    logo: "/images/partner/boegle-metzgerei.png",
+    url: "https://www.xn--metzgerei-bgle-5pb.de/",
+  },
+  {
     name: "Fink's Hofladen",
     logo: "/images/partner/finks-hofladen.png",
     url: "https://finks-hofladen.de/",

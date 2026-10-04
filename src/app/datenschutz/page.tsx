@@ -54,7 +54,7 @@ export default function DatenschutzPage() {
               <address className="mt-5 not-italic leading-7 text-[#1F2F20]/75">
                 Talbrennerei Neufra
                 <br />
-                Talstr. 25
+                Lichtensteinstr. 21
                 <br />
                 72419 Neufra
                 <br />
