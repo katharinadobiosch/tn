@@ -19,7 +19,7 @@ export default async function HofladenPage() {
       className="bg-[#FAF9F6] text-[#24231F] talbrennerei-hofladen"
       style={{ "--page-accent": "#C98A2C" } as React.CSSProperties}
     >
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-12 md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 md:pt-24 lg:gap-20">
+      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16  md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 pt-12 md:pt-24 lg:gap-20">
         <div>
           <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
             Hofladen in Neufra
@@ -79,7 +79,7 @@ export default async function HofladenPage() {
 
               <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
                 <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
-                  Von Betrieben, die wir kennen
+                  Von Erzeugern, die wir kennen
                 </h3>
 
                 <p className="leading-7 text-[#FAF9F6]/80">
@@ -92,10 +92,6 @@ export default async function HofladenPage() {
 
               <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
                 <div>
-                  <p className="mb-3 text-xs uppercase tracking-[0.24em] text-[#EAD6BD]">
-                    Aus eigener Herstellung
-                  </p>
-
                   <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
                     Spezialitäten aus eigener Herstellung
                   </h3>
@@ -157,7 +153,7 @@ export default async function HofladenPage() {
           </RevealText>
         </div>
 
-        <div className="grid gap-10 border-t border-[#1F2F20]/20 pt-10 md:grid-cols-2 md:gap-20 md:pt-12">
+        <div className="grid gap-10 border-t border-[#1F2F20]/20 pt-10 md:grid-cols-3 md:gap-12 md:pt-12 lg:gap-20">
           <div>
             <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
               Öffnungszeiten
@@ -179,19 +175,37 @@ export default async function HofladenPage() {
               72419 Neufra
             </p>
           </div>
+
+          <div>
+            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+              Produktion / Lager
+            </p>
+
+            <p className="mt-5 font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
+              Talstr. 25
+              <br />
+              72419 Neufra
+            </p>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:pb-36">
-        <div className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-10 md:flex-row md:items-center md:gap-10 md:pt-14">
-          <p className="max-w-3xl font-heading text-4xl leading-snug text-[#1F2F20] md:text-5xl">
+      <section className="bg-[#526247] mx-auto max-w-7xl px-6">
+        <div className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-10 md:pt-14 pb-10 md:pb-14 md:flex-row md:items-center md:gap-10">
+          <p className="max-w-3xl font-heading text-3xl leading-snug  text-[#FAF9F6] md:text-4xl">
             Kommen Sie vorbei, lernen Sie unser Sortiment kennen und überzeugen
             Sie sich selbst.
           </p>
 
-          <ButtonLink href="/kontakt" variant="secondary">
-            Kontakt &amp; Anfahrt
-          </ButtonLink>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Rathausstr.+15%2C+72419+Neufra"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-3 bg-[#EAD6BD] px-8 py-4 text-base font-medium text-[#1F2F20] transition hover:bg-[#FAF9F6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FAF9F6]"
+          >
+            Route in Google Maps
+            <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </section>
     </main>

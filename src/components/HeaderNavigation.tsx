@@ -129,7 +129,7 @@ export function HeaderNavigation({
         </nav>
 
         <span className="hidden border border-[#1F2F20]/30 px-4 py-2 text-sm md:inline-block">
-          Hofladen {shopStatus === "open" ? "geöffnet" : "geschlossen"}
+          Hofladen jetzt {shopStatus === "open" ? "geöffnet" : "geschlossen"}
         </span>
 
         <button

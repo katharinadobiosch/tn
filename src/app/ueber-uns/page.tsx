@@ -23,7 +23,7 @@ export default function UeberUnsPage() {
           </p>
 
           <RevealText>
-            <h1 className="font-heading text-6xl leading-[0.98] md:text-8xl">
+            <h1 className="font-heading text-3xl leading-[0.98] md:text-8xl">
               Von der Streuobstwiese zum regionalen Hofladen.
             </h1>
           </RevealText>
@@ -270,8 +270,8 @@ export default function UeberUnsPage() {
       </section>
 
       {/* ABSCHLUSS */}
-      <section className="mx-auto max-w-7xl px-6 pb-16 md:pb-40">
-        <blockquote className="max-w-6xl border-l-2 border-[var(--page-accent)] py-4 pl-6 font-heading text-4xl leading-[1.1] text-[#1F2F20] md:pl-12 md:text-6xl">
+      <section className="bg-[#526247] mx-auto max-w-7xl px-6">
+        <blockquote className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-10 md:pt-14 pb-10 md:pb-14 md:flex-row md:items-center md:gap-10 max-w-3xl font-heading text-3xl leading-snug  text-[#FAF9F6] md:text-4xl">
           Von der eigenen Streuobstwiese zur regionalen Vermarktung – unsere
           Geschichte verändert sich, aber unsere Leidenschaft für gute Produkte
           bleibt.

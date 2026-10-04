@@ -3,7 +3,7 @@ export const navigation = [
   { label: "Produkte", href: "/produkte" },
   { label: "Verkostung", href: "/verkostung" },
   { label: "Über uns", href: "/ueber-uns" },
-  { label: "Aktuelles", href: "/aktuelles" },
+  // { label: "Aktuelles", href: "/aktuelles" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 

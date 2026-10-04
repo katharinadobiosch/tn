@@ -84,7 +84,7 @@ export default function ProduktePage() {
         <p className="mt-6 max-w-2xl text-lg leading-8 text-[#555149] md:mt-8">
           Neben unserem regionalen Hofladen bleibt die eigene Herstellung ein
           wichtiger Teil der Talbrennerei. Entdecken Sie unsere Brände, Liköre,
-          Honig, Fruchtaufstriche und weitere Spezialitäten aus Neufra.
+          Honig, Fruchtaufstriche und weitere Spezialitäten.
         </p>
 
         <p className="mt-4 max-w-2xl border-l border-[var(--page-accent)] pl-5 leading-7 text-[#555149] md:mt-5 md:pl-6">
@@ -289,6 +289,14 @@ export default function ProduktePage() {
               Fleisch mit feinem Wildgeschmack ist besonders saftig.
             </p>
 
+            <div className="mt-5 border-l border-[#526247] pl-4 text-sm leading-6 text-[#555149] md:mt-6">
+              <span className="font-medium text-[#1F2F20]">
+                Saisonal erhältlich:
+              </span>{" "}
+              Wildspezialitäten sind in der Regel ab Mitte Oktober bzw. im
+              Spätherbst verfügbar.
+            </div>
+
             <div className="mt-6 md:mt-8">
               <ProductList items={wildProducts} />
             </div>
@@ -349,7 +357,7 @@ export default function ProduktePage() {
                 />
               </div>
 
-              <div className="relative col-span-5 -mt-6 min-h-44 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] md:-mt-8 md:min-h-60">
+              <div className="relative col-span-5 min-h-44 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] md:min-h-60">
                 <Image
                   src={siteImages.products.flour}
                   alt=""
