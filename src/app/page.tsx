@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { HeroSection } from "@/components/HeroSection";
 import { ProductTeaserGrid } from "@/components/ProductTeaserGrid";
-import { UpdatesPreview } from "@/components/UpdatesPreview";
+// import { UpdatesPreview } from "@/components/UpdatesPreview";
 import { siteImages } from "@/data/images";
 import { PartnerSection } from "@/components/PartnerSection";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
@@ -200,14 +200,14 @@ export default async function Home() {
 
         <PartnerSection />
 
-        <UpdatesPreview
+        {/* <UpdatesPreview
           updates={latestUpdates.map((update) => ({
             title: update.title,
             text: update.content,
             date: new Date(update.created_at).toISOString(),
             imageUrl: update.image_url,
           }))}
-        />
+        /> */}
       </main>
     </>
   );
