@@ -12,16 +12,16 @@ export const siteImages = {
     // Eigene Spezialitäten
     spirits: "/images/products/edelbrände.png",
     liqueur: "/images/products/hofladen-likör-3.png",
-    honey: "/images/products/honig.jpg",
+    honey: "/images/products/honig.JPG",
     jam: "/images/products/fruchtaufstriche.png",
     juice: "/images/products/apfelsaft.png",
     wild: "/images/products/wild.png",
 
     // Hofladen / regionales Sortiment
-    inside: "/images/products/hofladen-einblick.jpg",
+    inside: "/images/products/hofladen-einblick.JPG",
     carrots: "/images/products/hofladen-möhren-2.png",
     flour: "/images/products/hofladen-mehl.png",
-    shopTea: "/images/products/hofladen-tee.jpg",
+    shopTea: "/images/products/hofladen-tee.JPG",
 
     // Weitere Produktbilder
   },
