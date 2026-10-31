@@ -39,7 +39,7 @@ export default function UeberUnsPage() {
         <div className="relative min-h-[360px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[14px_14px_0_rgba(234,214,189,0.45)] md:min-h-[520px] md:shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
           <Image
             src={siteImages.about.inside}
-            alt="Außenansicht der Talbrennerei Neufra"
+            alt="Innenansicht der Talbrennerei Neufra"
             fill
             className="object-cover object-[0%_center] saturate-[0.92] contrast-[1.03]"
             priority

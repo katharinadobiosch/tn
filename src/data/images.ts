@@ -1,15 +1,14 @@
 export const siteImages = {
   home: {
-    hero: "/images/about/hofladen-innen.png",
+    hero: "/images/about/hofladen-hero.png",
     logo: "/images/general/logo.png",
   },
 
   hofladen: {
-    inside: "/images/hofladen/hofladen-gemüse.jpg",
+    inside: "/images/hofladen/hofladen-gemüse.JPG",
   },
 
   products: {
-
     // Eigene Spezialitäten
     spirits: "/images/products/edelbrände.png",
     liqueur: "/images/products/hofladen-likör-3.png",
@@ -19,7 +18,7 @@ export const siteImages = {
     wild: "/images/products/wild.png",
 
     // Hofladen / regionales Sortiment
-    apples: "/images/products/hofladen-einblick.jpg",
+    inside: "/images/products/hofladen-einblick.jpg",
     carrots: "/images/products/hofladen-möhren-2.png",
     flour: "/images/products/hofladen-mehl.png",
     shopTea: "/images/products/hofladen-tee.jpg",

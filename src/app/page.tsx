@@ -173,7 +173,7 @@ export default async function Home() {
             <div className="grid gap-4 md:mt-16 md:gap-6">
               <div className="relative min-h-[260px] overflow-hidden md:min-h-[340px]">
                 <Image
-                  src={siteImages.products.apples}
+                  src={siteImages.products.inside}
                   alt="Obst im Hofladen"
                   fill
                   sizes="(min-width: 768px) 42vw, 100vw"

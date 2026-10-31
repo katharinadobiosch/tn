@@ -339,7 +339,7 @@ export default function ProduktePage() {
             <div className="grid grid-cols-12 items-start gap-4">
               <div className="relative col-span-7 min-h-64 overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[12px_12px_0_rgba(82,98,71,0.12)] md:min-h-96">
                 <Image
-                  src={siteImages.products.apples}
+                  src={siteImages.products.inside}
                   alt=""
                   fill
                   sizes="(min-width: 1024px) 35vw, 58vw"
