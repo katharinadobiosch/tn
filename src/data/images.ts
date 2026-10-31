@@ -21,16 +21,10 @@ export const siteImages = {
     // Hofladen / regionales Sortiment
     apples: "/images/products/hofladen-einblick.jpg",
     carrots: "/images/products/hofladen-möhren-2.png",
-    marmalade: "/images/products/hofladen-marmelade.png",
-    marmaladeAlt: "/images/products/hofladen-marmelade-2.png",
     flour: "/images/products/hofladen-mehl.png",
-    shopNoodles: "/images/products/hofladen-nudeln.png",
     shopTea: "/images/products/hofladen-tee.jpg",
-    shopSausage: "/images/products/hofladen-wurst.png",
 
     // Weitere Produktbilder
-    noodles: "/images/products/nudeln.png",
-    tea: "/images/products/tee.png",
   },
 
   tasting: {
