@@ -41,7 +41,7 @@ export default function UeberUnsPage() {
             src={siteImages.about.inside}
             alt="Innenansicht der Talbrennerei Neufra"
             fill
-            className="object-cover object-[0%_center] saturate-[0.92] contrast-[1.03]"
+            className="object-cover object-[100%_center] saturate-[0.92] contrast-[1.03]"
             priority
           />
         </div>
