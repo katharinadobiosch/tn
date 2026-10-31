@@ -6,208 +6,208 @@ import { getOpenDaysOnly } from "@/lib/siteSettings";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hofladen Neufra",
-  description:
-    "Entdecken Sie den Hofladen der Talbrennerei Neufra mit regionalem Obst und Gemüse, Lebensmitteln ausgewählter Erzeuger und eigenen Spezialitäten.",
+ title: "Hofladen Neufra",
+ description:
+ "Entdecken Sie den Hofladen der Talbrennerei Neufra mit regionalem Obst und Gemüse, Lebensmitteln ausgewählter Erzeuger und eigenen Spezialitäten.",
 };
 
 export default async function HofladenPage() {
-  const openingHours = await getOpenDaysOnly();
+ const openingHours = await getOpenDaysOnly();
 
-  return (
-    <main
-      className="bg-[#FAF9F6] text-[#24231F] talbrennerei-hofladen"
-      style={{ "--page-accent": "#C98A2C" } as React.CSSProperties}
-    >
-      <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16  md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 pt-12 md:pt-24 lg:gap-20">
-        <div>
-          <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
-            Hofladen in Neufra
-          </p>
+ return (
+ <main
+ className="bg-[#FAF9F6] text-[#24231F] talbrennerei-hofladen"
+ style={{ "--page-accent": "#C98A2C" } as React.CSSProperties}
+ >
+ <section className="mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 md:min-h-[74vh] md:grid-cols-[1fr_0.95fr] md:gap-14 md:pb-24 pt-12 md:pt-24 lg:gap-20">
+ <div>
+ <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
+ Hofladen in Neufra
+ </p>
 
-          <RevealText>
-            <h1 className="max-w-4xl font-heading text-6xl leading-[0.98] md:text-8xl">
-              Hofladen im Herzen von Neufra.
-            </h1>
-          </RevealText>
+ <RevealText>
+ <h1 className="max-w-4xl font-heading text-6xl leading-[0.98] md:text-8xl">
+ Hofladen im Herzen von Neufra.
+ </h1>
+ </RevealText>
 
-          <p className="mt-7 max-w-xl text-lg leading-8 text-[#555149] md:mt-9">
-            Regionale Lebensmittel, ausgewählte Erzeuger und eigene
-            Spezialitäten – persönlich ausgesucht und mit Blick auf Herkunft und
-            Qualität.
-          </p>
-        </div>
+ <p className="mt-7 max-w-xl text-lg leading-8 text-[#555149] md:mt-9">
+ Regionale Lebensmittel, ausgewählte Erzeuger und eigene
+ Spezialitäten – persönlich ausgesucht und mit Blick auf Herkunft und
+ Qualität.
+ </p>
+ </div>
 
-        <div className="relative min-h-[360px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] shadow-[12px_12px_0_rgba(234,214,189,0.45)] md:min-h-[520px] md:shadow-[18px_18px_0_rgba(234,214,189,0.45)]">
-          <Image
-            src={siteImages.hofladen.inside}
-            alt="Hofladen der Talbrennerei Neufra"
-            fill
-            priority
-            className="scale-[1.05] object-cover saturate-[0.92] contrast-[1.03]"
-          />
-        </div>
-      </section>
+ <div className="relative min-h-[360px] overflow-hidden border border-[#B87935]/20 bg-[#D8D2C6] md:min-h-[520px] ">
+ <Image
+ src={siteImages.hofladen.inside}
+ alt="Hofladen der Talbrennerei Neufra"
+ fill
+ priority
+ className="scale-[1.05] object-cover"
+ />
+ </div>
+ </section>
 
-      <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-hofladen-sortiment md:py-36">
-        <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
-            <div>
-              <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
-                Unser Sortiment
-              </p>
+ <section className="bg-[#526247] px-6 py-12 text-[#FAF9F6] talbrennerei-hofladen-sortiment md:py-36">
+ <div className="mx-auto max-w-7xl">
+ <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-24">
+ <div>
+ <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#EAD6BD] before:h-px before:w-8 before:bg-[#B87935]">
+ Unser Sortiment
+ </p>
 
-              <RevealText>
-                <h2 className="font-heading text-5xl leading-[1.02] md:text-6xl">
-                  Regionale Lebensmittel und saisonale Produkte
-                </h2>
-              </RevealText>
-            </div>
+ <RevealText>
+ <h2 className="font-heading text-5xl leading-[1.02] md:text-6xl">
+ Regionale Lebensmittel und saisonale Produkte
+ </h2>
+ </RevealText>
+ </div>
 
-            <div className="space-y-10 md:space-y-16">
-              <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
-                <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
-                  Regional &amp; saisonal
-                </h3>
+ <div className="space-y-10 md:space-y-16">
+ <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
+ <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
+ Regional &amp; saisonal
+ </h3>
 
-                <p className="leading-7 text-[#FAF9F6]/80">
-                  Je nach Saison finden Sie bei uns Obst und Gemüse von
-                  regionalen Erzeugern. Das Angebot orientiert sich daran, was
-                  in der Umgebung gerade wächst und verfügbar ist.
-                </p>
-              </article>
+ <p className="leading-7 text-[#FAF9F6]/80">
+ Je nach Saison finden Sie bei uns Obst und Gemüse von
+ regionalen Erzeugern. Das Angebot orientiert sich daran, was
+ in der Umgebung gerade wächst und verfügbar ist.
+ </p>
+ </article>
 
-              <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
-                <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
-                  Von Erzeugern, die wir kennen
-                </h3>
+ <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
+ <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
+ Von Erzeugern, die wir kennen
+ </h3>
 
-                <p className="leading-7 text-[#FAF9F6]/80">
-                  Brot, Eier, Käse, Wurst, Gewürze und weitere Lebensmittel
-                  beziehen wir von ausgewählten Betrieben aus Neufra und der
-                  umliegenden Region. Entscheidend sind für uns Qualität und
-                  eine Herkunft, die nachvollziehbar bleibt.
-                </p>
-              </article>
+ <p className="leading-7 text-[#FAF9F6]/80">
+ Brot, Eier, Käse, Wurst, Gewürze und weitere Lebensmittel
+ beziehen wir von ausgewählten Betrieben aus Neufra und der
+ umliegenden Region. Entscheidend sind für uns Qualität und
+ eine Herkunft, die nachvollziehbar bleibt.
+ </p>
+ </article>
 
-              <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
-                <div>
-                  <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
-                    Spezialitäten aus eigener Herstellung
-                  </h3>
-                </div>
+ <article className="grid gap-4 sm:grid-cols-[13rem_1fr] sm:gap-5">
+ <div>
+ <h3 className="font-heading text-3xl leading-tight text-[#FAF9F6]">
+ Spezialitäten aus eigener Herstellung
+ </h3>
+ </div>
 
-                <p className="leading-7 text-[#FAF9F6]/80">
-                  Als Talbrennerei stellen wir weiterhin eigene Liköre,
-                  Spirituosen, Fruchtaufstriche, Honig und verschiedene Säfte
-                  her. Sie ergänzen das regionale Sortiment im Hofladen um
-                  unsere eigenen Spezialitäten.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
+ <p className="leading-7 text-[#FAF9F6]/80">
+ Als Talbrennerei stellen wir weiterhin eigene Liköre,
+ Spirituosen, Fruchtaufstriche, Honig und verschiedene Säfte
+ her. Sie ergänzen das regionale Sortiment im Hofladen um
+ unsere eigenen Spezialitäten.
+ </p>
+ </article>
+ </div>
+ </div>
+ </div>
+ </section>
 
-      <section className="bg-[#EAD6BD]/35 px-6 py-16 talbrennerei-hofladen-wochenmarkt md:py-40">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-24">
-          <div>
-            <p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#B87935]">
-              Persönlich einkaufen
-            </p>
+ <section className="bg-[#EAD6BD]/35 px-6 py-16 talbrennerei-hofladen-wochenmarkt md:py-40">
+ <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.78fr_1.22fr] lg:gap-24">
+ <div>
+ <p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#B87935]">
+ Persönlich einkaufen
+ </p>
 
-            <RevealText direction="right">
-              <h2 className="font-heading text-5xl leading-[1.02] md:text-6xl">
-                Ein kleiner Wochenmarkt unter einem Dach.
-              </h2>
-            </RevealText>
-          </div>
+ <RevealText direction="right">
+ <h2 className="font-heading text-5xl leading-[1.02] md:text-6xl">
+ Ein kleiner Wochenmarkt unter einem Dach.
+ </h2>
+ </RevealText>
+ </div>
 
-          <div className="max-w-2xl space-y-5 self-end text-lg leading-8 text-[#555149] md:space-y-7">
-            <p>
-              Der Hofladen verbindet ein sorgfältig ausgewähltes regionales
-              Angebot an einem Ort. So entsteht ein Einkaufserlebnis wie auf
-              einem kleinen Wochenmarkt: persönlich, überschaubar und nah an den
-              Menschen, die die Lebensmittel erzeugen.
-            </p>
+ <div className="max-w-2xl space-y-5 self-end text-lg leading-8 text-[#555149] md:space-y-7">
+ <p>
+ Der Hofladen verbindet ein sorgfältig ausgewähltes regionales
+ Angebot an einem Ort. So entsteht ein Einkaufserlebnis wie auf
+ einem kleinen Wochenmarkt: persönlich, überschaubar und nah an den
+ Menschen, die die Lebensmittel erzeugen.
+ </p>
 
-            <p>
-              Im Mittelpunkt stehen hochwertige Produkte direkt von regionalen
-              Betrieben und eine Herkunft, die für unsere Kundinnen und Kunden
-              verständlich bleibt.
-            </p>
-          </div>
-        </div>
-      </section>
+ <p>
+ Im Mittelpunkt stehen hochwertige Produkte direkt von regionalen
+ Betrieben und eine Herkunft, die für unsere Kundinnen und Kunden
+ verständlich bleibt.
+ </p>
+ </div>
+ </div>
+ </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-16 talbrennerei-hofladen-opening-hours md:py-36">
-        <div className="mb-10 max-w-4xl md:mb-16">
-          <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
-            Vorbeikommen
-          </p>
+ <section className="mx-auto max-w-7xl px-6 py-16 talbrennerei-hofladen-opening-hours md:py-36">
+ <div className="mb-10 max-w-4xl md:mb-16">
+ <p className="mb-5 flex items-center gap-3 text-xs uppercase tracking-[0.28em] text-[#B87935] before:h-px before:w-8 before:bg-[#B87935]">
+ Vorbeikommen
+ </p>
 
-          <RevealText>
-            <h2 className="font-heading text-5xl leading-[1.02] md:text-6xl">
-              Öffnungszeiten und Adresse
-            </h2>
-          </RevealText>
-        </div>
+ <RevealText>
+ <h2 className="font-heading text-5xl leading-[1.02] md:text-6xl">
+ Öffnungszeiten und Adresse
+ </h2>
+ </RevealText>
+ </div>
 
-        <div className="grid gap-10 border-t border-[#1F2F20]/20 pt-10 md:grid-cols-3 md:gap-12 md:pt-12 lg:gap-20">
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
-              Öffnungszeiten
-            </p>
+ <div className="grid gap-10 border-t border-[#1F2F20]/20 pt-10 md:grid-cols-3 md:gap-12 md:pt-12 lg:gap-20">
+ <div>
+ <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+ Öffnungszeiten
+ </p>
 
-            <p className="mt-5 whitespace-pre-line font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
-              {openingHours}
-            </p>
-          </div>
+ <p className="mt-5 whitespace-pre-line font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
+ {openingHours}
+ </p>
+ </div>
 
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
-              Hofladen
-            </p>
+ <div>
+ <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+ Hofladen
+ </p>
 
-            <p className="mt-5 font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
-              Rathausstr. 15
-              <br />
-              72419 Neufra
-            </p>
-          </div>
+ <p className="mt-5 font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
+ Rathausstr. 15
+ <br />
+ 72419 Neufra
+ </p>
+ </div>
 
-          <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
-              Produktion / Lager
-            </p>
+ <div>
+ <p className="text-xs uppercase tracking-[0.28em] text-[#526247]">
+ Produktion / Lager
+ </p>
 
-            <p className="mt-5 font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
-              Talstr. 25
-              <br />
-              72419 Neufra
-            </p>
-          </div>
-        </div>
-      </section>
+ <p className="mt-5 font-heading text-3xl leading-relaxed text-[#1F2F20] md:mt-6 md:text-4xl">
+ Talstr. 25
+ <br />
+ 72419 Neufra
+ </p>
+ </div>
+ </div>
+ </section>
 
-      <section className="bg-[#526247] mx-auto max-w-7xl px-6">
-        <div className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-10 md:pt-14 pb-10 md:pb-14 md:flex-row md:items-center md:gap-10">
-          <p className="max-w-3xl font-heading text-3xl leading-snug  text-[#FAF9F6] md:text-4xl">
-            Kommen Sie vorbei, lernen Sie unser Sortiment kennen und überzeugen
-            Sie sich selbst.
-          </p>
+ <section className="bg-[#526247] mx-auto max-w-7xl px-6">
+ <div className="flex flex-col items-start justify-between gap-8 border-t border-[#1F2F20]/15 pt-10 md:pt-14 pb-10 md:pb-14 md:flex-row md:items-center md:gap-10">
+ <p className="max-w-3xl font-heading text-3xl leading-snug text-[#FAF9F6] md:text-4xl">
+ Kommen Sie vorbei, lernen Sie unser Sortiment kennen und überzeugen
+ Sie sich selbst.
+ </p>
 
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Rathausstr.+15%2C+72419+Neufra"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex shrink-0 items-center gap-3 bg-[#EAD6BD] px-8 py-4 text-base font-medium text-[#1F2F20] transition hover:bg-[#FAF9F6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FAF9F6]"
-          >
-            Route in Google Maps
-            <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </section>
-    </main>
-  );
+ <a
+ href="https://www.google.com/maps/search/?api=1&query=Rathausstr.+15%2C+72419+Neufra"
+ target="_blank"
+ rel="noopener noreferrer"
+ className="inline-flex shrink-0 items-center gap-3 bg-[#EAD6BD] px-8 py-4 text-base font-medium text-[#1F2F20] transition hover:bg-[#FAF9F6] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#FAF9F6]"
+ >
+ Route in Google Maps
+ <span aria-hidden="true">↗</span>
+ </a>
+ </div>
+ </section>
+ </main>
+ );
 }
