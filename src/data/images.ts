@@ -9,7 +9,6 @@ export const siteImages = {
   },
 
   products: {
-    hero: "/images/products/produkte-flaschen.jpg",
 
     // Eigene Spezialitäten
     spirits: "/images/products/edelbrände.png",
@@ -17,7 +16,6 @@ export const siteImages = {
     honey: "/images/products/honig.jpg",
     jam: "/images/products/fruchtaufstriche.png",
     juice: "/images/products/apfelsaft.png",
-    driedFruit: "/images/products/apfelringe.png",
     wild: "/images/products/wild.png",
 
     // Hofladen / regionales Sortiment
@@ -31,14 +29,11 @@ export const siteImages = {
     shopSausage: "/images/products/hofladen-wurst.png",
 
     // Weitere Produktbilder
-    giftBasket: "/images/products/geschenkkorb.jpg",
     noodles: "/images/products/nudeln.png",
     tea: "/images/products/tee.png",
-    plums: "/images/products/zwetschgen.png",
   },
 
   tasting: {
-    distillery: "/images/tasting/destille.jpg",
     room: "/images/tasting/verkostung.jpg",
     detail: "/images/tasting/verkostung-detail.jpg",
   },
