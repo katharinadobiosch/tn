@@ -157,8 +157,9 @@ export default async function Home() {
           className="mx-auto max-w-7xl px-6 py-12 md:py-28"
           aria-label="Einblicke in den Hofladen"
         >
-          <div className="grid grid-cols-12 items-start gap-4 md:gap-6">
-            <div className="relative col-span-12 min-h-[300px] overflow-hidden md:col-span-7 md:min-h-[620px]">
+          <div className="grid gap-4 md:grid-cols-[1.4fr_1fr] md:items-start md:gap-6">
+            {/* Großes Bild links */}
+            <div className="relative min-h-[350px] overflow-hidden md:min-h-[650px]">
               <Image
                 src={siteImages.hofladen.inside}
                 alt="Einblick in den Hofladen der Talbrennerei Neufra"
@@ -168,24 +169,27 @@ export default async function Home() {
               />
             </div>
 
-            <div className="relative col-span-7 min-h-[230px] overflow-hidden md:col-span-5 md:mt-20 md:min-h-[390px]">
-              <Image
-                src={siteImages.products.apples}
-                alt="Obst im Hofladen"
-                fill
-                sizes="(min-width: 768px) 40vw, 58vw"
-                className="object-cover"
-              />
-            </div>
+            {/* Zwei Bilder rechts */}
+            <div className="grid gap-4 md:mt-16 md:gap-6">
+              <div className="relative min-h-[260px] overflow-hidden md:min-h-[340px]">
+                <Image
+                  src={siteImages.products.apples}
+                  alt="Obst im Hofladen"
+                  fill
+                  sizes="(min-width: 768px) 42vw, 100vw"
+                  className="object-cover"
+                />
+              </div>
 
-            <div className="relative col-span-5 mt-6 min-h-[190px] overflow-hidden md:col-span-4 md:-mt-28 md:min-h-[310px]">
-              <Image
-                src={siteImages.products.shopTea}
-                alt="Tee und Gewürze im Hofladen"
-                fill
-                sizes="(min-width: 768px) 32vw, 42vw"
-                className="object-cover object-[50%_1%]"
-              />
+              <div className="relative min-h-[260px] overflow-hidden md:min-h-[280px]">
+                <Image
+                  src={siteImages.products.shopTea}
+                  alt="Tee und Gewürze im Hofladen"
+                  fill
+                  sizes="(min-width: 768px) 42vw, 100vw"
+                  className="object-cover object-[50%_1%]"
+                />
+              </div>
             </div>
           </div>
         </section>

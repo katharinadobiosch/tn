@@ -1,11 +1,11 @@
 export const siteImages = {
   home: {
-    hero: "/images/home/hofladen-innen.png",
+    hero: "/images/home/hofladen-innen.jpg",
     logo: "/images/general/logo.png",
   },
 
   hofladen: {
-    inside: "/images/hofladen/hofladen-gemüse.png",
+    inside: "/images/hofladen/hofladen-gemüse.jpg",
   },
 
   products: {
@@ -14,20 +14,20 @@ export const siteImages = {
     // Eigene Spezialitäten
     spirits: "/images/products/edelbrände.png",
     liqueur: "/images/products/hofladen-likör-3.png",
-    honey: "/images/products/honig.png",
+    honey: "/images/products/honig.jpg",
     jam: "/images/products/fruchtaufstriche.png",
     juice: "/images/products/apfelsaft.png",
     driedFruit: "/images/products/apfelringe.png",
     wild: "/images/products/wild.png",
 
     // Hofladen / regionales Sortiment
-    apples: "/images/products/hofladen-äpfel.png",
+    apples: "/images/products/hofladen-einblick.jpg",
     carrots: "/images/products/hofladen-möhren-2.png",
     marmalade: "/images/products/hofladen-marmelade.png",
     marmaladeAlt: "/images/products/hofladen-marmelade-2.png",
     flour: "/images/products/hofladen-mehl.png",
     shopNoodles: "/images/products/hofladen-nudeln.png",
-    shopTea: "/images/products/hofladen-tee.png",
+    shopTea: "/images/products/hofladen-tee.jpg",
     shopSausage: "/images/products/hofladen-wurst.png",
 
     // Weitere Produktbilder
