@@ -1,6 +1,6 @@
 export const siteImages = {
   home: {
-    hero: "/images/home/hofladen-innen.jpg",
+    hero: "/images/about/hofladen-innen.png",
     logo: "/images/general/logo.png",
   },
 
