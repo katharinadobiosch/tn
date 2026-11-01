@@ -1,5 +1,4 @@
-import { Inter, Raleway, Josefin_Sans } from "next/font/google";
-
+import { Barlow_Condensed, Inter } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import type { Metadata } from "next";
@@ -10,22 +9,19 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const raleway = Raleway({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-heading",
-});
-
-const josefinSans = Josefin_Sans({
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
 });
 
 export const metadata: Metadata = {
-  title: "Talbrennerei Neufra",
+  title: {
+    default: "Talbrennerei Neufra | Hofladen & regionale Spezialitäten",
+    template: "%s | Talbrennerei Neufra",
+  },
   description:
-    "Talbrennerei Neufra - Produkte aus regionalem Anbau in bester Qualität. Entdecken Sie unsere Brände, Liköre, Honig, Fruchtaufstriche und Wildspezialitäten aus eigener Herstellung.",
+    "Hofladen in Neufra mit regionalem Obst und Gemüse, ausgewählten Lebensmitteln aus der Region sowie Spezialitäten aus eigener Herstellung.",
 };
 
 export default function RootLayout({
@@ -37,9 +33,9 @@ export default function RootLayout({
     <html
       lang="de"
       suppressHydrationWarning
-      className={`${josefinSans.variable} ${inter.variable} h-full antialiased`}
+      className={`${barlowCondensed.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className={`${inter.variable} ${josefinSans.variable}`}>
+      <body>
         <Header />
         {children}
         <Footer />

@@ -1,6 +1,7 @@
 "use server";
 
 import { put } from "@vercel/blob";
+import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { sql } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
@@ -36,6 +37,9 @@ export async function createUpdate(formData: FormData) {
     insert into updates (title, content, published, image_url)
     values (${title}, ${content}, ${published}, ${imageUrl})
   `;
+
+  revalidatePath("/aktuelles");
+  revalidatePath("/");
 
   redirect("/admin");
 }
@@ -77,6 +81,9 @@ export async function updateUpdate(id: string, formData: FormData) {
     `;
   }
 
+  revalidatePath("/aktuelles");
+  revalidatePath("/");
+
   redirect("/admin");
 }
 
@@ -87,6 +94,9 @@ export async function deleteUpdate(id: string) {
     delete from updates
     where id = ${id}
   `;
+
+  revalidatePath("/aktuelles");
+  revalidatePath("/");
 
   redirect("/admin");
 }

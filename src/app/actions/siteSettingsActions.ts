@@ -1,8 +1,9 @@
 "use server";
 
+import { revalidatePath } from "next/cache";
 import { sql } from "@/lib/db";
 import { requireAdmin } from "@/lib/auth";
-import { weekdays, type OpeningHoursSchedule } from "@/lib/siteSettings";
+import { weekdays, type OpeningHoursSchedule } from "@/lib/siteSettings.shared";
 
 export type SiteSettingsState = {
   success: boolean;
@@ -38,6 +39,8 @@ export async function updateSiteSettings(
         value = ${JSON.stringify(schedule)},
         updated_at = now()
     `;
+
+    revalidatePath("/", "layout");
 
     return {
       success: true,

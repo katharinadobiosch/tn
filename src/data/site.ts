@@ -31,18 +31,3 @@ export const productCategories = [
     href: "/produkte#damwild",
   },
 ];
-
-export const updatesPreview = [
-  {
-    title: "Eierlikör – Wildspezialitäten",
-    text: "Aktuelle Spezialitäten aus eigener Herstellung.",
-  },
-  {
-    title: "Apfelsaft",
-    text: "Frischer 100 % naturtrüber Apfelsaft in der 5 l Bag-in-Box.",
-  },
-  {
-    title: "Spezialitäten vom Wild",
-    text: "Wildwurst, Bauernbratwürste, Braten, Gulasch, Keule, Rücken und Filet vom Damwild.",
-  },
-];

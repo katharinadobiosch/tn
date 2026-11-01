@@ -7,6 +7,9 @@
   --accent-muted-green: #526247;
   --accent-warm: #b87935;
   --accent-warm-soft: #ead6bd;
+  --page-accent: var(
+    --accent-warm
+  ); /* Fallback, wird pro Seite überschrieben */
 }
 
 body {
@@ -15,9 +18,9 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
-/* .font-heading {
+.font-heading {
   font-family: var(--font-heading), sans-serif;
-} */
+}
 
 a,
 button,
@@ -29,3 +32,115 @@ input[type="file"],
 label[for] {
   cursor: pointer;
 }
+
+/* Einheitlicher Bildlook für die Talbrennerei */
+main img:not([data-no-filter]) {
+  filter: saturate(0.85) contrast(1.02) brightness(1) sepia(0.10);
+}
+
+/* BEGIN TALBRENNEREI TYPOGRAPHY */
+
+/*
+  Typography system
+  Headings: Barlow Condensed
+  Body: Inter
+  Applies to public pages only
+*/
+
+main[class*="talbrennerei-"] h1,
+main[class*="talbrennerei-"] h2,
+main[class*="talbrennerei-"] h3 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+/* Page headings */
+main[class*="talbrennerei-"] h1 {
+  font-size: 44px;
+  line-height: 1.04;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+/* Homepage hero */
+main .talbrennerei-hero h1 {
+  font-size: 56px;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+/* Section headings */
+main[class*="talbrennerei-"] h2 {
+  font-size: 36px;
+  line-height: 1.08;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+/* Article headings */
+main[class*="talbrennerei-"] article h2 {
+  font-size: 32px;
+  line-height: 1.12;
+}
+
+/* Card headings */
+main[class*="talbrennerei-"] h3 {
+  font-size: 26px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+
+/* Legal pages */
+main.talbrennerei-impressum h1,
+main.talbrennerei-datenschutz h1 {
+  font-size: 40px;
+}
+
+main.talbrennerei-impressum h2,
+main.talbrennerei-datenschutz h2 {
+  font-size: 26px;
+}
+
+/* Desktop typography */
+@media (min-width: 768px) {
+  main[class*="talbrennerei-"] h1 {
+    font-size: 72px;
+    line-height: 1.02;
+  }
+
+  main .talbrennerei-hero h1 {
+    font-size: 96px;
+    line-height: 1;
+  }
+
+  main[class*="talbrennerei-"] h2 {
+    font-size: 48px;
+  }
+
+  main[class*="talbrennerei-"] article h2 {
+    font-size: 40px;
+  }
+
+  main[class*="talbrennerei-"] h3 {
+    font-size: 30px;
+  }
+
+  /* Editorial homepage heading */
+  main .talbrennerei-home-hofladen-intro h2 {
+    font-size: 64px;
+    line-height: 1.02;
+  }
+
+  main.talbrennerei-impressum h1,
+  main.talbrennerei-datenschutz h1 {
+    font-size: 48px;
+  }
+
+  main.talbrennerei-impressum h2,
+  main.talbrennerei-datenschutz h2 {
+    font-size: 26px;
+  }
+}
+
+/* END TALBRENNEREI TYPOGRAPHY */

@@ -12,7 +12,7 @@ export function EditorialIntro({
   children,
 }: EditorialIntroProps) {
   return (
-    <section className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-[0.8fr_1.2fr]">
+    <section className="mx-auto grid max-w-7xl gap-12 px-6 py-24 md:grid-cols-[0.8fr_1.2fr] talbrennerei-editorial-intro">
       <div>
         {eyebrow && (
           <p className="mb-5 text-xs uppercase tracking-[0.28em] text-[#526247]">
