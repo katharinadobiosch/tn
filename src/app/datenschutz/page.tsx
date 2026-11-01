@@ -292,7 +292,7 @@ export default function DatenschutzPage() {
                 gesetzlichen Anforderungen ändern.
               </p>
 
-              <p className="mt-4 text-sm text-[#1F2F20]/55">
+              <p className="mt-4 text-sm text-[#1F2F20]/75">
                 Stand: September 2026
               </p>
             </section>

@@ -88,7 +88,7 @@ export default async function AktuellesPage() {
               <div>
                 <time
                   dateTime={update.created_at}
-                  className="text-xs uppercase tracking-[0.22em] text-[#B87935]"
+                  className="text-xs uppercase tracking-[0.22em] text-[#526247]"
                 >
                   {new Date(update.created_at).toLocaleDateString("de-DE")}
                 </time>

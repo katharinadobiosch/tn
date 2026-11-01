@@ -107,13 +107,13 @@ export default function ImpressumPage() {
             </section>
 
             <section className="border-t border-[#1F2F20]/10 pt-8">
-              <p className="text-sm leading-6 text-[#1F2F20]/60">
+              <p className="text-sm leading-6 text-[#1F2F20]/75">
                 Quelle:{" "}
                 <a
                   href="https://www.e-recht24.de/impressum-generator.html"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="underline underline-offset-4 transition-colors hover:text-[#B87935]"
+                  className="underline underline-offset-4 transition-colors hover:text-[#526247]"
                 >
                   e-recht24.de/impressum-generator.html
                 </a>

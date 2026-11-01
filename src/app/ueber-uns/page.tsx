@@ -193,7 +193,7 @@ export default function UeberUnsPage() {
  <div className="relative min-h-[360px] overflow-hidden bg-[#D8D2C6] md:min-h-[500px]">
  <Image
  src={siteImages.about.outside}
- alt="Innenraum des Hofladens in Neufra"
+ alt="Außenansicht des Hofladens der Talbrennerei Neufra"
  fill
  className="object-cover object-[0%_center]"
  />

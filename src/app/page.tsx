@@ -1,12 +1,9 @@
 import Image from "next/image";
 import { HeroSection } from "@/components/HeroSection";
 import { ProductTeaserGrid } from "@/components/ProductTeaserGrid";
-// import { UpdatesPreview } from "@/components/UpdatesPreview";
 import { siteImages } from "@/data/images";
 import { PartnerSection } from "@/components/PartnerSection";
 import { getOpenDaysOnly } from "@/lib/siteSettings";
-import { sql } from "@/lib/db";
-import type { Update } from "@/types/update";
 import type { Metadata } from "next";
 
 const ownSpecialties = [
@@ -35,14 +32,6 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const openingHours = await getOpenDaysOnly();
-
-  const latestUpdates = (await sql`
-    select *
-    from updates
-    where published = true
-    order by created_at desc
-    limit 3
-  `) as Update[];
 
   return (
     <>
@@ -204,14 +193,6 @@ export default async function Home() {
 
         <PartnerSection />
 
-        {/* <UpdatesPreview
-          updates={latestUpdates.map((update) => ({
-            title: update.title,
-            text: update.content,
-            date: new Date(update.created_at).toISOString(),
-            imageUrl: update.image_url,
-          }))}
-        /> */}
       </main>
     </>
   );
